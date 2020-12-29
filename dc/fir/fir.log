@@ -1,0 +1,2556 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+              Version O-2018.06-SP5-1 for linux64 - Mar 08, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#########################################
+# TCL script for Design Compiler        #
+# MS 2015                               #
+#########################################
+#########################################
+# READ Design and Library               #
+#########################################
+set top_level fir
+fir
+source -verbose "../common_script/common.tcl"
+. /tools4/syn2007.12/libraries/syn/
+dw_foundation.sldb
+* /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db dw_foundation.sldb
+/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
+/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
+read_db "../../mem_comp/imem_mc/imem_mc_tt_1p2v_25c_syn.db"
+Loading db file '/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db'
+Loading db file '/tools/synopsys/syn/O-2018.06-SP5-1/libraries/syn/dw_foundation.sldb'
+Loading db file '/tools/synopsys/syn/O-2018.06-SP5-1/libraries/syn/gtech.db'
+Loading db file '/tools/synopsys/syn/O-2018.06-SP5-1/libraries/syn/standard.sldb'
+  Loading link library 'scx3_cmos8rf_lpvt_tt_1p2v_25c'
+  Loading link library 'gtech'
+Loading db file '/homes/user/stud/fall20/jd3693/Desktop/Project/mem_comp/imem_mc/imem_mc_tt_1p2v_25c_syn.db'
+Loaded 0 designs.
+read_db "../../mem_comp/cmem_mc/cmem_mc_tt_1p2v_25c_syn.db"
+Loading db file '/homes/user/stud/fall20/jd3693/Desktop/Project/mem_comp/cmem_mc/cmem_mc_tt_1p2v_25c_syn.db'
+Loaded 0 designs.
+read_verilog {../../rtl/$top_level/$top_level.v}
+Loading verilog file '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v
+
+Statistics for case statements in always block at line 39 in file
+	'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            41            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 75 in file
+	'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            80            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 158 in file
+	'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           160            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 167 in file
+	'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           169            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 176 in file
+	'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           178            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 185 in file
+	'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           187            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine fir line 65 in file
+		'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  presentState_reg   | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fir line 75 in file
+		'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|      Done_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Current design is now '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.db:fir'
+Loaded 1 design.
+Current design is 'fir'.
+fir
+read_verilog {../../rtl/reg_16/reg_16.v}
+Loading verilog file '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_16/reg_16.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /homes/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_16/reg_16.v
+
+Inferred memory devices in process
+	in routine reg_16 line 11 in file
+		'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_16/reg_16.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    DATA_OUT_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_16/reg_16.db:reg_16'
+Loaded 1 design.
+Current design is 'reg_16'.
+reg_16
+read_verilog {../../rtl/reg_38/reg_38.v}
+Loading verilog file '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_38/reg_38.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /homes/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_38/reg_38.v
+
+Inferred memory devices in process
+	in routine reg_38 line 11 in file
+		'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_38/reg_38.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    DATA_OUT_reg     | Flip-flop |  38   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_38/reg_38.db:reg_38'
+Loaded 1 design.
+Current design is 'reg_38'.
+reg_38
+read_verilog {../../rtl/upcounter_14/upcounter_14.v}
+Loading verilog file '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_14/upcounter_14.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /homes/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_14/upcounter_14.v
+
+Inferred memory devices in process
+	in routine upcounter_14 line 9 in file
+		'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_14/upcounter_14.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      COUNT_reg      | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_14/upcounter_14.db:upcounter_14'
+Loaded 1 design.
+Current design is 'upcounter_14'.
+upcounter_14
+read_verilog {../../rtl/upcounter_6/upcounter_6.v}
+Loading verilog file '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_6/upcounter_6.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /homes/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_6/upcounter_6.v
+
+Inferred memory devices in process
+	in routine upcounter_6 line 9 in file
+		'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_6/upcounter_6.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      COUNT_reg      | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_6/upcounter_6.db:upcounter_6'
+Loaded 1 design.
+Current design is 'upcounter_6'.
+upcounter_6
+read_verilog {../../rtl/alu/alu.v}
+Loading verilog file '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/alu/alu.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /homes/user/stud/fall20/jd3693/Desktop/Project/rtl/alu/alu.v
+
+Statistics for case statements in always block at line 11 in file
+	'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/alu/alu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            13            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine alu line 20 in file
+		'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/alu/alu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ANS_reg       | Flip-flop |  38   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/alu/alu.db:alu'
+Loaded 1 design.
+Current design is 'alu'.
+alu
+read_verilog {../../rtl/cmem/cmem.v}
+Loading verilog file '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/cmem/cmem.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /homes/user/stud/fall20/jd3693/Desktop/Project/rtl/cmem/cmem.v
+Presto compilation completed successfully.
+Current design is now '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/cmem/cmem.db:cmem'
+Loaded 1 design.
+Current design is 'cmem'.
+cmem
+read_verilog {../../rtl/imem/imem.v}
+Loading verilog file '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/imem.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /homes/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/imem.v
+
+Statistics for case statements in always block at line 75 in file
+	'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/imem.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            78            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/imem.db:imem'
+Loaded 1 design.
+Current design is 'imem'.
+imem
+read_verilog {../../rtl/imem/mux_16_1.v}
+Loading verilog file '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/mux_16_1.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /homes/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/mux_16_1.v
+
+Statistics for case statements in always block at line 31 in file
+	'/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/mux_16_1.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            34            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/homes/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/mux_16_1.db:mux_16_1'
+Loaded 1 design.
+Current design is 'mux_16_1'.
+mux_16_1
+set set_fix_multiple_port_nets "true"
+true
+list_designs
+alu             fir             mux_16_1 (*)    reg_38          upcounter_14
+cmem            imem            reg_16          upcounter_6
+1
+if { [check_error -v] == 1 } { exit 1 }
+#########################################
+# Design Constraints                    #
+#########################################
+current_design $top_level
+Current design is 'fir'.
+{fir}
+link
+
+  Linking design 'fir'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (9 designs)               /homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.db, etc
+  scx3_cmos8rf_lpvt_tt_1p2v_25c (library) /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
+  dw_foundation.sldb (library) /tools/synopsys/syn/O-2018.06-SP5-1/libraries/syn/dw_foundation.sldb
+
+Information: Building the design 'cmem_mc'. (HDL-193)
+Warning: Cannot find the design 'cmem_mc' in the library 'WORK'. (LBR-1)
+Information: Building the design 'imem_mc'. (HDL-193)
+Warning: Cannot find the design 'imem_mc' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'cmem_mc' in 'cmem'. (LINK-5)
+Warning: Unable to resolve reference 'imem_mc' in 'imem'. (LINK-5)
+0
+check_design
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP5-1
+Date:        Mon Dec 14 23:15:53 2020
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     52
+    Multiply driven inputs (LINT-6)                                51
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                               6
+    Cells do not drive (LINT-1)                                     4
+    Connected to power or ground (LINT-32)                          2
+
+Nets                                                               21
+    Unloaded nets (LINT-2)                                         20
+    Multiply driven net with constant driver (LINT-54)              1
+
+Tristate                                                           65
+    A tristate bus has a non tri-state driver (LINT-34)            65
+--------------------------------------------------------------------------------
+
+Warning: In design 'alu', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'upcounter_14', cell 'C44' does not drive any nets. (LINT-1)
+Warning: In design 'upcounter_6', cell 'C36' does not drive any nets. (LINT-1)
+Warning: In design 'fir', net 'I[0]' driven by pin 'upcounter_I/COUNT[0]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'I[1]' driven by pin 'upcounter_I/COUNT[1]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'I[2]' driven by pin 'upcounter_I/COUNT[2]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'I[3]' driven by pin 'upcounter_I/COUNT[3]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'I[4]' driven by pin 'upcounter_I/COUNT[4]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'I[5]' driven by pin 'upcounter_I/COUNT[5]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[0]' driven by pin 'upcounter_N/COUNT[0]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[1]' driven by pin 'upcounter_N/COUNT[1]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[2]' driven by pin 'upcounter_N/COUNT[2]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[3]' driven by pin 'upcounter_N/COUNT[3]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[4]' driven by pin 'upcounter_N/COUNT[4]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[5]' driven by pin 'upcounter_N/COUNT[5]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[6]' driven by pin 'upcounter_N/COUNT[6]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[7]' driven by pin 'upcounter_N/COUNT[7]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[8]' driven by pin 'upcounter_N/COUNT[8]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[9]' driven by pin 'upcounter_N/COUNT[9]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[10]' driven by pin 'upcounter_N/COUNT[10]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[11]' driven by pin 'upcounter_N/COUNT[11]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[12]' driven by pin 'upcounter_N/COUNT[12]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[13]' driven by pin 'upcounter_N/COUNT[13]' has no loads. (LINT-2)
+Warning: In design 'cmem', input port 'CLK' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'CEN' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'WEN' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[15]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[14]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[13]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[12]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[11]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[10]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[9]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[8]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[7]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[6]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'CLK' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'WEN' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[7]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[6]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[15]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[14]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[13]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[12]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[11]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[10]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[9]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[8]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[7]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[6]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'fir', a pin on submodule 'cmem_0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CEN' is connected to logic 0. 
+Warning: In design 'fir', a pin on submodule 'imem_0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CEN' is connected to logic 0. 
+Warning: In design 'fir', three-state bus '*Logic0*' has non three-state driver 'U2/**logic_0**'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[0]' has non three-state driver 'imem_0/C404/Z_0'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[1]' has non three-state driver 'imem_0/C404/Z_1'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[2]' has non three-state driver 'imem_0/C404/Z_2'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[3]' has non three-state driver 'imem_0/C404/Z_3'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[4]' has non three-state driver 'imem_0/C404/Z_4'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[5]' has non three-state driver 'imem_0/C404/Z_5'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[6]' has non three-state driver 'imem_0/C404/Z_6'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[7]' has non three-state driver 'imem_0/C404/Z_7'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[8]' has non three-state driver 'imem_0/C404/Z_8'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[9]' has non three-state driver 'imem_0/C404/Z_9'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[10]' has non three-state driver 'imem_0/C404/Z_10'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[11]' has non three-state driver 'imem_0/C404/Z_11'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[12]' has non three-state driver 'imem_0/C404/Z_12'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[13]' has non three-state driver 'imem_0/C404/Z_13'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[14]' has non three-state driver 'imem_0/C404/Z_14'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[15]' has non three-state driver 'imem_0/C404/Z_15'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[16]' has non three-state driver 'imem_0/C404/Z_16'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[17]' has non three-state driver 'imem_0/C404/Z_17'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[18]' has non three-state driver 'imem_0/C404/Z_18'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[19]' has non three-state driver 'imem_0/C404/Z_19'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[20]' has non three-state driver 'imem_0/C404/Z_20'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[21]' has non three-state driver 'imem_0/C404/Z_21'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[22]' has non three-state driver 'imem_0/C404/Z_22'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[23]' has non three-state driver 'imem_0/C404/Z_23'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[24]' has non three-state driver 'imem_0/C404/Z_24'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[25]' has non three-state driver 'imem_0/C404/Z_25'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[26]' has non three-state driver 'imem_0/C404/Z_26'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[27]' has non three-state driver 'imem_0/C404/Z_27'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[28]' has non three-state driver 'imem_0/C404/Z_28'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[29]' has non three-state driver 'imem_0/C404/Z_29'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[30]' has non three-state driver 'imem_0/C404/Z_30'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[31]' has non three-state driver 'imem_0/C404/Z_31'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[32]' has non three-state driver 'imem_0/C404/Z_32'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[33]' has non three-state driver 'imem_0/C404/Z_33'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[34]' has non three-state driver 'imem_0/C404/Z_34'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[35]' has non three-state driver 'imem_0/C404/Z_35'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[36]' has non three-state driver 'imem_0/C404/Z_36'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[37]' has non three-state driver 'imem_0/C404/Z_37'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[38]' has non three-state driver 'imem_0/C404/Z_38'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[39]' has non three-state driver 'imem_0/C404/Z_39'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[40]' has non three-state driver 'imem_0/C404/Z_40'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[41]' has non three-state driver 'imem_0/C404/Z_41'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[42]' has non three-state driver 'imem_0/C404/Z_42'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[43]' has non three-state driver 'imem_0/C404/Z_43'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[44]' has non three-state driver 'imem_0/C404/Z_44'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[45]' has non three-state driver 'imem_0/C404/Z_45'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[46]' has non three-state driver 'imem_0/C404/Z_46'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[47]' has non three-state driver 'imem_0/C404/Z_47'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[48]' has non three-state driver 'imem_0/C404/Z_48'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[49]' has non three-state driver 'imem_0/C404/Z_49'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[50]' has non three-state driver 'imem_0/C404/Z_50'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[51]' has non three-state driver 'imem_0/C404/Z_51'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[52]' has non three-state driver 'imem_0/C404/Z_52'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[53]' has non three-state driver 'imem_0/C404/Z_53'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[54]' has non three-state driver 'imem_0/C404/Z_54'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[55]' has non three-state driver 'imem_0/C404/Z_55'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[56]' has non three-state driver 'imem_0/C404/Z_56'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[57]' has non three-state driver 'imem_0/C404/Z_57'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[58]' has non three-state driver 'imem_0/C404/Z_58'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[59]' has non three-state driver 'imem_0/C404/Z_59'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[60]' has non three-state driver 'imem_0/C404/Z_60'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[61]' has non three-state driver 'imem_0/C404/Z_61'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[62]' has non three-state driver 'imem_0/C404/Z_62'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[63]' has non three-state driver 'imem_0/C404/Z_63'. (LINT-34)
+Warning: In design 'fir', output port 'valid' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fir', multiply-driven net '*Logic0*' is driven by constant 0. (LINT-54)
+1
+source -verbose "./timing.tcl"
+10.0
+0
+0.010
+0.05
+0.05
+0.005
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+1
+1
+set_max_capacitance 0.005 [all_inputs]
+1
+set_max_fanout 4 $top_level
+1
+set_max_fanout 4 [all_inputs]
+1
+set_max_area 0 
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+#########################################
+# Compile                               #
+#########################################
+check_design
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP5-1
+Date:        Mon Dec 14 23:15:53 2020
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     52
+    Multiply driven inputs (LINT-6)                                51
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                               6
+    Cells do not drive (LINT-1)                                     4
+    Connected to power or ground (LINT-32)                          2
+
+Nets                                                               21
+    Unloaded nets (LINT-2)                                         20
+    Multiply driven net with constant driver (LINT-54)              1
+
+Tristate                                                           65
+    A tristate bus has a non tri-state driver (LINT-34)            65
+--------------------------------------------------------------------------------
+
+Warning: In design 'alu', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'upcounter_14', cell 'C44' does not drive any nets. (LINT-1)
+Warning: In design 'upcounter_6', cell 'C36' does not drive any nets. (LINT-1)
+Warning: In design 'fir', net 'I[0]' driven by pin 'upcounter_I/COUNT[0]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'I[1]' driven by pin 'upcounter_I/COUNT[1]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'I[2]' driven by pin 'upcounter_I/COUNT[2]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'I[3]' driven by pin 'upcounter_I/COUNT[3]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'I[4]' driven by pin 'upcounter_I/COUNT[4]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'I[5]' driven by pin 'upcounter_I/COUNT[5]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[0]' driven by pin 'upcounter_N/COUNT[0]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[1]' driven by pin 'upcounter_N/COUNT[1]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[2]' driven by pin 'upcounter_N/COUNT[2]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[3]' driven by pin 'upcounter_N/COUNT[3]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[4]' driven by pin 'upcounter_N/COUNT[4]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[5]' driven by pin 'upcounter_N/COUNT[5]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[6]' driven by pin 'upcounter_N/COUNT[6]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[7]' driven by pin 'upcounter_N/COUNT[7]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[8]' driven by pin 'upcounter_N/COUNT[8]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[9]' driven by pin 'upcounter_N/COUNT[9]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[10]' driven by pin 'upcounter_N/COUNT[10]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[11]' driven by pin 'upcounter_N/COUNT[11]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[12]' driven by pin 'upcounter_N/COUNT[12]' has no loads. (LINT-2)
+Warning: In design 'fir', net 'N[13]' driven by pin 'upcounter_N/COUNT[13]' has no loads. (LINT-2)
+Warning: In design 'cmem', input port 'CLK' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'CEN' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'WEN' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'A[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[15]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[14]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[13]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[12]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[11]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[10]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[9]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[8]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[7]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[6]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cmem', input port 'D[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'CLK' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'WEN' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[7]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[6]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'A[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[15]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[14]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[13]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[12]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[11]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[10]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[9]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[8]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[7]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[6]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'imem', input port 'D[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'fir', a pin on submodule 'cmem_0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CEN' is connected to logic 0. 
+Warning: In design 'fir', a pin on submodule 'imem_0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CEN' is connected to logic 0. 
+Warning: In design 'fir', three-state bus '*Logic0*' has non three-state driver 'U2/**logic_0**'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[0]' has non three-state driver 'imem_0/C404/Z_0'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[1]' has non three-state driver 'imem_0/C404/Z_1'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[2]' has non three-state driver 'imem_0/C404/Z_2'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[3]' has non three-state driver 'imem_0/C404/Z_3'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[4]' has non three-state driver 'imem_0/C404/Z_4'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[5]' has non three-state driver 'imem_0/C404/Z_5'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[6]' has non three-state driver 'imem_0/C404/Z_6'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[7]' has non three-state driver 'imem_0/C404/Z_7'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[8]' has non three-state driver 'imem_0/C404/Z_8'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[9]' has non three-state driver 'imem_0/C404/Z_9'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[10]' has non three-state driver 'imem_0/C404/Z_10'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[11]' has non three-state driver 'imem_0/C404/Z_11'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[12]' has non three-state driver 'imem_0/C404/Z_12'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[13]' has non three-state driver 'imem_0/C404/Z_13'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[14]' has non three-state driver 'imem_0/C404/Z_14'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[15]' has non three-state driver 'imem_0/C404/Z_15'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[16]' has non three-state driver 'imem_0/C404/Z_16'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[17]' has non three-state driver 'imem_0/C404/Z_17'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[18]' has non three-state driver 'imem_0/C404/Z_18'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[19]' has non three-state driver 'imem_0/C404/Z_19'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[20]' has non three-state driver 'imem_0/C404/Z_20'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[21]' has non three-state driver 'imem_0/C404/Z_21'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[22]' has non three-state driver 'imem_0/C404/Z_22'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[23]' has non three-state driver 'imem_0/C404/Z_23'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[24]' has non three-state driver 'imem_0/C404/Z_24'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[25]' has non three-state driver 'imem_0/C404/Z_25'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[26]' has non three-state driver 'imem_0/C404/Z_26'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[27]' has non three-state driver 'imem_0/C404/Z_27'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[28]' has non three-state driver 'imem_0/C404/Z_28'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[29]' has non three-state driver 'imem_0/C404/Z_29'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[30]' has non three-state driver 'imem_0/C404/Z_30'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[31]' has non three-state driver 'imem_0/C404/Z_31'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[32]' has non three-state driver 'imem_0/C404/Z_32'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[33]' has non three-state driver 'imem_0/C404/Z_33'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[34]' has non three-state driver 'imem_0/C404/Z_34'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[35]' has non three-state driver 'imem_0/C404/Z_35'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[36]' has non three-state driver 'imem_0/C404/Z_36'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[37]' has non three-state driver 'imem_0/C404/Z_37'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[38]' has non three-state driver 'imem_0/C404/Z_38'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[39]' has non three-state driver 'imem_0/C404/Z_39'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[40]' has non three-state driver 'imem_0/C404/Z_40'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[41]' has non three-state driver 'imem_0/C404/Z_41'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[42]' has non three-state driver 'imem_0/C404/Z_42'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[43]' has non three-state driver 'imem_0/C404/Z_43'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[44]' has non three-state driver 'imem_0/C404/Z_44'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[45]' has non three-state driver 'imem_0/C404/Z_45'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[46]' has non three-state driver 'imem_0/C404/Z_46'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[47]' has non three-state driver 'imem_0/C404/Z_47'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[48]' has non three-state driver 'imem_0/C404/Z_48'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[49]' has non three-state driver 'imem_0/C404/Z_49'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[50]' has non three-state driver 'imem_0/C404/Z_50'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[51]' has non three-state driver 'imem_0/C404/Z_51'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[52]' has non three-state driver 'imem_0/C404/Z_52'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[53]' has non three-state driver 'imem_0/C404/Z_53'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[54]' has non three-state driver 'imem_0/C404/Z_54'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[55]' has non three-state driver 'imem_0/C404/Z_55'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[56]' has non three-state driver 'imem_0/C404/Z_56'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[57]' has non three-state driver 'imem_0/C404/Z_57'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[58]' has non three-state driver 'imem_0/C404/Z_58'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[59]' has non three-state driver 'imem_0/C404/Z_59'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[60]' has non three-state driver 'imem_0/C404/Z_60'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[61]' has non three-state driver 'imem_0/C404/Z_61'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[62]' has non three-state driver 'imem_0/C404/Z_62'. (LINT-34)
+Warning: In design 'fir', three-state bus 'imem_0/cen_med[63]' has non three-state driver 'imem_0/C404/Z_63'. (LINT-34)
+Warning: In design 'fir', output port 'valid' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fir', multiply-driven net '*Logic0*' is driven by constant 0. (LINT-54)
+1
+#uniquify
+current_design $top_level
+Current design is 'fir'.
+{fir}
+link
+
+  Linking design 'fir'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (9 designs)               /homes/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.db, etc
+  scx3_cmos8rf_lpvt_tt_1p2v_25c (library)
+                              /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
+  dw_foundation.sldb (library)
+                              /tools/synopsys/syn/O-2018.06-SP5-1/libraries/syn/dw_foundation.sldb
+
+Information: Building the design 'cmem_mc'. (HDL-193)
+Warning: Cannot find the design 'cmem_mc' in the library 'WORK'. (LBR-1)
+Information: Building the design 'imem_mc'. (HDL-193)
+Warning: Cannot find the design 'imem_mc' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'cmem_mc' in 'cmem'. (LINK-5)
+Warning: Unable to resolve reference 'imem_mc' in 'imem'. (LINK-5)
+0
+compile_ultra
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db"
+Library analysis succeeded.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.5 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.5 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 144 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 2 instances of design 'reg_16'. (OPT-1056)
+Information: Uniquified 2 instances of design 'reg_38'. (OPT-1056)
+Information: Uniquified 4 instances of design 'mux_16_1'. (OPT-1056)
+  Simplifying Design 'fir'
+Information: The register 'upcounter_I/COUNT_reg[0]' will be removed. (OPT-1207)
+Information: The register 'upcounter_I/COUNT_reg[1]' will be removed. (OPT-1207)
+Information: The register 'upcounter_I/COUNT_reg[2]' will be removed. (OPT-1207)
+Information: The register 'upcounter_I/COUNT_reg[3]' will be removed. (OPT-1207)
+Information: The register 'upcounter_I/COUNT_reg[4]' will be removed. (OPT-1207)
+Information: The register 'upcounter_I/COUNT_reg[5]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[0]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[1]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[2]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[3]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[4]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[5]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[6]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[7]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[8]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[9]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[10]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[11]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[12]' will be removed. (OPT-1207)
+Information: The register 'upcounter_N/COUNT_reg[13]' will be removed. (OPT-1207)
+
+Information: Building the design 'cmem_mc'. (HDL-193)
+Warning: Cannot find the design 'cmem_mc' in the library 'WORK'. (LBR-1)
+Information: Building the design 'imem_mc'. (HDL-193)
+Warning: Cannot find the design 'imem_mc' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'cmem_mc' in 'cmem'. (LINK-5)
+Warning: Unable to resolve reference 'imem_mc' in 'imem'. (LINK-5)
+Loaded alib file './alib-52/scx3_cmos8rf_lpvt_tt_1p2v_25c.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy alu_0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy reg_16_X before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy reg_38_M before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy upcounter_N before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy upcounter_I before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy reg_16_B before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy reg_38_Y before Pass 1 (OPT-776)
+Information: Ungrouping 7 of 14 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'imem'
+  Processing 'fir'
+Information: The register 'Done_reg' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'fir'.
+  Processing 'mux_16_1_0'
+  Processing 'cmem'
+Information: Building the design 'cmem_mc'. (HDL-193)
+Warning: Cannot find the design 'cmem_mc' in the library 'WORK'. (LBR-1)
+Information: Building the design 'imem_mc'. (HDL-193)
+Warning: Cannot find the design 'imem_mc' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'cmem_mc' in 'cmem'. (LINK-5)
+Warning: Unable to resolve reference 'imem_mc' in 'imem'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1TS' in the library 'scx3_cmos8rf_lpvt_tt_1p2v_25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'fir_DW_mult_uns_1'
+Information: Added key list 'DesignWare' to design 'fir'. (DDB-72)
+Information: The register 'reg_38_Y/DATA_OUT_reg[37]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[37]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[37]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[36]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[36]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[36]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[35]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[33]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[33]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[33]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[35]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[35]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[34]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[34]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[34]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[32]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[31]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[30]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[30]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[30]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[31]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[31]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[32]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[32]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[28]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[27]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[27]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[27]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[29]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[28]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[28]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[29]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[29]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[25]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[26]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[25]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[25]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[26]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[26]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[24]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[24]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[24]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[22]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[22]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[22]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[21]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[21]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[21]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[23]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[23]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[23]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[19]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[19]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[19]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[18]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[18]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[18]' will be removed. (OPT-1207)
+Information: The register 'reg_38_M/DATA_OUT_reg[20]' will be removed. (OPT-1207)
+Information: The register 'alu_0/ANS_reg[20]' will be removed. (OPT-1207)
+Information: The register 'reg_38_Y/DATA_OUT_reg[20]' will be removed. (OPT-1207)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:20   21205.4      0.00       0.0     977.5                           23429.5977      0.00  
+    0:00:20   21205.4      0.00       0.0     977.5                           23429.5977      0.00  
+    0:00:20   21205.4      0.00       0.0     977.5                           23429.5977      0.00  
+    0:00:21   21196.8      0.00       0.0     976.5                           23422.6133      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:23   19643.0      0.00       0.0     976.5                           21293.5352      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_fanout)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:24   19615.7      0.00       0.0     976.5                           21067.9766      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:26   21500.6      0.00       0.0       0.0                           22469.1758      0.00  
+    0:00:26   21500.6      0.00       0.0       0.0                           22469.1758      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:26   21500.6      0.00       0.0       0.0                           22469.1758      0.00  
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+    0:00:27   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:27   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:27   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20905.9      0.00       0.0       0.0                           21704.8008      0.00  
+    0:00:28   20940.5      0.00       0.0       0.0                           21760.7363      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:28   20940.5      0.00       0.0       0.0                           21760.7363      0.00  
+    0:00:29   20926.1      0.00       0.0       0.0                           21764.2363      0.00  
+    0:00:29   20926.1      0.00       0.0       0.0                           21764.2363      0.00  
+    0:00:29   20926.1      0.00       0.0       0.0                           21764.2363      0.00  
+    0:00:30   20921.8      0.00       0.0       0.0                           21752.2656      0.00  
+    0:00:30   20920.3      0.00       0.0       0.0                           21748.1621      0.00  
+    0:00:30   20920.3      0.00       0.0       0.0                           21748.1621      0.00  
+    0:00:31   20920.3      0.00       0.0       0.0                           21748.1621      0.00  
+    0:00:31   20920.3      0.00       0.0       0.0                           21748.1621      0.00  
+Loading db file '/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db'
+Loading db file '/homes/user/stud/fall20/jd3693/Desktop/Project/mem_comp/imem_mc/imem_mc_tt_1p2v_25c_syn.db'
+Loading db file '/homes/user/stud/fall20/jd3693/Desktop/Project/mem_comp/cmem_mc/cmem_mc_tt_1p2v_25c_syn.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Building the design 'cmem_mc'. (HDL-193)
+Warning: Cannot find the design 'cmem_mc' in the library 'WORK'. (LBR-1)
+Information: Building the design 'imem_mc'. (HDL-193)
+Warning: Cannot find the design 'imem_mc' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'cmem_mc' in 'cmem'. (LINK-5)
+Warning: Unable to resolve reference 'imem_mc' in 'imem'. (LINK-5)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated black box outputs. (PWR-428)
+1
+#########################################
+# Optimize design                       #
+# Some pointers for possible optimizatio# 
+# Check the DC reference manual         #
+#########################################
+#set_transform_for_retiming {temp_reg[6] temp_reg[5] temp_reg[4] temp_reg[3] temp_reg[2] temp_reg[1] temp_reg[0]} dont_retime
+#optimize_registers -clock clk -edge rise -justification_effort high 
+#balance_registers
+#source -verbose "../script/timing.1.2ns.tcl"
+#pipeline_design -stages 8 -clock_port_name $clk_name -check_design -verbose -print_critical_loop
+#set_max_capacitance 1 [all_inputs] 
+#compile_ultra -no_autoungroup -no_boundary_optimization
+#remove_clock -all
+#pipeline_design -stages 8 -clock_port_name $clk_name -async_reset reset -check_design -verbose -minimum_period_only
+#########################################
+# Write outputs                         #
+#########################################
+source -verbose "../common_script/namingrules.tcl"
+1
+Information: Building the design 'cmem_mc'. (HDL-193)
+Warning: Cannot find the design 'cmem_mc' in the library 'WORK'. (LBR-1)
+Information: Building the design 'imem_mc'. (HDL-193)
+Warning: Cannot find the design 'imem_mc' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'cmem_mc' in 'cmem'. (LINK-5)
+Warning: Unable to resolve reference 'imem_mc' in 'imem'. (LINK-5)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+fir             cell    presentState_reg[1]     presentState_reg_1_
+fir             cell    alu_0/ANS_reg[0]        alu_0_ANS_reg_0_
+fir             cell    alu_0/ANS_reg[1]        alu_0_ANS_reg_1_
+fir             cell    alu_0/ANS_reg[2]        alu_0_ANS_reg_2_
+fir             cell    alu_0/ANS_reg[3]        alu_0_ANS_reg_3_
+fir             cell    alu_0/ANS_reg[4]        alu_0_ANS_reg_4_
+fir             cell    alu_0/ANS_reg[5]        alu_0_ANS_reg_5_
+fir             cell    alu_0/ANS_reg[6]        alu_0_ANS_reg_6_
+fir             cell    alu_0/ANS_reg[7]        alu_0_ANS_reg_7_
+fir             cell    alu_0/ANS_reg[8]        alu_0_ANS_reg_8_
+fir             cell    alu_0/ANS_reg[9]        alu_0_ANS_reg_9_
+fir             cell    alu_0/ANS_reg[10]       alu_0_ANS_reg_10_
+fir             cell    alu_0/ANS_reg[11]       alu_0_ANS_reg_11_
+fir             cell    alu_0/ANS_reg[12]       alu_0_ANS_reg_12_
+fir             cell    alu_0/ANS_reg[13]       alu_0_ANS_reg_13_
+fir             cell    alu_0/ANS_reg[14]       alu_0_ANS_reg_14_
+fir             cell    alu_0/ANS_reg[15]       alu_0_ANS_reg_15_
+fir             cell    alu_0/ANS_reg[16]       alu_0_ANS_reg_16_
+fir             cell    alu_0/ANS_reg[17]       alu_0_ANS_reg_17_
+fir             cell    reg_16_X/DATA_OUT_reg[0] reg_16_X_DATA_OUT_reg_0_
+fir             cell    reg_16_X/DATA_OUT_reg[1] reg_16_X_DATA_OUT_reg_1_
+fir             cell    reg_16_X/DATA_OUT_reg[2] reg_16_X_DATA_OUT_reg_2_
+fir             cell    reg_16_X/DATA_OUT_reg[3] reg_16_X_DATA_OUT_reg_3_
+fir             cell    reg_16_X/DATA_OUT_reg[4] reg_16_X_DATA_OUT_reg_4_
+fir             cell    reg_16_X/DATA_OUT_reg[5] reg_16_X_DATA_OUT_reg_5_
+fir             cell    reg_16_X/DATA_OUT_reg[6] reg_16_X_DATA_OUT_reg_6_
+fir             cell    reg_16_X/DATA_OUT_reg[7] reg_16_X_DATA_OUT_reg_7_
+fir             cell    reg_16_X/DATA_OUT_reg[8] reg_16_X_DATA_OUT_reg_8_
+fir             cell    reg_16_X/DATA_OUT_reg[9] reg_16_X_DATA_OUT_reg_9_
+fir             cell    reg_16_X/DATA_OUT_reg[10] reg_16_X_DATA_OUT_reg_10_
+fir             cell    reg_16_X/DATA_OUT_reg[11] reg_16_X_DATA_OUT_reg_11_
+fir             cell    reg_16_X/DATA_OUT_reg[12] reg_16_X_DATA_OUT_reg_12_
+fir             cell    reg_16_X/DATA_OUT_reg[13] reg_16_X_DATA_OUT_reg_13_
+fir             cell    reg_16_X/DATA_OUT_reg[14] reg_16_X_DATA_OUT_reg_14_
+fir             cell    reg_16_X/DATA_OUT_reg[15] reg_16_X_DATA_OUT_reg_15_
+fir             cell    reg_38_M/DATA_OUT_reg[0] reg_38_M_DATA_OUT_reg_0_
+fir             cell    reg_38_M/DATA_OUT_reg[1] reg_38_M_DATA_OUT_reg_1_
+fir             cell    reg_38_M/DATA_OUT_reg[2] reg_38_M_DATA_OUT_reg_2_
+fir             cell    reg_38_M/DATA_OUT_reg[3] reg_38_M_DATA_OUT_reg_3_
+fir             cell    reg_38_M/DATA_OUT_reg[4] reg_38_M_DATA_OUT_reg_4_
+fir             cell    reg_38_M/DATA_OUT_reg[5] reg_38_M_DATA_OUT_reg_5_
+fir             cell    reg_38_M/DATA_OUT_reg[6] reg_38_M_DATA_OUT_reg_6_
+fir             cell    reg_38_M/DATA_OUT_reg[7] reg_38_M_DATA_OUT_reg_7_
+fir             cell    reg_38_M/DATA_OUT_reg[8] reg_38_M_DATA_OUT_reg_8_
+fir             cell    reg_38_M/DATA_OUT_reg[9] reg_38_M_DATA_OUT_reg_9_
+fir             cell    reg_38_M/DATA_OUT_reg[10] reg_38_M_DATA_OUT_reg_10_
+fir             cell    reg_38_M/DATA_OUT_reg[11] reg_38_M_DATA_OUT_reg_11_
+fir             cell    reg_38_M/DATA_OUT_reg[12] reg_38_M_DATA_OUT_reg_12_
+fir             cell    reg_38_M/DATA_OUT_reg[13] reg_38_M_DATA_OUT_reg_13_
+fir             cell    reg_38_M/DATA_OUT_reg[14] reg_38_M_DATA_OUT_reg_14_
+fir             cell    reg_38_M/DATA_OUT_reg[15] reg_38_M_DATA_OUT_reg_15_
+fir             cell    reg_38_M/DATA_OUT_reg[16] reg_38_M_DATA_OUT_reg_16_
+fir             cell    reg_38_M/DATA_OUT_reg[17] reg_38_M_DATA_OUT_reg_17_
+fir             cell    reg_16_B/DATA_OUT_reg[0] reg_16_B_DATA_OUT_reg_0_
+fir             cell    reg_16_B/DATA_OUT_reg[1] reg_16_B_DATA_OUT_reg_1_
+fir             cell    reg_16_B/DATA_OUT_reg[2] reg_16_B_DATA_OUT_reg_2_
+fir             cell    reg_16_B/DATA_OUT_reg[3] reg_16_B_DATA_OUT_reg_3_
+fir             cell    reg_16_B/DATA_OUT_reg[4] reg_16_B_DATA_OUT_reg_4_
+fir             cell    reg_16_B/DATA_OUT_reg[5] reg_16_B_DATA_OUT_reg_5_
+fir             cell    reg_16_B/DATA_OUT_reg[6] reg_16_B_DATA_OUT_reg_6_
+fir             cell    reg_16_B/DATA_OUT_reg[7] reg_16_B_DATA_OUT_reg_7_
+fir             cell    reg_16_B/DATA_OUT_reg[8] reg_16_B_DATA_OUT_reg_8_
+fir             cell    reg_16_B/DATA_OUT_reg[9] reg_16_B_DATA_OUT_reg_9_
+fir             cell    reg_16_B/DATA_OUT_reg[10] reg_16_B_DATA_OUT_reg_10_
+fir             cell    reg_16_B/DATA_OUT_reg[11] reg_16_B_DATA_OUT_reg_11_
+fir             cell    reg_16_B/DATA_OUT_reg[12] reg_16_B_DATA_OUT_reg_12_
+fir             cell    reg_16_B/DATA_OUT_reg[13] reg_16_B_DATA_OUT_reg_13_
+fir             cell    reg_16_B/DATA_OUT_reg[14] reg_16_B_DATA_OUT_reg_14_
+fir             cell    reg_16_B/DATA_OUT_reg[15] reg_16_B_DATA_OUT_reg_15_
+fir             cell    reg_38_Y/DATA_OUT_reg[16] reg_38_Y_DATA_OUT_reg_16_
+fir             cell    reg_38_Y/DATA_OUT_reg[17] reg_38_Y_DATA_OUT_reg_17_
+fir             cell    mult_x_19/U585          mult_x_19_U585
+fir             cell    mult_x_19/U583          mult_x_19_U583
+fir             cell    mult_x_19/U581          mult_x_19_U581
+fir             cell    mult_x_19/U578          mult_x_19_U578
+fir             cell    mult_x_19/U575          mult_x_19_U575
+fir             cell    mult_x_19/U572          mult_x_19_U572
+fir             cell    mult_x_19/U570          mult_x_19_U570
+fir             cell    mult_x_19/U569          mult_x_19_U569
+fir             cell    mult_x_19/U567          mult_x_19_U567
+fir             cell    mult_x_19/U564          mult_x_19_U564
+fir             cell    mult_x_19/U563          mult_x_19_U563
+fir             cell    presentState_reg[0]     presentState_reg_0_
+fir             cell    reg_38_Y/DATA_OUT_reg[15] reg_38_Y_DATA_OUT_reg_15_
+fir             cell    reg_38_Y/DATA_OUT_reg[14] reg_38_Y_DATA_OUT_reg_14_
+fir             cell    reg_38_Y/DATA_OUT_reg[13] reg_38_Y_DATA_OUT_reg_13_
+fir             cell    reg_38_Y/DATA_OUT_reg[12] reg_38_Y_DATA_OUT_reg_12_
+fir             cell    reg_38_Y/DATA_OUT_reg[10] reg_38_Y_DATA_OUT_reg_10_
+fir             cell    reg_38_Y/DATA_OUT_reg[11] reg_38_Y_DATA_OUT_reg_11_
+fir             cell    reg_38_Y/DATA_OUT_reg[9] reg_38_Y_DATA_OUT_reg_9_
+fir             cell    reg_38_Y/DATA_OUT_reg[6] reg_38_Y_DATA_OUT_reg_6_
+fir             cell    reg_38_Y/DATA_OUT_reg[5] reg_38_Y_DATA_OUT_reg_5_
+fir             cell    reg_38_Y/DATA_OUT_reg[8] reg_38_Y_DATA_OUT_reg_8_
+fir             cell    reg_38_Y/DATA_OUT_reg[7] reg_38_Y_DATA_OUT_reg_7_
+fir             cell    reg_38_Y/DATA_OUT_reg[3] reg_38_Y_DATA_OUT_reg_3_
+fir             cell    reg_38_Y/DATA_OUT_reg[4] reg_38_Y_DATA_OUT_reg_4_
+fir             cell    reg_38_Y/DATA_OUT_reg[2] reg_38_Y_DATA_OUT_reg_2_
+fir             cell    reg_38_Y/DATA_OUT_reg[1] reg_38_Y_DATA_OUT_reg_1_
+fir             cell    reg_38_Y/DATA_OUT_reg[0] reg_38_Y_DATA_OUT_reg_0_
+fir             cell    presentState_reg[2]     presentState_reg_2_
+fir             net     alu_0/N98               alu_0_N98
+fir             net     alu_0/N97               alu_0_N97
+fir             net     alu_0/N96               alu_0_N96
+fir             net     alu_0/N95               alu_0_N95
+fir             net     alu_0/N94               alu_0_N94
+fir             net     alu_0/N93               alu_0_N93
+fir             net     alu_0/N92               alu_0_N92
+fir             net     alu_0/N91               alu_0_N91
+fir             net     alu_0/N90               alu_0_N90
+fir             net     alu_0/N89               alu_0_N89
+fir             net     alu_0/N88               alu_0_N88
+fir             net     alu_0/N87               alu_0_N87
+fir             net     alu_0/N86               alu_0_N86
+fir             net     alu_0/N85               alu_0_N85
+fir             net     alu_0/N84               alu_0_N84
+fir             net     alu_0/N83               alu_0_N83
+fir             net     alu_0/N82               alu_0_N82
+fir             net     alu_0/N81               alu_0_N81
+fir             net     mult_x_19/n1512         mult_x_19_n1512
+fir             net     mult_x_19/n1511         mult_x_19_n1511
+fir             net     mult_x_19/n1510         mult_x_19_n1510
+fir             net     mult_x_19/n1509         mult_x_19_n1509
+fir             net     mult_x_19/n1508         mult_x_19_n1508
+fir             net     mult_x_19/n1507         mult_x_19_n1507
+fir             net     mult_x_19/n1506         mult_x_19_n1506
+fir             net     mult_x_19/n1505         mult_x_19_n1505
+fir             net     mult_x_19/n1504         mult_x_19_n1504
+fir             net     mult_x_19/n1477         mult_x_19_n1477
+fir             net     mult_x_19/n1476         mult_x_19_n1476
+fir             net     mult_x_19/n1475         mult_x_19_n1475
+fir             net     mult_x_19/n1474         mult_x_19_n1474
+fir             net     mult_x_19/n1473         mult_x_19_n1473
+fir             net     mult_x_19/n1472         mult_x_19_n1472
+fir             net     mult_x_19/n1471         mult_x_19_n1471
+fir             net     mult_x_19/n1470         mult_x_19_n1470
+fir             net     mult_x_19/n1469         mult_x_19_n1469
+fir             net     mult_x_19/n1445         mult_x_19_n1445
+fir             net     mult_x_19/n1444         mult_x_19_n1444
+fir             net     mult_x_19/n1443         mult_x_19_n1443
+fir             net     mult_x_19/n1442         mult_x_19_n1442
+fir             net     mult_x_19/n1441         mult_x_19_n1441
+fir             net     mult_x_19/n1439         mult_x_19_n1439
+fir             net     mult_x_19/n1438         mult_x_19_n1438
+fir             net     mult_x_19/n1437         mult_x_19_n1437
+fir             net     mult_x_19/n1410         mult_x_19_n1410
+fir             net     mult_x_19/n1409         mult_x_19_n1409
+fir             net     mult_x_19/n1408         mult_x_19_n1408
+fir             net     mult_x_19/n1384         mult_x_19_n1384
+fir             net     mult_x_19/n1383         mult_x_19_n1383
+fir             net     mult_x_19/n1382         mult_x_19_n1382
+fir             net     mult_x_19/n785          mult_x_19_n785
+fir             net     mult_x_19/n782          mult_x_19_n782
+fir             net     mult_x_19/n780          mult_x_19_n780
+fir             net     mult_x_19/n779          mult_x_19_n779
+fir             net     mult_x_19/n778          mult_x_19_n778
+fir             net     mult_x_19/n777          mult_x_19_n777
+fir             net     mult_x_19/n775          mult_x_19_n775
+fir             net     mult_x_19/n774          mult_x_19_n774
+fir             net     mult_x_19/n773          mult_x_19_n773
+fir             net     mult_x_19/n772          mult_x_19_n772
+fir             net     mult_x_19/n770          mult_x_19_n770
+fir             net     mult_x_19/n769          mult_x_19_n769
+fir             net     mult_x_19/n768          mult_x_19_n768
+fir             net     mult_x_19/n765          mult_x_19_n765
+fir             net     mult_x_19/n763          mult_x_19_n763
+fir             net     mult_x_19/n762          mult_x_19_n762
+fir             net     mult_x_19/n761          mult_x_19_n761
+fir             net     mult_x_19/n758          mult_x_19_n758
+fir             net     mult_x_19/n757          mult_x_19_n757
+fir             net     mult_x_19/n756          mult_x_19_n756
+fir             net     mult_x_19/n755          mult_x_19_n755
+fir             net     mult_x_19/n754          mult_x_19_n754
+fir             net     mult_x_19/n752          mult_x_19_n752
+fir             net     mult_x_19/n751          mult_x_19_n751
+fir             net     mult_x_19/n750          mult_x_19_n750
+fir             net     mult_x_19/n749          mult_x_19_n749
+fir             net     mult_x_19/n748          mult_x_19_n748
+fir             net     mult_x_19/n747          mult_x_19_n747
+fir             net     mult_x_19/n746          mult_x_19_n746
+fir             net     mult_x_19/n744          mult_x_19_n744
+fir             net     mult_x_19/n743          mult_x_19_n743
+fir             net     mult_x_19/n742          mult_x_19_n742
+fir             net     mult_x_19/n741          mult_x_19_n741
+fir             net     mult_x_19/n740          mult_x_19_n740
+fir             net     mult_x_19/n739          mult_x_19_n739
+fir             net     mult_x_19/n738          mult_x_19_n738
+fir             net     mult_x_19/n736          mult_x_19_n736
+fir             net     mult_x_19/n735          mult_x_19_n735
+fir             net     mult_x_19/n734          mult_x_19_n734
+fir             net     mult_x_19/n733          mult_x_19_n733
+fir             net     mult_x_19/n732          mult_x_19_n732
+fir             net     mult_x_19/n731          mult_x_19_n731
+fir             net     mult_x_19/n730          mult_x_19_n730
+fir             net     mult_x_19/n728          mult_x_19_n728
+fir             net     mult_x_19/n725          mult_x_19_n725
+cmem            net     Q_0[15]                 Q[15]
+cmem            net     Q_0[14]                 Q[14]
+cmem            net     Q_0[13]                 Q[13]
+cmem            net     Q_0[12]                 Q[12]
+cmem            net     Q_0[11]                 Q[11]
+cmem            net     Q_0[10]                 Q[10]
+cmem            net     Q_0[9]                  Q[9]
+cmem            net     Q_0[8]                  Q[8]
+cmem            net     Q_0[7]                  Q[7]
+cmem            net     Q_0[6]                  Q[6]
+cmem            net     Q_0[5]                  Q[5]
+cmem            net     Q_0[4]                  Q[4]
+cmem            net     Q_0[3]                  Q[3]
+cmem            net     Q_0[2]                  Q[2]
+cmem            net     Q_0[1]                  Q[1]
+cmem            net     Q_0[0]                  Q[0]
+imem            cell    mem[0].imem_0           mem_0__imem_0
+imem            cell    mem[1].imem_0           mem_1__imem_0
+imem            cell    mem[2].imem_0           mem_2__imem_0
+imem            cell    mem[3].imem_0           mem_3__imem_0
+imem            cell    mem[4].imem_0           mem_4__imem_0
+imem            cell    mem[5].imem_0           mem_5__imem_0
+imem            cell    mem[6].imem_0           mem_6__imem_0
+imem            cell    mem[7].imem_0           mem_7__imem_0
+imem            cell    mem[8].imem_0           mem_8__imem_0
+imem            cell    mem[9].imem_0           mem_9__imem_0
+imem            cell    mem[10].imem_0          mem_10__imem_0
+imem            cell    mem[11].imem_0          mem_11__imem_0
+imem            cell    mem[12].imem_0          mem_12__imem_0
+imem            cell    mem[13].imem_0          mem_13__imem_0
+imem            cell    mem[14].imem_0          mem_14__imem_0
+imem            cell    mem[15].imem_0          mem_15__imem_0
+imem            cell    mem[16].imem_0          mem_16__imem_0
+imem            cell    mem[17].imem_0          mem_17__imem_0
+imem            cell    mem[18].imem_0          mem_18__imem_0
+imem            cell    mem[19].imem_0          mem_19__imem_0
+imem            cell    mem[20].imem_0          mem_20__imem_0
+imem            cell    mem[21].imem_0          mem_21__imem_0
+imem            cell    mem[22].imem_0          mem_22__imem_0
+imem            cell    mem[23].imem_0          mem_23__imem_0
+imem            cell    mem[24].imem_0          mem_24__imem_0
+imem            cell    mem[25].imem_0          mem_25__imem_0
+imem            cell    mem[26].imem_0          mem_26__imem_0
+imem            cell    mem[27].imem_0          mem_27__imem_0
+imem            cell    mem[28].imem_0          mem_28__imem_0
+imem            cell    mem[29].imem_0          mem_29__imem_0
+imem            cell    mem[30].imem_0          mem_30__imem_0
+imem            cell    mem[31].imem_0          mem_31__imem_0
+imem            cell    mem[32].imem_0          mem_32__imem_0
+imem            cell    mem[33].imem_0          mem_33__imem_0
+imem            cell    mem[34].imem_0          mem_34__imem_0
+imem            cell    mem[35].imem_0          mem_35__imem_0
+imem            cell    mem[36].imem_0          mem_36__imem_0
+imem            cell    mem[37].imem_0          mem_37__imem_0
+imem            cell    mem[38].imem_0          mem_38__imem_0
+imem            cell    mem[39].imem_0          mem_39__imem_0
+imem            cell    mem[40].imem_0          mem_40__imem_0
+imem            cell    mem[41].imem_0          mem_41__imem_0
+imem            cell    mem[42].imem_0          mem_42__imem_0
+imem            cell    mem[43].imem_0          mem_43__imem_0
+imem            cell    mem[44].imem_0          mem_44__imem_0
+imem            cell    mem[45].imem_0          mem_45__imem_0
+imem            cell    mem[46].imem_0          mem_46__imem_0
+imem            cell    mem[47].imem_0          mem_47__imem_0
+imem            cell    mem[48].imem_0          mem_48__imem_0
+imem            cell    mem[49].imem_0          mem_49__imem_0
+imem            cell    mem[50].imem_0          mem_50__imem_0
+imem            cell    mem[51].imem_0          mem_51__imem_0
+imem            cell    mem[52].imem_0          mem_52__imem_0
+imem            cell    mem[53].imem_0          mem_53__imem_0
+imem            cell    mem[54].imem_0          mem_54__imem_0
+imem            cell    mem[55].imem_0          mem_55__imem_0
+imem            cell    mem[56].imem_0          mem_56__imem_0
+imem            cell    mem[57].imem_0          mem_57__imem_0
+imem            cell    mem[58].imem_0          mem_58__imem_0
+imem            cell    mem[59].imem_0          mem_59__imem_0
+imem            cell    mem[60].imem_0          mem_60__imem_0
+imem            cell    mem[61].imem_0          mem_61__imem_0
+imem            cell    mem[62].imem_0          mem_62__imem_0
+imem            cell    mem[63].imem_0          mem_63__imem_0
+imem            cell    mux[0].mux              mux_0__mux
+imem            cell    mux[1].mux              mux_1__mux
+imem            cell    mux[2].mux              mux_2__mux
+imem            cell    mux[3].mux              mux_3__mux
+imem            net     mem[0].q_mem            mem_0__q_mem
+imem            net     mem[0].q_mem[15]        mem_0__q_mem[15]
+imem            net     mem[0].q_mem[14]        mem_0__q_mem[14]
+imem            net     mem[0].q_mem[13]        mem_0__q_mem[13]
+imem            net     mem[0].q_mem[12]        mem_0__q_mem[12]
+imem            net     mem[0].q_mem[11]        mem_0__q_mem[11]
+imem            net     mem[0].q_mem[10]        mem_0__q_mem[10]
+imem            net     mem[0].q_mem[9]         mem_0__q_mem[9]
+imem            net     mem[0].q_mem[8]         mem_0__q_mem[8]
+imem            net     mem[0].q_mem[7]         mem_0__q_mem[7]
+imem            net     mem[0].q_mem[6]         mem_0__q_mem[6]
+imem            net     mem[0].q_mem[5]         mem_0__q_mem[5]
+imem            net     mem[0].q_mem[4]         mem_0__q_mem[4]
+imem            net     mem[0].q_mem[3]         mem_0__q_mem[3]
+imem            net     mem[0].q_mem[2]         mem_0__q_mem[2]
+imem            net     mem[0].q_mem[1]         mem_0__q_mem[1]
+imem            net     mem[0].q_mem[0]         mem_0__q_mem[0]
+imem            net     mem[1].q_mem            mem_1__q_mem
+imem            net     mem[1].q_mem[15]        mem_1__q_mem[15]
+imem            net     mem[1].q_mem[14]        mem_1__q_mem[14]
+imem            net     mem[1].q_mem[13]        mem_1__q_mem[13]
+imem            net     mem[1].q_mem[12]        mem_1__q_mem[12]
+imem            net     mem[1].q_mem[11]        mem_1__q_mem[11]
+imem            net     mem[1].q_mem[10]        mem_1__q_mem[10]
+imem            net     mem[1].q_mem[9]         mem_1__q_mem[9]
+imem            net     mem[1].q_mem[8]         mem_1__q_mem[8]
+imem            net     mem[1].q_mem[7]         mem_1__q_mem[7]
+imem            net     mem[1].q_mem[6]         mem_1__q_mem[6]
+imem            net     mem[1].q_mem[5]         mem_1__q_mem[5]
+imem            net     mem[1].q_mem[4]         mem_1__q_mem[4]
+imem            net     mem[1].q_mem[3]         mem_1__q_mem[3]
+imem            net     mem[1].q_mem[2]         mem_1__q_mem[2]
+imem            net     mem[1].q_mem[1]         mem_1__q_mem[1]
+imem            net     mem[1].q_mem[0]         mem_1__q_mem[0]
+imem            net     mem[2].q_mem            mem_2__q_mem
+imem            net     mem[2].q_mem[15]        mem_2__q_mem[15]
+imem            net     mem[2].q_mem[14]        mem_2__q_mem[14]
+imem            net     mem[2].q_mem[13]        mem_2__q_mem[13]
+imem            net     mem[2].q_mem[12]        mem_2__q_mem[12]
+imem            net     mem[2].q_mem[11]        mem_2__q_mem[11]
+imem            net     mem[2].q_mem[10]        mem_2__q_mem[10]
+imem            net     mem[2].q_mem[9]         mem_2__q_mem[9]
+imem            net     mem[2].q_mem[8]         mem_2__q_mem[8]
+imem            net     mem[2].q_mem[7]         mem_2__q_mem[7]
+imem            net     mem[2].q_mem[6]         mem_2__q_mem[6]
+imem            net     mem[2].q_mem[5]         mem_2__q_mem[5]
+imem            net     mem[2].q_mem[4]         mem_2__q_mem[4]
+imem            net     mem[2].q_mem[3]         mem_2__q_mem[3]
+imem            net     mem[2].q_mem[2]         mem_2__q_mem[2]
+imem            net     mem[2].q_mem[1]         mem_2__q_mem[1]
+imem            net     mem[2].q_mem[0]         mem_2__q_mem[0]
+imem            net     mem[3].q_mem            mem_3__q_mem
+imem            net     mem[3].q_mem[15]        mem_3__q_mem[15]
+imem            net     mem[3].q_mem[14]        mem_3__q_mem[14]
+imem            net     mem[3].q_mem[13]        mem_3__q_mem[13]
+imem            net     mem[3].q_mem[12]        mem_3__q_mem[12]
+imem            net     mem[3].q_mem[11]        mem_3__q_mem[11]
+imem            net     mem[3].q_mem[10]        mem_3__q_mem[10]
+imem            net     mem[3].q_mem[9]         mem_3__q_mem[9]
+imem            net     mem[3].q_mem[8]         mem_3__q_mem[8]
+imem            net     mem[3].q_mem[7]         mem_3__q_mem[7]
+imem            net     mem[3].q_mem[6]         mem_3__q_mem[6]
+imem            net     mem[3].q_mem[5]         mem_3__q_mem[5]
+imem            net     mem[3].q_mem[4]         mem_3__q_mem[4]
+imem            net     mem[3].q_mem[3]         mem_3__q_mem[3]
+imem            net     mem[3].q_mem[2]         mem_3__q_mem[2]
+imem            net     mem[3].q_mem[1]         mem_3__q_mem[1]
+imem            net     mem[3].q_mem[0]         mem_3__q_mem[0]
+imem            net     mem[4].q_mem            mem_4__q_mem
+imem            net     mem[4].q_mem[15]        mem_4__q_mem[15]
+imem            net     mem[4].q_mem[14]        mem_4__q_mem[14]
+imem            net     mem[4].q_mem[13]        mem_4__q_mem[13]
+imem            net     mem[4].q_mem[12]        mem_4__q_mem[12]
+imem            net     mem[4].q_mem[11]        mem_4__q_mem[11]
+imem            net     mem[4].q_mem[10]        mem_4__q_mem[10]
+imem            net     mem[4].q_mem[9]         mem_4__q_mem[9]
+imem            net     mem[4].q_mem[8]         mem_4__q_mem[8]
+imem            net     mem[4].q_mem[7]         mem_4__q_mem[7]
+imem            net     mem[4].q_mem[6]         mem_4__q_mem[6]
+imem            net     mem[4].q_mem[5]         mem_4__q_mem[5]
+imem            net     mem[4].q_mem[4]         mem_4__q_mem[4]
+imem            net     mem[4].q_mem[3]         mem_4__q_mem[3]
+imem            net     mem[4].q_mem[2]         mem_4__q_mem[2]
+imem            net     mem[4].q_mem[1]         mem_4__q_mem[1]
+imem            net     mem[4].q_mem[0]         mem_4__q_mem[0]
+imem            net     mem[5].q_mem            mem_5__q_mem
+imem            net     mem[5].q_mem[15]        mem_5__q_mem[15]
+imem            net     mem[5].q_mem[14]        mem_5__q_mem[14]
+imem            net     mem[5].q_mem[13]        mem_5__q_mem[13]
+imem            net     mem[5].q_mem[12]        mem_5__q_mem[12]
+imem            net     mem[5].q_mem[11]        mem_5__q_mem[11]
+imem            net     mem[5].q_mem[10]        mem_5__q_mem[10]
+imem            net     mem[5].q_mem[9]         mem_5__q_mem[9]
+imem            net     mem[5].q_mem[8]         mem_5__q_mem[8]
+imem            net     mem[5].q_mem[7]         mem_5__q_mem[7]
+imem            net     mem[5].q_mem[6]         mem_5__q_mem[6]
+imem            net     mem[5].q_mem[5]         mem_5__q_mem[5]
+imem            net     mem[5].q_mem[4]         mem_5__q_mem[4]
+imem            net     mem[5].q_mem[3]         mem_5__q_mem[3]
+imem            net     mem[5].q_mem[2]         mem_5__q_mem[2]
+imem            net     mem[5].q_mem[1]         mem_5__q_mem[1]
+imem            net     mem[5].q_mem[0]         mem_5__q_mem[0]
+imem            net     mem[6].q_mem            mem_6__q_mem
+imem            net     mem[6].q_mem[15]        mem_6__q_mem[15]
+imem            net     mem[6].q_mem[14]        mem_6__q_mem[14]
+imem            net     mem[6].q_mem[13]        mem_6__q_mem[13]
+imem            net     mem[6].q_mem[12]        mem_6__q_mem[12]
+imem            net     mem[6].q_mem[11]        mem_6__q_mem[11]
+imem            net     mem[6].q_mem[10]        mem_6__q_mem[10]
+imem            net     mem[6].q_mem[9]         mem_6__q_mem[9]
+imem            net     mem[6].q_mem[8]         mem_6__q_mem[8]
+imem            net     mem[6].q_mem[7]         mem_6__q_mem[7]
+imem            net     mem[6].q_mem[6]         mem_6__q_mem[6]
+imem            net     mem[6].q_mem[5]         mem_6__q_mem[5]
+imem            net     mem[6].q_mem[4]         mem_6__q_mem[4]
+imem            net     mem[6].q_mem[3]         mem_6__q_mem[3]
+imem            net     mem[6].q_mem[2]         mem_6__q_mem[2]
+imem            net     mem[6].q_mem[1]         mem_6__q_mem[1]
+imem            net     mem[6].q_mem[0]         mem_6__q_mem[0]
+imem            net     mem[7].q_mem            mem_7__q_mem
+imem            net     mem[7].q_mem[15]        mem_7__q_mem[15]
+imem            net     mem[7].q_mem[14]        mem_7__q_mem[14]
+imem            net     mem[7].q_mem[13]        mem_7__q_mem[13]
+imem            net     mem[7].q_mem[12]        mem_7__q_mem[12]
+imem            net     mem[7].q_mem[11]        mem_7__q_mem[11]
+imem            net     mem[7].q_mem[10]        mem_7__q_mem[10]
+imem            net     mem[7].q_mem[9]         mem_7__q_mem[9]
+imem            net     mem[7].q_mem[8]         mem_7__q_mem[8]
+imem            net     mem[7].q_mem[7]         mem_7__q_mem[7]
+imem            net     mem[7].q_mem[6]         mem_7__q_mem[6]
+imem            net     mem[7].q_mem[5]         mem_7__q_mem[5]
+imem            net     mem[7].q_mem[4]         mem_7__q_mem[4]
+imem            net     mem[7].q_mem[3]         mem_7__q_mem[3]
+imem            net     mem[7].q_mem[2]         mem_7__q_mem[2]
+imem            net     mem[7].q_mem[1]         mem_7__q_mem[1]
+imem            net     mem[7].q_mem[0]         mem_7__q_mem[0]
+imem            net     mem[8].q_mem            mem_8__q_mem
+imem            net     mem[8].q_mem[15]        mem_8__q_mem[15]
+imem            net     mem[8].q_mem[14]        mem_8__q_mem[14]
+imem            net     mem[8].q_mem[13]        mem_8__q_mem[13]
+imem            net     mem[8].q_mem[12]        mem_8__q_mem[12]
+imem            net     mem[8].q_mem[11]        mem_8__q_mem[11]
+imem            net     mem[8].q_mem[10]        mem_8__q_mem[10]
+imem            net     mem[8].q_mem[9]         mem_8__q_mem[9]
+imem            net     mem[8].q_mem[8]         mem_8__q_mem[8]
+imem            net     mem[8].q_mem[7]         mem_8__q_mem[7]
+imem            net     mem[8].q_mem[6]         mem_8__q_mem[6]
+imem            net     mem[8].q_mem[5]         mem_8__q_mem[5]
+imem            net     mem[8].q_mem[4]         mem_8__q_mem[4]
+imem            net     mem[8].q_mem[3]         mem_8__q_mem[3]
+imem            net     mem[8].q_mem[2]         mem_8__q_mem[2]
+imem            net     mem[8].q_mem[1]         mem_8__q_mem[1]
+imem            net     mem[8].q_mem[0]         mem_8__q_mem[0]
+imem            net     mem[9].q_mem            mem_9__q_mem
+imem            net     mem[9].q_mem[15]        mem_9__q_mem[15]
+imem            net     mem[9].q_mem[14]        mem_9__q_mem[14]
+imem            net     mem[9].q_mem[13]        mem_9__q_mem[13]
+imem            net     mem[9].q_mem[12]        mem_9__q_mem[12]
+imem            net     mem[9].q_mem[11]        mem_9__q_mem[11]
+imem            net     mem[9].q_mem[10]        mem_9__q_mem[10]
+imem            net     mem[9].q_mem[9]         mem_9__q_mem[9]
+imem            net     mem[9].q_mem[8]         mem_9__q_mem[8]
+imem            net     mem[9].q_mem[7]         mem_9__q_mem[7]
+imem            net     mem[9].q_mem[6]         mem_9__q_mem[6]
+imem            net     mem[9].q_mem[5]         mem_9__q_mem[5]
+imem            net     mem[9].q_mem[4]         mem_9__q_mem[4]
+imem            net     mem[9].q_mem[3]         mem_9__q_mem[3]
+imem            net     mem[9].q_mem[2]         mem_9__q_mem[2]
+imem            net     mem[9].q_mem[1]         mem_9__q_mem[1]
+imem            net     mem[9].q_mem[0]         mem_9__q_mem[0]
+imem            net     mem[10].q_mem           mem_10__q_mem
+imem            net     mem[10].q_mem[15]       mem_10__q_mem[15]
+imem            net     mem[10].q_mem[14]       mem_10__q_mem[14]
+imem            net     mem[10].q_mem[13]       mem_10__q_mem[13]
+imem            net     mem[10].q_mem[12]       mem_10__q_mem[12]
+imem            net     mem[10].q_mem[11]       mem_10__q_mem[11]
+imem            net     mem[10].q_mem[10]       mem_10__q_mem[10]
+imem            net     mem[10].q_mem[9]        mem_10__q_mem[9]
+imem            net     mem[10].q_mem[8]        mem_10__q_mem[8]
+imem            net     mem[10].q_mem[7]        mem_10__q_mem[7]
+imem            net     mem[10].q_mem[6]        mem_10__q_mem[6]
+imem            net     mem[10].q_mem[5]        mem_10__q_mem[5]
+imem            net     mem[10].q_mem[4]        mem_10__q_mem[4]
+imem            net     mem[10].q_mem[3]        mem_10__q_mem[3]
+imem            net     mem[10].q_mem[2]        mem_10__q_mem[2]
+imem            net     mem[10].q_mem[1]        mem_10__q_mem[1]
+imem            net     mem[10].q_mem[0]        mem_10__q_mem[0]
+imem            net     mem[11].q_mem           mem_11__q_mem
+imem            net     mem[11].q_mem[15]       mem_11__q_mem[15]
+imem            net     mem[11].q_mem[14]       mem_11__q_mem[14]
+imem            net     mem[11].q_mem[13]       mem_11__q_mem[13]
+imem            net     mem[11].q_mem[12]       mem_11__q_mem[12]
+imem            net     mem[11].q_mem[11]       mem_11__q_mem[11]
+imem            net     mem[11].q_mem[10]       mem_11__q_mem[10]
+imem            net     mem[11].q_mem[9]        mem_11__q_mem[9]
+imem            net     mem[11].q_mem[8]        mem_11__q_mem[8]
+imem            net     mem[11].q_mem[7]        mem_11__q_mem[7]
+imem            net     mem[11].q_mem[6]        mem_11__q_mem[6]
+imem            net     mem[11].q_mem[5]        mem_11__q_mem[5]
+imem            net     mem[11].q_mem[4]        mem_11__q_mem[4]
+imem            net     mem[11].q_mem[3]        mem_11__q_mem[3]
+imem            net     mem[11].q_mem[2]        mem_11__q_mem[2]
+imem            net     mem[11].q_mem[1]        mem_11__q_mem[1]
+imem            net     mem[11].q_mem[0]        mem_11__q_mem[0]
+imem            net     mem[12].q_mem           mem_12__q_mem
+imem            net     mem[12].q_mem[15]       mem_12__q_mem[15]
+imem            net     mem[12].q_mem[14]       mem_12__q_mem[14]
+imem            net     mem[12].q_mem[13]       mem_12__q_mem[13]
+imem            net     mem[12].q_mem[12]       mem_12__q_mem[12]
+imem            net     mem[12].q_mem[11]       mem_12__q_mem[11]
+imem            net     mem[12].q_mem[10]       mem_12__q_mem[10]
+imem            net     mem[12].q_mem[9]        mem_12__q_mem[9]
+imem            net     mem[12].q_mem[8]        mem_12__q_mem[8]
+imem            net     mem[12].q_mem[7]        mem_12__q_mem[7]
+imem            net     mem[12].q_mem[6]        mem_12__q_mem[6]
+imem            net     mem[12].q_mem[5]        mem_12__q_mem[5]
+imem            net     mem[12].q_mem[4]        mem_12__q_mem[4]
+imem            net     mem[12].q_mem[3]        mem_12__q_mem[3]
+imem            net     mem[12].q_mem[2]        mem_12__q_mem[2]
+imem            net     mem[12].q_mem[1]        mem_12__q_mem[1]
+imem            net     mem[12].q_mem[0]        mem_12__q_mem[0]
+imem            net     mem[13].q_mem           mem_13__q_mem
+imem            net     mem[13].q_mem[15]       mem_13__q_mem[15]
+imem            net     mem[13].q_mem[14]       mem_13__q_mem[14]
+imem            net     mem[13].q_mem[13]       mem_13__q_mem[13]
+imem            net     mem[13].q_mem[12]       mem_13__q_mem[12]
+imem            net     mem[13].q_mem[11]       mem_13__q_mem[11]
+imem            net     mem[13].q_mem[10]       mem_13__q_mem[10]
+imem            net     mem[13].q_mem[9]        mem_13__q_mem[9]
+imem            net     mem[13].q_mem[8]        mem_13__q_mem[8]
+imem            net     mem[13].q_mem[7]        mem_13__q_mem[7]
+imem            net     mem[13].q_mem[6]        mem_13__q_mem[6]
+imem            net     mem[13].q_mem[5]        mem_13__q_mem[5]
+imem            net     mem[13].q_mem[4]        mem_13__q_mem[4]
+imem            net     mem[13].q_mem[3]        mem_13__q_mem[3]
+imem            net     mem[13].q_mem[2]        mem_13__q_mem[2]
+imem            net     mem[13].q_mem[1]        mem_13__q_mem[1]
+imem            net     mem[13].q_mem[0]        mem_13__q_mem[0]
+imem            net     mem[14].q_mem           mem_14__q_mem
+imem            net     mem[14].q_mem[15]       mem_14__q_mem[15]
+imem            net     mem[14].q_mem[14]       mem_14__q_mem[14]
+imem            net     mem[14].q_mem[13]       mem_14__q_mem[13]
+imem            net     mem[14].q_mem[12]       mem_14__q_mem[12]
+imem            net     mem[14].q_mem[11]       mem_14__q_mem[11]
+imem            net     mem[14].q_mem[10]       mem_14__q_mem[10]
+imem            net     mem[14].q_mem[9]        mem_14__q_mem[9]
+imem            net     mem[14].q_mem[8]        mem_14__q_mem[8]
+imem            net     mem[14].q_mem[7]        mem_14__q_mem[7]
+imem            net     mem[14].q_mem[6]        mem_14__q_mem[6]
+imem            net     mem[14].q_mem[5]        mem_14__q_mem[5]
+imem            net     mem[14].q_mem[4]        mem_14__q_mem[4]
+imem            net     mem[14].q_mem[3]        mem_14__q_mem[3]
+imem            net     mem[14].q_mem[2]        mem_14__q_mem[2]
+imem            net     mem[14].q_mem[1]        mem_14__q_mem[1]
+imem            net     mem[14].q_mem[0]        mem_14__q_mem[0]
+imem            net     mem[15].q_mem           mem_15__q_mem
+imem            net     mem[15].q_mem[15]       mem_15__q_mem[15]
+imem            net     mem[15].q_mem[14]       mem_15__q_mem[14]
+imem            net     mem[15].q_mem[13]       mem_15__q_mem[13]
+imem            net     mem[15].q_mem[12]       mem_15__q_mem[12]
+imem            net     mem[15].q_mem[11]       mem_15__q_mem[11]
+imem            net     mem[15].q_mem[10]       mem_15__q_mem[10]
+imem            net     mem[15].q_mem[9]        mem_15__q_mem[9]
+imem            net     mem[15].q_mem[8]        mem_15__q_mem[8]
+imem            net     mem[15].q_mem[7]        mem_15__q_mem[7]
+imem            net     mem[15].q_mem[6]        mem_15__q_mem[6]
+imem            net     mem[15].q_mem[5]        mem_15__q_mem[5]
+imem            net     mem[15].q_mem[4]        mem_15__q_mem[4]
+imem            net     mem[15].q_mem[3]        mem_15__q_mem[3]
+imem            net     mem[15].q_mem[2]        mem_15__q_mem[2]
+imem            net     mem[15].q_mem[1]        mem_15__q_mem[1]
+imem            net     mem[15].q_mem[0]        mem_15__q_mem[0]
+imem            net     mem[16].q_mem           mem_16__q_mem
+imem            net     mem[16].q_mem[15]       mem_16__q_mem[15]
+imem            net     mem[16].q_mem[14]       mem_16__q_mem[14]
+imem            net     mem[16].q_mem[13]       mem_16__q_mem[13]
+imem            net     mem[16].q_mem[12]       mem_16__q_mem[12]
+imem            net     mem[16].q_mem[11]       mem_16__q_mem[11]
+imem            net     mem[16].q_mem[10]       mem_16__q_mem[10]
+imem            net     mem[16].q_mem[9]        mem_16__q_mem[9]
+imem            net     mem[16].q_mem[8]        mem_16__q_mem[8]
+imem            net     mem[16].q_mem[7]        mem_16__q_mem[7]
+imem            net     mem[16].q_mem[6]        mem_16__q_mem[6]
+imem            net     mem[16].q_mem[5]        mem_16__q_mem[5]
+imem            net     mem[16].q_mem[4]        mem_16__q_mem[4]
+imem            net     mem[16].q_mem[3]        mem_16__q_mem[3]
+imem            net     mem[16].q_mem[2]        mem_16__q_mem[2]
+imem            net     mem[16].q_mem[1]        mem_16__q_mem[1]
+imem            net     mem[16].q_mem[0]        mem_16__q_mem[0]
+imem            net     mem[17].q_mem           mem_17__q_mem
+imem            net     mem[17].q_mem[15]       mem_17__q_mem[15]
+imem            net     mem[17].q_mem[14]       mem_17__q_mem[14]
+imem            net     mem[17].q_mem[13]       mem_17__q_mem[13]
+imem            net     mem[17].q_mem[12]       mem_17__q_mem[12]
+imem            net     mem[17].q_mem[11]       mem_17__q_mem[11]
+imem            net     mem[17].q_mem[10]       mem_17__q_mem[10]
+imem            net     mem[17].q_mem[9]        mem_17__q_mem[9]
+imem            net     mem[17].q_mem[8]        mem_17__q_mem[8]
+imem            net     mem[17].q_mem[7]        mem_17__q_mem[7]
+imem            net     mem[17].q_mem[6]        mem_17__q_mem[6]
+imem            net     mem[17].q_mem[5]        mem_17__q_mem[5]
+imem            net     mem[17].q_mem[4]        mem_17__q_mem[4]
+imem            net     mem[17].q_mem[3]        mem_17__q_mem[3]
+imem            net     mem[17].q_mem[2]        mem_17__q_mem[2]
+imem            net     mem[17].q_mem[1]        mem_17__q_mem[1]
+imem            net     mem[17].q_mem[0]        mem_17__q_mem[0]
+imem            net     mem[18].q_mem           mem_18__q_mem
+imem            net     mem[18].q_mem[15]       mem_18__q_mem[15]
+imem            net     mem[18].q_mem[14]       mem_18__q_mem[14]
+imem            net     mem[18].q_mem[13]       mem_18__q_mem[13]
+imem            net     mem[18].q_mem[12]       mem_18__q_mem[12]
+imem            net     mem[18].q_mem[11]       mem_18__q_mem[11]
+imem            net     mem[18].q_mem[10]       mem_18__q_mem[10]
+imem            net     mem[18].q_mem[9]        mem_18__q_mem[9]
+imem            net     mem[18].q_mem[8]        mem_18__q_mem[8]
+imem            net     mem[18].q_mem[7]        mem_18__q_mem[7]
+imem            net     mem[18].q_mem[6]        mem_18__q_mem[6]
+imem            net     mem[18].q_mem[5]        mem_18__q_mem[5]
+imem            net     mem[18].q_mem[4]        mem_18__q_mem[4]
+imem            net     mem[18].q_mem[3]        mem_18__q_mem[3]
+imem            net     mem[18].q_mem[2]        mem_18__q_mem[2]
+imem            net     mem[18].q_mem[1]        mem_18__q_mem[1]
+imem            net     mem[18].q_mem[0]        mem_18__q_mem[0]
+imem            net     mem[19].q_mem           mem_19__q_mem
+imem            net     mem[19].q_mem[15]       mem_19__q_mem[15]
+imem            net     mem[19].q_mem[14]       mem_19__q_mem[14]
+imem            net     mem[19].q_mem[13]       mem_19__q_mem[13]
+imem            net     mem[19].q_mem[12]       mem_19__q_mem[12]
+imem            net     mem[19].q_mem[11]       mem_19__q_mem[11]
+imem            net     mem[19].q_mem[10]       mem_19__q_mem[10]
+imem            net     mem[19].q_mem[9]        mem_19__q_mem[9]
+imem            net     mem[19].q_mem[8]        mem_19__q_mem[8]
+imem            net     mem[19].q_mem[7]        mem_19__q_mem[7]
+imem            net     mem[19].q_mem[6]        mem_19__q_mem[6]
+imem            net     mem[19].q_mem[5]        mem_19__q_mem[5]
+imem            net     mem[19].q_mem[4]        mem_19__q_mem[4]
+imem            net     mem[19].q_mem[3]        mem_19__q_mem[3]
+imem            net     mem[19].q_mem[2]        mem_19__q_mem[2]
+imem            net     mem[19].q_mem[1]        mem_19__q_mem[1]
+imem            net     mem[19].q_mem[0]        mem_19__q_mem[0]
+imem            net     mem[20].q_mem           mem_20__q_mem
+imem            net     mem[20].q_mem[15]       mem_20__q_mem[15]
+imem            net     mem[20].q_mem[14]       mem_20__q_mem[14]
+imem            net     mem[20].q_mem[13]       mem_20__q_mem[13]
+imem            net     mem[20].q_mem[12]       mem_20__q_mem[12]
+imem            net     mem[20].q_mem[11]       mem_20__q_mem[11]
+imem            net     mem[20].q_mem[10]       mem_20__q_mem[10]
+imem            net     mem[20].q_mem[9]        mem_20__q_mem[9]
+imem            net     mem[20].q_mem[8]        mem_20__q_mem[8]
+imem            net     mem[20].q_mem[7]        mem_20__q_mem[7]
+imem            net     mem[20].q_mem[6]        mem_20__q_mem[6]
+imem            net     mem[20].q_mem[5]        mem_20__q_mem[5]
+imem            net     mem[20].q_mem[4]        mem_20__q_mem[4]
+imem            net     mem[20].q_mem[3]        mem_20__q_mem[3]
+imem            net     mem[20].q_mem[2]        mem_20__q_mem[2]
+imem            net     mem[20].q_mem[1]        mem_20__q_mem[1]
+imem            net     mem[20].q_mem[0]        mem_20__q_mem[0]
+imem            net     mem[21].q_mem           mem_21__q_mem
+imem            net     mem[21].q_mem[15]       mem_21__q_mem[15]
+imem            net     mem[21].q_mem[14]       mem_21__q_mem[14]
+imem            net     mem[21].q_mem[13]       mem_21__q_mem[13]
+imem            net     mem[21].q_mem[12]       mem_21__q_mem[12]
+imem            net     mem[21].q_mem[11]       mem_21__q_mem[11]
+imem            net     mem[21].q_mem[10]       mem_21__q_mem[10]
+imem            net     mem[21].q_mem[9]        mem_21__q_mem[9]
+imem            net     mem[21].q_mem[8]        mem_21__q_mem[8]
+imem            net     mem[21].q_mem[7]        mem_21__q_mem[7]
+imem            net     mem[21].q_mem[6]        mem_21__q_mem[6]
+imem            net     mem[21].q_mem[5]        mem_21__q_mem[5]
+imem            net     mem[21].q_mem[4]        mem_21__q_mem[4]
+imem            net     mem[21].q_mem[3]        mem_21__q_mem[3]
+imem            net     mem[21].q_mem[2]        mem_21__q_mem[2]
+imem            net     mem[21].q_mem[1]        mem_21__q_mem[1]
+imem            net     mem[21].q_mem[0]        mem_21__q_mem[0]
+imem            net     mem[22].q_mem           mem_22__q_mem
+imem            net     mem[22].q_mem[15]       mem_22__q_mem[15]
+imem            net     mem[22].q_mem[14]       mem_22__q_mem[14]
+imem            net     mem[22].q_mem[13]       mem_22__q_mem[13]
+imem            net     mem[22].q_mem[12]       mem_22__q_mem[12]
+imem            net     mem[22].q_mem[11]       mem_22__q_mem[11]
+imem            net     mem[22].q_mem[10]       mem_22__q_mem[10]
+imem            net     mem[22].q_mem[9]        mem_22__q_mem[9]
+imem            net     mem[22].q_mem[8]        mem_22__q_mem[8]
+imem            net     mem[22].q_mem[7]        mem_22__q_mem[7]
+imem            net     mem[22].q_mem[6]        mem_22__q_mem[6]
+imem            net     mem[22].q_mem[5]        mem_22__q_mem[5]
+imem            net     mem[22].q_mem[4]        mem_22__q_mem[4]
+imem            net     mem[22].q_mem[3]        mem_22__q_mem[3]
+imem            net     mem[22].q_mem[2]        mem_22__q_mem[2]
+imem            net     mem[22].q_mem[1]        mem_22__q_mem[1]
+imem            net     mem[22].q_mem[0]        mem_22__q_mem[0]
+imem            net     mem[23].q_mem           mem_23__q_mem
+imem            net     mem[23].q_mem[15]       mem_23__q_mem[15]
+imem            net     mem[23].q_mem[14]       mem_23__q_mem[14]
+imem            net     mem[23].q_mem[13]       mem_23__q_mem[13]
+imem            net     mem[23].q_mem[12]       mem_23__q_mem[12]
+imem            net     mem[23].q_mem[11]       mem_23__q_mem[11]
+imem            net     mem[23].q_mem[10]       mem_23__q_mem[10]
+imem            net     mem[23].q_mem[9]        mem_23__q_mem[9]
+imem            net     mem[23].q_mem[8]        mem_23__q_mem[8]
+imem            net     mem[23].q_mem[7]        mem_23__q_mem[7]
+imem            net     mem[23].q_mem[6]        mem_23__q_mem[6]
+imem            net     mem[23].q_mem[5]        mem_23__q_mem[5]
+imem            net     mem[23].q_mem[4]        mem_23__q_mem[4]
+imem            net     mem[23].q_mem[3]        mem_23__q_mem[3]
+imem            net     mem[23].q_mem[2]        mem_23__q_mem[2]
+imem            net     mem[23].q_mem[1]        mem_23__q_mem[1]
+imem            net     mem[23].q_mem[0]        mem_23__q_mem[0]
+imem            net     mem[24].q_mem           mem_24__q_mem
+imem            net     mem[24].q_mem[15]       mem_24__q_mem[15]
+imem            net     mem[24].q_mem[14]       mem_24__q_mem[14]
+imem            net     mem[24].q_mem[13]       mem_24__q_mem[13]
+imem            net     mem[24].q_mem[12]       mem_24__q_mem[12]
+imem            net     mem[24].q_mem[11]       mem_24__q_mem[11]
+imem            net     mem[24].q_mem[10]       mem_24__q_mem[10]
+imem            net     mem[24].q_mem[9]        mem_24__q_mem[9]
+imem            net     mem[24].q_mem[8]        mem_24__q_mem[8]
+imem            net     mem[24].q_mem[7]        mem_24__q_mem[7]
+imem            net     mem[24].q_mem[6]        mem_24__q_mem[6]
+imem            net     mem[24].q_mem[5]        mem_24__q_mem[5]
+imem            net     mem[24].q_mem[4]        mem_24__q_mem[4]
+imem            net     mem[24].q_mem[3]        mem_24__q_mem[3]
+imem            net     mem[24].q_mem[2]        mem_24__q_mem[2]
+imem            net     mem[24].q_mem[1]        mem_24__q_mem[1]
+imem            net     mem[24].q_mem[0]        mem_24__q_mem[0]
+imem            net     mem[25].q_mem           mem_25__q_mem
+imem            net     mem[25].q_mem[15]       mem_25__q_mem[15]
+imem            net     mem[25].q_mem[14]       mem_25__q_mem[14]
+imem            net     mem[25].q_mem[13]       mem_25__q_mem[13]
+imem            net     mem[25].q_mem[12]       mem_25__q_mem[12]
+imem            net     mem[25].q_mem[11]       mem_25__q_mem[11]
+imem            net     mem[25].q_mem[10]       mem_25__q_mem[10]
+imem            net     mem[25].q_mem[9]        mem_25__q_mem[9]
+imem            net     mem[25].q_mem[8]        mem_25__q_mem[8]
+imem            net     mem[25].q_mem[7]        mem_25__q_mem[7]
+imem            net     mem[25].q_mem[6]        mem_25__q_mem[6]
+imem            net     mem[25].q_mem[5]        mem_25__q_mem[5]
+imem            net     mem[25].q_mem[4]        mem_25__q_mem[4]
+imem            net     mem[25].q_mem[3]        mem_25__q_mem[3]
+imem            net     mem[25].q_mem[2]        mem_25__q_mem[2]
+imem            net     mem[25].q_mem[1]        mem_25__q_mem[1]
+imem            net     mem[25].q_mem[0]        mem_25__q_mem[0]
+imem            net     mem[26].q_mem           mem_26__q_mem
+imem            net     mem[26].q_mem[15]       mem_26__q_mem[15]
+imem            net     mem[26].q_mem[14]       mem_26__q_mem[14]
+imem            net     mem[26].q_mem[13]       mem_26__q_mem[13]
+imem            net     mem[26].q_mem[12]       mem_26__q_mem[12]
+imem            net     mem[26].q_mem[11]       mem_26__q_mem[11]
+imem            net     mem[26].q_mem[10]       mem_26__q_mem[10]
+imem            net     mem[26].q_mem[9]        mem_26__q_mem[9]
+imem            net     mem[26].q_mem[8]        mem_26__q_mem[8]
+imem            net     mem[26].q_mem[7]        mem_26__q_mem[7]
+imem            net     mem[26].q_mem[6]        mem_26__q_mem[6]
+imem            net     mem[26].q_mem[5]        mem_26__q_mem[5]
+imem            net     mem[26].q_mem[4]        mem_26__q_mem[4]
+imem            net     mem[26].q_mem[3]        mem_26__q_mem[3]
+imem            net     mem[26].q_mem[2]        mem_26__q_mem[2]
+imem            net     mem[26].q_mem[1]        mem_26__q_mem[1]
+imem            net     mem[26].q_mem[0]        mem_26__q_mem[0]
+imem            net     mem[27].q_mem           mem_27__q_mem
+imem            net     mem[27].q_mem[15]       mem_27__q_mem[15]
+imem            net     mem[27].q_mem[14]       mem_27__q_mem[14]
+imem            net     mem[27].q_mem[13]       mem_27__q_mem[13]
+imem            net     mem[27].q_mem[12]       mem_27__q_mem[12]
+imem            net     mem[27].q_mem[11]       mem_27__q_mem[11]
+imem            net     mem[27].q_mem[10]       mem_27__q_mem[10]
+imem            net     mem[27].q_mem[9]        mem_27__q_mem[9]
+imem            net     mem[27].q_mem[8]        mem_27__q_mem[8]
+imem            net     mem[27].q_mem[7]        mem_27__q_mem[7]
+imem            net     mem[27].q_mem[6]        mem_27__q_mem[6]
+imem            net     mem[27].q_mem[5]        mem_27__q_mem[5]
+imem            net     mem[27].q_mem[4]        mem_27__q_mem[4]
+imem            net     mem[27].q_mem[3]        mem_27__q_mem[3]
+imem            net     mem[27].q_mem[2]        mem_27__q_mem[2]
+imem            net     mem[27].q_mem[1]        mem_27__q_mem[1]
+imem            net     mem[27].q_mem[0]        mem_27__q_mem[0]
+imem            net     mem[28].q_mem           mem_28__q_mem
+imem            net     mem[28].q_mem[15]       mem_28__q_mem[15]
+imem            net     mem[28].q_mem[14]       mem_28__q_mem[14]
+imem            net     mem[28].q_mem[13]       mem_28__q_mem[13]
+imem            net     mem[28].q_mem[12]       mem_28__q_mem[12]
+imem            net     mem[28].q_mem[11]       mem_28__q_mem[11]
+imem            net     mem[28].q_mem[10]       mem_28__q_mem[10]
+imem            net     mem[28].q_mem[9]        mem_28__q_mem[9]
+imem            net     mem[28].q_mem[8]        mem_28__q_mem[8]
+imem            net     mem[28].q_mem[7]        mem_28__q_mem[7]
+imem            net     mem[28].q_mem[6]        mem_28__q_mem[6]
+imem            net     mem[28].q_mem[5]        mem_28__q_mem[5]
+imem            net     mem[28].q_mem[4]        mem_28__q_mem[4]
+imem            net     mem[28].q_mem[3]        mem_28__q_mem[3]
+imem            net     mem[28].q_mem[2]        mem_28__q_mem[2]
+imem            net     mem[28].q_mem[1]        mem_28__q_mem[1]
+imem            net     mem[28].q_mem[0]        mem_28__q_mem[0]
+imem            net     mem[29].q_mem           mem_29__q_mem
+imem            net     mem[29].q_mem[15]       mem_29__q_mem[15]
+imem            net     mem[29].q_mem[14]       mem_29__q_mem[14]
+imem            net     mem[29].q_mem[13]       mem_29__q_mem[13]
+imem            net     mem[29].q_mem[12]       mem_29__q_mem[12]
+imem            net     mem[29].q_mem[11]       mem_29__q_mem[11]
+imem            net     mem[29].q_mem[10]       mem_29__q_mem[10]
+imem            net     mem[29].q_mem[9]        mem_29__q_mem[9]
+imem            net     mem[29].q_mem[8]        mem_29__q_mem[8]
+imem            net     mem[29].q_mem[7]        mem_29__q_mem[7]
+imem            net     mem[29].q_mem[6]        mem_29__q_mem[6]
+imem            net     mem[29].q_mem[5]        mem_29__q_mem[5]
+imem            net     mem[29].q_mem[4]        mem_29__q_mem[4]
+imem            net     mem[29].q_mem[3]        mem_29__q_mem[3]
+imem            net     mem[29].q_mem[2]        mem_29__q_mem[2]
+imem            net     mem[29].q_mem[1]        mem_29__q_mem[1]
+imem            net     mem[29].q_mem[0]        mem_29__q_mem[0]
+imem            net     mem[30].q_mem           mem_30__q_mem
+imem            net     mem[30].q_mem[15]       mem_30__q_mem[15]
+imem            net     mem[30].q_mem[14]       mem_30__q_mem[14]
+imem            net     mem[30].q_mem[13]       mem_30__q_mem[13]
+imem            net     mem[30].q_mem[12]       mem_30__q_mem[12]
+imem            net     mem[30].q_mem[11]       mem_30__q_mem[11]
+imem            net     mem[30].q_mem[10]       mem_30__q_mem[10]
+imem            net     mem[30].q_mem[9]        mem_30__q_mem[9]
+imem            net     mem[30].q_mem[8]        mem_30__q_mem[8]
+imem            net     mem[30].q_mem[7]        mem_30__q_mem[7]
+imem            net     mem[30].q_mem[6]        mem_30__q_mem[6]
+imem            net     mem[30].q_mem[5]        mem_30__q_mem[5]
+imem            net     mem[30].q_mem[4]        mem_30__q_mem[4]
+imem            net     mem[30].q_mem[3]        mem_30__q_mem[3]
+imem            net     mem[30].q_mem[2]        mem_30__q_mem[2]
+imem            net     mem[30].q_mem[1]        mem_30__q_mem[1]
+imem            net     mem[30].q_mem[0]        mem_30__q_mem[0]
+imem            net     mem[31].q_mem           mem_31__q_mem
+imem            net     mem[31].q_mem[15]       mem_31__q_mem[15]
+imem            net     mem[31].q_mem[14]       mem_31__q_mem[14]
+imem            net     mem[31].q_mem[13]       mem_31__q_mem[13]
+imem            net     mem[31].q_mem[12]       mem_31__q_mem[12]
+imem            net     mem[31].q_mem[11]       mem_31__q_mem[11]
+imem            net     mem[31].q_mem[10]       mem_31__q_mem[10]
+imem            net     mem[31].q_mem[9]        mem_31__q_mem[9]
+imem            net     mem[31].q_mem[8]        mem_31__q_mem[8]
+imem            net     mem[31].q_mem[7]        mem_31__q_mem[7]
+imem            net     mem[31].q_mem[6]        mem_31__q_mem[6]
+imem            net     mem[31].q_mem[5]        mem_31__q_mem[5]
+imem            net     mem[31].q_mem[4]        mem_31__q_mem[4]
+imem            net     mem[31].q_mem[3]        mem_31__q_mem[3]
+imem            net     mem[31].q_mem[2]        mem_31__q_mem[2]
+imem            net     mem[31].q_mem[1]        mem_31__q_mem[1]
+imem            net     mem[31].q_mem[0]        mem_31__q_mem[0]
+imem            net     mem[32].q_mem           mem_32__q_mem
+imem            net     mem[32].q_mem[15]       mem_32__q_mem[15]
+imem            net     mem[32].q_mem[14]       mem_32__q_mem[14]
+imem            net     mem[32].q_mem[13]       mem_32__q_mem[13]
+imem            net     mem[32].q_mem[12]       mem_32__q_mem[12]
+imem            net     mem[32].q_mem[11]       mem_32__q_mem[11]
+imem            net     mem[32].q_mem[10]       mem_32__q_mem[10]
+imem            net     mem[32].q_mem[9]        mem_32__q_mem[9]
+imem            net     mem[32].q_mem[8]        mem_32__q_mem[8]
+imem            net     mem[32].q_mem[7]        mem_32__q_mem[7]
+imem            net     mem[32].q_mem[6]        mem_32__q_mem[6]
+imem            net     mem[32].q_mem[5]        mem_32__q_mem[5]
+imem            net     mem[32].q_mem[4]        mem_32__q_mem[4]
+imem            net     mem[32].q_mem[3]        mem_32__q_mem[3]
+imem            net     mem[32].q_mem[2]        mem_32__q_mem[2]
+imem            net     mem[32].q_mem[1]        mem_32__q_mem[1]
+imem            net     mem[32].q_mem[0]        mem_32__q_mem[0]
+imem            net     mem[33].q_mem           mem_33__q_mem
+imem            net     mem[33].q_mem[15]       mem_33__q_mem[15]
+imem            net     mem[33].q_mem[14]       mem_33__q_mem[14]
+imem            net     mem[33].q_mem[13]       mem_33__q_mem[13]
+imem            net     mem[33].q_mem[12]       mem_33__q_mem[12]
+imem            net     mem[33].q_mem[11]       mem_33__q_mem[11]
+imem            net     mem[33].q_mem[10]       mem_33__q_mem[10]
+imem            net     mem[33].q_mem[9]        mem_33__q_mem[9]
+imem            net     mem[33].q_mem[8]        mem_33__q_mem[8]
+imem            net     mem[33].q_mem[7]        mem_33__q_mem[7]
+imem            net     mem[33].q_mem[6]        mem_33__q_mem[6]
+imem            net     mem[33].q_mem[5]        mem_33__q_mem[5]
+imem            net     mem[33].q_mem[4]        mem_33__q_mem[4]
+imem            net     mem[33].q_mem[3]        mem_33__q_mem[3]
+imem            net     mem[33].q_mem[2]        mem_33__q_mem[2]
+imem            net     mem[33].q_mem[1]        mem_33__q_mem[1]
+imem            net     mem[33].q_mem[0]        mem_33__q_mem[0]
+imem            net     mem[34].q_mem           mem_34__q_mem
+imem            net     mem[34].q_mem[15]       mem_34__q_mem[15]
+imem            net     mem[34].q_mem[14]       mem_34__q_mem[14]
+imem            net     mem[34].q_mem[13]       mem_34__q_mem[13]
+imem            net     mem[34].q_mem[12]       mem_34__q_mem[12]
+imem            net     mem[34].q_mem[11]       mem_34__q_mem[11]
+imem            net     mem[34].q_mem[10]       mem_34__q_mem[10]
+imem            net     mem[34].q_mem[9]        mem_34__q_mem[9]
+imem            net     mem[34].q_mem[8]        mem_34__q_mem[8]
+imem            net     mem[34].q_mem[7]        mem_34__q_mem[7]
+imem            net     mem[34].q_mem[6]        mem_34__q_mem[6]
+imem            net     mem[34].q_mem[5]        mem_34__q_mem[5]
+imem            net     mem[34].q_mem[4]        mem_34__q_mem[4]
+imem            net     mem[34].q_mem[3]        mem_34__q_mem[3]
+imem            net     mem[34].q_mem[2]        mem_34__q_mem[2]
+imem            net     mem[34].q_mem[1]        mem_34__q_mem[1]
+imem            net     mem[34].q_mem[0]        mem_34__q_mem[0]
+imem            net     mem[35].q_mem           mem_35__q_mem
+imem            net     mem[35].q_mem[15]       mem_35__q_mem[15]
+imem            net     mem[35].q_mem[14]       mem_35__q_mem[14]
+imem            net     mem[35].q_mem[13]       mem_35__q_mem[13]
+imem            net     mem[35].q_mem[12]       mem_35__q_mem[12]
+imem            net     mem[35].q_mem[11]       mem_35__q_mem[11]
+imem            net     mem[35].q_mem[10]       mem_35__q_mem[10]
+imem            net     mem[35].q_mem[9]        mem_35__q_mem[9]
+imem            net     mem[35].q_mem[8]        mem_35__q_mem[8]
+imem            net     mem[35].q_mem[7]        mem_35__q_mem[7]
+imem            net     mem[35].q_mem[6]        mem_35__q_mem[6]
+imem            net     mem[35].q_mem[5]        mem_35__q_mem[5]
+imem            net     mem[35].q_mem[4]        mem_35__q_mem[4]
+imem            net     mem[35].q_mem[3]        mem_35__q_mem[3]
+imem            net     mem[35].q_mem[2]        mem_35__q_mem[2]
+imem            net     mem[35].q_mem[1]        mem_35__q_mem[1]
+imem            net     mem[35].q_mem[0]        mem_35__q_mem[0]
+imem            net     mem[36].q_mem           mem_36__q_mem
+imem            net     mem[36].q_mem[15]       mem_36__q_mem[15]
+imem            net     mem[36].q_mem[14]       mem_36__q_mem[14]
+imem            net     mem[36].q_mem[13]       mem_36__q_mem[13]
+imem            net     mem[36].q_mem[12]       mem_36__q_mem[12]
+imem            net     mem[36].q_mem[11]       mem_36__q_mem[11]
+imem            net     mem[36].q_mem[10]       mem_36__q_mem[10]
+imem            net     mem[36].q_mem[9]        mem_36__q_mem[9]
+imem            net     mem[36].q_mem[8]        mem_36__q_mem[8]
+imem            net     mem[36].q_mem[7]        mem_36__q_mem[7]
+imem            net     mem[36].q_mem[6]        mem_36__q_mem[6]
+imem            net     mem[36].q_mem[5]        mem_36__q_mem[5]
+imem            net     mem[36].q_mem[4]        mem_36__q_mem[4]
+imem            net     mem[36].q_mem[3]        mem_36__q_mem[3]
+imem            net     mem[36].q_mem[2]        mem_36__q_mem[2]
+imem            net     mem[36].q_mem[1]        mem_36__q_mem[1]
+imem            net     mem[36].q_mem[0]        mem_36__q_mem[0]
+imem            net     mem[37].q_mem           mem_37__q_mem
+imem            net     mem[37].q_mem[15]       mem_37__q_mem[15]
+imem            net     mem[37].q_mem[14]       mem_37__q_mem[14]
+imem            net     mem[37].q_mem[13]       mem_37__q_mem[13]
+imem            net     mem[37].q_mem[12]       mem_37__q_mem[12]
+imem            net     mem[37].q_mem[11]       mem_37__q_mem[11]
+imem            net     mem[37].q_mem[10]       mem_37__q_mem[10]
+imem            net     mem[37].q_mem[9]        mem_37__q_mem[9]
+imem            net     mem[37].q_mem[8]        mem_37__q_mem[8]
+imem            net     mem[37].q_mem[7]        mem_37__q_mem[7]
+imem            net     mem[37].q_mem[6]        mem_37__q_mem[6]
+imem            net     mem[37].q_mem[5]        mem_37__q_mem[5]
+imem            net     mem[37].q_mem[4]        mem_37__q_mem[4]
+imem            net     mem[37].q_mem[3]        mem_37__q_mem[3]
+imem            net     mem[37].q_mem[2]        mem_37__q_mem[2]
+imem            net     mem[37].q_mem[1]        mem_37__q_mem[1]
+imem            net     mem[37].q_mem[0]        mem_37__q_mem[0]
+imem            net     mem[38].q_mem           mem_38__q_mem
+imem            net     mem[38].q_mem[15]       mem_38__q_mem[15]
+imem            net     mem[38].q_mem[14]       mem_38__q_mem[14]
+imem            net     mem[38].q_mem[13]       mem_38__q_mem[13]
+imem            net     mem[38].q_mem[12]       mem_38__q_mem[12]
+imem            net     mem[38].q_mem[11]       mem_38__q_mem[11]
+imem            net     mem[38].q_mem[10]       mem_38__q_mem[10]
+imem            net     mem[38].q_mem[9]        mem_38__q_mem[9]
+imem            net     mem[38].q_mem[8]        mem_38__q_mem[8]
+imem            net     mem[38].q_mem[7]        mem_38__q_mem[7]
+imem            net     mem[38].q_mem[6]        mem_38__q_mem[6]
+imem            net     mem[38].q_mem[5]        mem_38__q_mem[5]
+imem            net     mem[38].q_mem[4]        mem_38__q_mem[4]
+imem            net     mem[38].q_mem[3]        mem_38__q_mem[3]
+imem            net     mem[38].q_mem[2]        mem_38__q_mem[2]
+imem            net     mem[38].q_mem[1]        mem_38__q_mem[1]
+imem            net     mem[38].q_mem[0]        mem_38__q_mem[0]
+imem            net     mem[39].q_mem           mem_39__q_mem
+imem            net     mem[39].q_mem[15]       mem_39__q_mem[15]
+imem            net     mem[39].q_mem[14]       mem_39__q_mem[14]
+imem            net     mem[39].q_mem[13]       mem_39__q_mem[13]
+imem            net     mem[39].q_mem[12]       mem_39__q_mem[12]
+imem            net     mem[39].q_mem[11]       mem_39__q_mem[11]
+imem            net     mem[39].q_mem[10]       mem_39__q_mem[10]
+imem            net     mem[39].q_mem[9]        mem_39__q_mem[9]
+imem            net     mem[39].q_mem[8]        mem_39__q_mem[8]
+imem            net     mem[39].q_mem[7]        mem_39__q_mem[7]
+imem            net     mem[39].q_mem[6]        mem_39__q_mem[6]
+imem            net     mem[39].q_mem[5]        mem_39__q_mem[5]
+imem            net     mem[39].q_mem[4]        mem_39__q_mem[4]
+imem            net     mem[39].q_mem[3]        mem_39__q_mem[3]
+imem            net     mem[39].q_mem[2]        mem_39__q_mem[2]
+imem            net     mem[39].q_mem[1]        mem_39__q_mem[1]
+imem            net     mem[39].q_mem[0]        mem_39__q_mem[0]
+imem            net     mem[40].q_mem           mem_40__q_mem
+imem            net     mem[40].q_mem[15]       mem_40__q_mem[15]
+imem            net     mem[40].q_mem[14]       mem_40__q_mem[14]
+imem            net     mem[40].q_mem[13]       mem_40__q_mem[13]
+imem            net     mem[40].q_mem[12]       mem_40__q_mem[12]
+imem            net     mem[40].q_mem[11]       mem_40__q_mem[11]
+imem            net     mem[40].q_mem[10]       mem_40__q_mem[10]
+imem            net     mem[40].q_mem[9]        mem_40__q_mem[9]
+imem            net     mem[40].q_mem[8]        mem_40__q_mem[8]
+imem            net     mem[40].q_mem[7]        mem_40__q_mem[7]
+imem            net     mem[40].q_mem[6]        mem_40__q_mem[6]
+imem            net     mem[40].q_mem[5]        mem_40__q_mem[5]
+imem            net     mem[40].q_mem[4]        mem_40__q_mem[4]
+imem            net     mem[40].q_mem[3]        mem_40__q_mem[3]
+imem            net     mem[40].q_mem[2]        mem_40__q_mem[2]
+imem            net     mem[40].q_mem[1]        mem_40__q_mem[1]
+imem            net     mem[40].q_mem[0]        mem_40__q_mem[0]
+imem            net     mem[41].q_mem           mem_41__q_mem
+imem            net     mem[41].q_mem[15]       mem_41__q_mem[15]
+imem            net     mem[41].q_mem[14]       mem_41__q_mem[14]
+imem            net     mem[41].q_mem[13]       mem_41__q_mem[13]
+imem            net     mem[41].q_mem[12]       mem_41__q_mem[12]
+imem            net     mem[41].q_mem[11]       mem_41__q_mem[11]
+imem            net     mem[41].q_mem[10]       mem_41__q_mem[10]
+imem            net     mem[41].q_mem[9]        mem_41__q_mem[9]
+imem            net     mem[41].q_mem[8]        mem_41__q_mem[8]
+imem            net     mem[41].q_mem[7]        mem_41__q_mem[7]
+imem            net     mem[41].q_mem[6]        mem_41__q_mem[6]
+imem            net     mem[41].q_mem[5]        mem_41__q_mem[5]
+imem            net     mem[41].q_mem[4]        mem_41__q_mem[4]
+imem            net     mem[41].q_mem[3]        mem_41__q_mem[3]
+imem            net     mem[41].q_mem[2]        mem_41__q_mem[2]
+imem            net     mem[41].q_mem[1]        mem_41__q_mem[1]
+imem            net     mem[41].q_mem[0]        mem_41__q_mem[0]
+imem            net     mem[42].q_mem           mem_42__q_mem
+imem            net     mem[42].q_mem[15]       mem_42__q_mem[15]
+imem            net     mem[42].q_mem[14]       mem_42__q_mem[14]
+imem            net     mem[42].q_mem[13]       mem_42__q_mem[13]
+imem            net     mem[42].q_mem[12]       mem_42__q_mem[12]
+imem            net     mem[42].q_mem[11]       mem_42__q_mem[11]
+imem            net     mem[42].q_mem[10]       mem_42__q_mem[10]
+imem            net     mem[42].q_mem[9]        mem_42__q_mem[9]
+imem            net     mem[42].q_mem[8]        mem_42__q_mem[8]
+imem            net     mem[42].q_mem[7]        mem_42__q_mem[7]
+imem            net     mem[42].q_mem[6]        mem_42__q_mem[6]
+imem            net     mem[42].q_mem[5]        mem_42__q_mem[5]
+imem            net     mem[42].q_mem[4]        mem_42__q_mem[4]
+imem            net     mem[42].q_mem[3]        mem_42__q_mem[3]
+imem            net     mem[42].q_mem[2]        mem_42__q_mem[2]
+imem            net     mem[42].q_mem[1]        mem_42__q_mem[1]
+imem            net     mem[42].q_mem[0]        mem_42__q_mem[0]
+imem            net     mem[43].q_mem           mem_43__q_mem
+imem            net     mem[43].q_mem[15]       mem_43__q_mem[15]
+imem            net     mem[43].q_mem[14]       mem_43__q_mem[14]
+imem            net     mem[43].q_mem[13]       mem_43__q_mem[13]
+imem            net     mem[43].q_mem[12]       mem_43__q_mem[12]
+imem            net     mem[43].q_mem[11]       mem_43__q_mem[11]
+imem            net     mem[43].q_mem[10]       mem_43__q_mem[10]
+imem            net     mem[43].q_mem[9]        mem_43__q_mem[9]
+imem            net     mem[43].q_mem[8]        mem_43__q_mem[8]
+imem            net     mem[43].q_mem[7]        mem_43__q_mem[7]
+imem            net     mem[43].q_mem[6]        mem_43__q_mem[6]
+imem            net     mem[43].q_mem[5]        mem_43__q_mem[5]
+imem            net     mem[43].q_mem[4]        mem_43__q_mem[4]
+imem            net     mem[43].q_mem[3]        mem_43__q_mem[3]
+imem            net     mem[43].q_mem[2]        mem_43__q_mem[2]
+imem            net     mem[43].q_mem[1]        mem_43__q_mem[1]
+imem            net     mem[43].q_mem[0]        mem_43__q_mem[0]
+imem            net     mem[44].q_mem           mem_44__q_mem
+imem            net     mem[44].q_mem[15]       mem_44__q_mem[15]
+imem            net     mem[44].q_mem[14]       mem_44__q_mem[14]
+imem            net     mem[44].q_mem[13]       mem_44__q_mem[13]
+imem            net     mem[44].q_mem[12]       mem_44__q_mem[12]
+imem            net     mem[44].q_mem[11]       mem_44__q_mem[11]
+imem            net     mem[44].q_mem[10]       mem_44__q_mem[10]
+imem            net     mem[44].q_mem[9]        mem_44__q_mem[9]
+imem            net     mem[44].q_mem[8]        mem_44__q_mem[8]
+imem            net     mem[44].q_mem[7]        mem_44__q_mem[7]
+imem            net     mem[44].q_mem[6]        mem_44__q_mem[6]
+imem            net     mem[44].q_mem[5]        mem_44__q_mem[5]
+imem            net     mem[44].q_mem[4]        mem_44__q_mem[4]
+imem            net     mem[44].q_mem[3]        mem_44__q_mem[3]
+imem            net     mem[44].q_mem[2]        mem_44__q_mem[2]
+imem            net     mem[44].q_mem[1]        mem_44__q_mem[1]
+imem            net     mem[44].q_mem[0]        mem_44__q_mem[0]
+imem            net     mem[45].q_mem           mem_45__q_mem
+imem            net     mem[45].q_mem[15]       mem_45__q_mem[15]
+imem            net     mem[45].q_mem[14]       mem_45__q_mem[14]
+imem            net     mem[45].q_mem[13]       mem_45__q_mem[13]
+imem            net     mem[45].q_mem[12]       mem_45__q_mem[12]
+imem            net     mem[45].q_mem[11]       mem_45__q_mem[11]
+imem            net     mem[45].q_mem[10]       mem_45__q_mem[10]
+imem            net     mem[45].q_mem[9]        mem_45__q_mem[9]
+imem            net     mem[45].q_mem[8]        mem_45__q_mem[8]
+imem            net     mem[45].q_mem[7]        mem_45__q_mem[7]
+imem            net     mem[45].q_mem[6]        mem_45__q_mem[6]
+imem            net     mem[45].q_mem[5]        mem_45__q_mem[5]
+imem            net     mem[45].q_mem[4]        mem_45__q_mem[4]
+imem            net     mem[45].q_mem[3]        mem_45__q_mem[3]
+imem            net     mem[45].q_mem[2]        mem_45__q_mem[2]
+imem            net     mem[45].q_mem[1]        mem_45__q_mem[1]
+imem            net     mem[45].q_mem[0]        mem_45__q_mem[0]
+imem            net     mem[46].q_mem           mem_46__q_mem
+imem            net     mem[46].q_mem[15]       mem_46__q_mem[15]
+imem            net     mem[46].q_mem[14]       mem_46__q_mem[14]
+imem            net     mem[46].q_mem[13]       mem_46__q_mem[13]
+imem            net     mem[46].q_mem[12]       mem_46__q_mem[12]
+imem            net     mem[46].q_mem[11]       mem_46__q_mem[11]
+imem            net     mem[46].q_mem[10]       mem_46__q_mem[10]
+imem            net     mem[46].q_mem[9]        mem_46__q_mem[9]
+imem            net     mem[46].q_mem[8]        mem_46__q_mem[8]
+imem            net     mem[46].q_mem[7]        mem_46__q_mem[7]
+imem            net     mem[46].q_mem[6]        mem_46__q_mem[6]
+imem            net     mem[46].q_mem[5]        mem_46__q_mem[5]
+imem            net     mem[46].q_mem[4]        mem_46__q_mem[4]
+imem            net     mem[46].q_mem[3]        mem_46__q_mem[3]
+imem            net     mem[46].q_mem[2]        mem_46__q_mem[2]
+imem            net     mem[46].q_mem[1]        mem_46__q_mem[1]
+imem            net     mem[46].q_mem[0]        mem_46__q_mem[0]
+imem            net     mem[47].q_mem           mem_47__q_mem
+imem            net     mem[47].q_mem[15]       mem_47__q_mem[15]
+imem            net     mem[47].q_mem[14]       mem_47__q_mem[14]
+imem            net     mem[47].q_mem[13]       mem_47__q_mem[13]
+imem            net     mem[47].q_mem[12]       mem_47__q_mem[12]
+imem            net     mem[47].q_mem[11]       mem_47__q_mem[11]
+imem            net     mem[47].q_mem[10]       mem_47__q_mem[10]
+imem            net     mem[47].q_mem[9]        mem_47__q_mem[9]
+imem            net     mem[47].q_mem[8]        mem_47__q_mem[8]
+imem            net     mem[47].q_mem[7]        mem_47__q_mem[7]
+imem            net     mem[47].q_mem[6]        mem_47__q_mem[6]
+imem            net     mem[47].q_mem[5]        mem_47__q_mem[5]
+imem            net     mem[47].q_mem[4]        mem_47__q_mem[4]
+imem            net     mem[47].q_mem[3]        mem_47__q_mem[3]
+imem            net     mem[47].q_mem[2]        mem_47__q_mem[2]
+imem            net     mem[47].q_mem[1]        mem_47__q_mem[1]
+imem            net     mem[47].q_mem[0]        mem_47__q_mem[0]
+imem            net     mem[48].q_mem           mem_48__q_mem
+imem            net     mem[48].q_mem[15]       mem_48__q_mem[15]
+imem            net     mem[48].q_mem[14]       mem_48__q_mem[14]
+imem            net     mem[48].q_mem[13]       mem_48__q_mem[13]
+imem            net     mem[48].q_mem[12]       mem_48__q_mem[12]
+imem            net     mem[48].q_mem[11]       mem_48__q_mem[11]
+imem            net     mem[48].q_mem[10]       mem_48__q_mem[10]
+imem            net     mem[48].q_mem[9]        mem_48__q_mem[9]
+imem            net     mem[48].q_mem[8]        mem_48__q_mem[8]
+imem            net     mem[48].q_mem[7]        mem_48__q_mem[7]
+imem            net     mem[48].q_mem[6]        mem_48__q_mem[6]
+imem            net     mem[48].q_mem[5]        mem_48__q_mem[5]
+imem            net     mem[48].q_mem[4]        mem_48__q_mem[4]
+imem            net     mem[48].q_mem[3]        mem_48__q_mem[3]
+imem            net     mem[48].q_mem[2]        mem_48__q_mem[2]
+imem            net     mem[48].q_mem[1]        mem_48__q_mem[1]
+imem            net     mem[48].q_mem[0]        mem_48__q_mem[0]
+imem            net     mem[49].q_mem           mem_49__q_mem
+imem            net     mem[49].q_mem[15]       mem_49__q_mem[15]
+imem            net     mem[49].q_mem[14]       mem_49__q_mem[14]
+imem            net     mem[49].q_mem[13]       mem_49__q_mem[13]
+imem            net     mem[49].q_mem[12]       mem_49__q_mem[12]
+imem            net     mem[49].q_mem[11]       mem_49__q_mem[11]
+imem            net     mem[49].q_mem[10]       mem_49__q_mem[10]
+imem            net     mem[49].q_mem[9]        mem_49__q_mem[9]
+imem            net     mem[49].q_mem[8]        mem_49__q_mem[8]
+imem            net     mem[49].q_mem[7]        mem_49__q_mem[7]
+imem            net     mem[49].q_mem[6]        mem_49__q_mem[6]
+imem            net     mem[49].q_mem[5]        mem_49__q_mem[5]
+imem            net     mem[49].q_mem[4]        mem_49__q_mem[4]
+imem            net     mem[49].q_mem[3]        mem_49__q_mem[3]
+imem            net     mem[49].q_mem[2]        mem_49__q_mem[2]
+imem            net     mem[49].q_mem[1]        mem_49__q_mem[1]
+imem            net     mem[49].q_mem[0]        mem_49__q_mem[0]
+imem            net     mem[50].q_mem           mem_50__q_mem
+imem            net     mem[50].q_mem[15]       mem_50__q_mem[15]
+imem            net     mem[50].q_mem[14]       mem_50__q_mem[14]
+imem            net     mem[50].q_mem[13]       mem_50__q_mem[13]
+imem            net     mem[50].q_mem[12]       mem_50__q_mem[12]
+imem            net     mem[50].q_mem[11]       mem_50__q_mem[11]
+imem            net     mem[50].q_mem[10]       mem_50__q_mem[10]
+imem            net     mem[50].q_mem[9]        mem_50__q_mem[9]
+imem            net     mem[50].q_mem[8]        mem_50__q_mem[8]
+imem            net     mem[50].q_mem[7]        mem_50__q_mem[7]
+imem            net     mem[50].q_mem[6]        mem_50__q_mem[6]
+imem            net     mem[50].q_mem[5]        mem_50__q_mem[5]
+imem            net     mem[50].q_mem[4]        mem_50__q_mem[4]
+imem            net     mem[50].q_mem[3]        mem_50__q_mem[3]
+imem            net     mem[50].q_mem[2]        mem_50__q_mem[2]
+imem            net     mem[50].q_mem[1]        mem_50__q_mem[1]
+imem            net     mem[50].q_mem[0]        mem_50__q_mem[0]
+imem            net     mem[51].q_mem           mem_51__q_mem
+imem            net     mem[51].q_mem[15]       mem_51__q_mem[15]
+imem            net     mem[51].q_mem[14]       mem_51__q_mem[14]
+imem            net     mem[51].q_mem[13]       mem_51__q_mem[13]
+imem            net     mem[51].q_mem[12]       mem_51__q_mem[12]
+imem            net     mem[51].q_mem[11]       mem_51__q_mem[11]
+imem            net     mem[51].q_mem[10]       mem_51__q_mem[10]
+imem            net     mem[51].q_mem[9]        mem_51__q_mem[9]
+imem            net     mem[51].q_mem[8]        mem_51__q_mem[8]
+imem            net     mem[51].q_mem[7]        mem_51__q_mem[7]
+imem            net     mem[51].q_mem[6]        mem_51__q_mem[6]
+imem            net     mem[51].q_mem[5]        mem_51__q_mem[5]
+imem            net     mem[51].q_mem[4]        mem_51__q_mem[4]
+imem            net     mem[51].q_mem[3]        mem_51__q_mem[3]
+imem            net     mem[51].q_mem[2]        mem_51__q_mem[2]
+imem            net     mem[51].q_mem[1]        mem_51__q_mem[1]
+imem            net     mem[51].q_mem[0]        mem_51__q_mem[0]
+imem            net     mem[52].q_mem           mem_52__q_mem
+imem            net     mem[52].q_mem[15]       mem_52__q_mem[15]
+imem            net     mem[52].q_mem[14]       mem_52__q_mem[14]
+imem            net     mem[52].q_mem[13]       mem_52__q_mem[13]
+imem            net     mem[52].q_mem[12]       mem_52__q_mem[12]
+imem            net     mem[52].q_mem[11]       mem_52__q_mem[11]
+imem            net     mem[52].q_mem[10]       mem_52__q_mem[10]
+imem            net     mem[52].q_mem[9]        mem_52__q_mem[9]
+imem            net     mem[52].q_mem[8]        mem_52__q_mem[8]
+imem            net     mem[52].q_mem[7]        mem_52__q_mem[7]
+imem            net     mem[52].q_mem[6]        mem_52__q_mem[6]
+imem            net     mem[52].q_mem[5]        mem_52__q_mem[5]
+imem            net     mem[52].q_mem[4]        mem_52__q_mem[4]
+imem            net     mem[52].q_mem[3]        mem_52__q_mem[3]
+imem            net     mem[52].q_mem[2]        mem_52__q_mem[2]
+imem            net     mem[52].q_mem[1]        mem_52__q_mem[1]
+imem            net     mem[52].q_mem[0]        mem_52__q_mem[0]
+imem            net     mem[53].q_mem           mem_53__q_mem
+imem            net     mem[53].q_mem[15]       mem_53__q_mem[15]
+imem            net     mem[53].q_mem[14]       mem_53__q_mem[14]
+imem            net     mem[53].q_mem[13]       mem_53__q_mem[13]
+imem            net     mem[53].q_mem[12]       mem_53__q_mem[12]
+imem            net     mem[53].q_mem[11]       mem_53__q_mem[11]
+imem            net     mem[53].q_mem[10]       mem_53__q_mem[10]
+imem            net     mem[53].q_mem[9]        mem_53__q_mem[9]
+imem            net     mem[53].q_mem[8]        mem_53__q_mem[8]
+imem            net     mem[53].q_mem[7]        mem_53__q_mem[7]
+imem            net     mem[53].q_mem[6]        mem_53__q_mem[6]
+imem            net     mem[53].q_mem[5]        mem_53__q_mem[5]
+imem            net     mem[53].q_mem[4]        mem_53__q_mem[4]
+imem            net     mem[53].q_mem[3]        mem_53__q_mem[3]
+imem            net     mem[53].q_mem[2]        mem_53__q_mem[2]
+imem            net     mem[53].q_mem[1]        mem_53__q_mem[1]
+imem            net     mem[53].q_mem[0]        mem_53__q_mem[0]
+imem            net     mem[54].q_mem           mem_54__q_mem
+imem            net     mem[54].q_mem[15]       mem_54__q_mem[15]
+imem            net     mem[54].q_mem[14]       mem_54__q_mem[14]
+imem            net     mem[54].q_mem[13]       mem_54__q_mem[13]
+imem            net     mem[54].q_mem[12]       mem_54__q_mem[12]
+imem            net     mem[54].q_mem[11]       mem_54__q_mem[11]
+imem            net     mem[54].q_mem[10]       mem_54__q_mem[10]
+imem            net     mem[54].q_mem[9]        mem_54__q_mem[9]
+imem            net     mem[54].q_mem[8]        mem_54__q_mem[8]
+imem            net     mem[54].q_mem[7]        mem_54__q_mem[7]
+imem            net     mem[54].q_mem[6]        mem_54__q_mem[6]
+imem            net     mem[54].q_mem[5]        mem_54__q_mem[5]
+imem            net     mem[54].q_mem[4]        mem_54__q_mem[4]
+imem            net     mem[54].q_mem[3]        mem_54__q_mem[3]
+imem            net     mem[54].q_mem[2]        mem_54__q_mem[2]
+imem            net     mem[54].q_mem[1]        mem_54__q_mem[1]
+imem            net     mem[54].q_mem[0]        mem_54__q_mem[0]
+imem            net     mem[55].q_mem           mem_55__q_mem
+imem            net     mem[55].q_mem[15]       mem_55__q_mem[15]
+imem            net     mem[55].q_mem[14]       mem_55__q_mem[14]
+imem            net     mem[55].q_mem[13]       mem_55__q_mem[13]
+imem            net     mem[55].q_mem[12]       mem_55__q_mem[12]
+imem            net     mem[55].q_mem[11]       mem_55__q_mem[11]
+imem            net     mem[55].q_mem[10]       mem_55__q_mem[10]
+imem            net     mem[55].q_mem[9]        mem_55__q_mem[9]
+imem            net     mem[55].q_mem[8]        mem_55__q_mem[8]
+imem            net     mem[55].q_mem[7]        mem_55__q_mem[7]
+imem            net     mem[55].q_mem[6]        mem_55__q_mem[6]
+imem            net     mem[55].q_mem[5]        mem_55__q_mem[5]
+imem            net     mem[55].q_mem[4]        mem_55__q_mem[4]
+imem            net     mem[55].q_mem[3]        mem_55__q_mem[3]
+imem            net     mem[55].q_mem[2]        mem_55__q_mem[2]
+imem            net     mem[55].q_mem[1]        mem_55__q_mem[1]
+imem            net     mem[55].q_mem[0]        mem_55__q_mem[0]
+imem            net     mem[56].q_mem           mem_56__q_mem
+imem            net     mem[56].q_mem[15]       mem_56__q_mem[15]
+imem            net     mem[56].q_mem[14]       mem_56__q_mem[14]
+imem            net     mem[56].q_mem[13]       mem_56__q_mem[13]
+imem            net     mem[56].q_mem[12]       mem_56__q_mem[12]
+imem            net     mem[56].q_mem[11]       mem_56__q_mem[11]
+imem            net     mem[56].q_mem[10]       mem_56__q_mem[10]
+imem            net     mem[56].q_mem[9]        mem_56__q_mem[9]
+imem            net     mem[56].q_mem[8]        mem_56__q_mem[8]
+imem            net     mem[56].q_mem[7]        mem_56__q_mem[7]
+imem            net     mem[56].q_mem[6]        mem_56__q_mem[6]
+imem            net     mem[56].q_mem[5]        mem_56__q_mem[5]
+imem            net     mem[56].q_mem[4]        mem_56__q_mem[4]
+imem            net     mem[56].q_mem[3]        mem_56__q_mem[3]
+imem            net     mem[56].q_mem[2]        mem_56__q_mem[2]
+imem            net     mem[56].q_mem[1]        mem_56__q_mem[1]
+imem            net     mem[56].q_mem[0]        mem_56__q_mem[0]
+imem            net     mem[57].q_mem           mem_57__q_mem
+imem            net     mem[57].q_mem[15]       mem_57__q_mem[15]
+imem            net     mem[57].q_mem[14]       mem_57__q_mem[14]
+imem            net     mem[57].q_mem[13]       mem_57__q_mem[13]
+imem            net     mem[57].q_mem[12]       mem_57__q_mem[12]
+imem            net     mem[57].q_mem[11]       mem_57__q_mem[11]
+imem            net     mem[57].q_mem[10]       mem_57__q_mem[10]
+imem            net     mem[57].q_mem[9]        mem_57__q_mem[9]
+imem            net     mem[57].q_mem[8]        mem_57__q_mem[8]
+imem            net     mem[57].q_mem[7]        mem_57__q_mem[7]
+imem            net     mem[57].q_mem[6]        mem_57__q_mem[6]
+imem            net     mem[57].q_mem[5]        mem_57__q_mem[5]
+imem            net     mem[57].q_mem[4]        mem_57__q_mem[4]
+imem            net     mem[57].q_mem[3]        mem_57__q_mem[3]
+imem            net     mem[57].q_mem[2]        mem_57__q_mem[2]
+imem            net     mem[57].q_mem[1]        mem_57__q_mem[1]
+imem            net     mem[57].q_mem[0]        mem_57__q_mem[0]
+imem            net     mem[58].q_mem           mem_58__q_mem
+imem            net     mem[58].q_mem[15]       mem_58__q_mem[15]
+imem            net     mem[58].q_mem[14]       mem_58__q_mem[14]
+imem            net     mem[58].q_mem[13]       mem_58__q_mem[13]
+imem            net     mem[58].q_mem[12]       mem_58__q_mem[12]
+imem            net     mem[58].q_mem[11]       mem_58__q_mem[11]
+imem            net     mem[58].q_mem[10]       mem_58__q_mem[10]
+imem            net     mem[58].q_mem[9]        mem_58__q_mem[9]
+imem            net     mem[58].q_mem[8]        mem_58__q_mem[8]
+imem            net     mem[58].q_mem[7]        mem_58__q_mem[7]
+imem            net     mem[58].q_mem[6]        mem_58__q_mem[6]
+imem            net     mem[58].q_mem[5]        mem_58__q_mem[5]
+imem            net     mem[58].q_mem[4]        mem_58__q_mem[4]
+imem            net     mem[58].q_mem[3]        mem_58__q_mem[3]
+imem            net     mem[58].q_mem[2]        mem_58__q_mem[2]
+imem            net     mem[58].q_mem[1]        mem_58__q_mem[1]
+imem            net     mem[58].q_mem[0]        mem_58__q_mem[0]
+imem            net     mem[59].q_mem           mem_59__q_mem
+imem            net     mem[59].q_mem[15]       mem_59__q_mem[15]
+imem            net     mem[59].q_mem[14]       mem_59__q_mem[14]
+imem            net     mem[59].q_mem[13]       mem_59__q_mem[13]
+imem            net     mem[59].q_mem[12]       mem_59__q_mem[12]
+imem            net     mem[59].q_mem[11]       mem_59__q_mem[11]
+imem            net     mem[59].q_mem[10]       mem_59__q_mem[10]
+imem            net     mem[59].q_mem[9]        mem_59__q_mem[9]
+imem            net     mem[59].q_mem[8]        mem_59__q_mem[8]
+imem            net     mem[59].q_mem[7]        mem_59__q_mem[7]
+imem            net     mem[59].q_mem[6]        mem_59__q_mem[6]
+imem            net     mem[59].q_mem[5]        mem_59__q_mem[5]
+imem            net     mem[59].q_mem[4]        mem_59__q_mem[4]
+imem            net     mem[59].q_mem[3]        mem_59__q_mem[3]
+imem            net     mem[59].q_mem[2]        mem_59__q_mem[2]
+imem            net     mem[59].q_mem[1]        mem_59__q_mem[1]
+imem            net     mem[59].q_mem[0]        mem_59__q_mem[0]
+imem            net     mem[60].q_mem           mem_60__q_mem
+imem            net     mem[60].q_mem[15]       mem_60__q_mem[15]
+imem            net     mem[60].q_mem[14]       mem_60__q_mem[14]
+imem            net     mem[60].q_mem[13]       mem_60__q_mem[13]
+imem            net     mem[60].q_mem[12]       mem_60__q_mem[12]
+imem            net     mem[60].q_mem[11]       mem_60__q_mem[11]
+imem            net     mem[60].q_mem[10]       mem_60__q_mem[10]
+imem            net     mem[60].q_mem[9]        mem_60__q_mem[9]
+imem            net     mem[60].q_mem[8]        mem_60__q_mem[8]
+imem            net     mem[60].q_mem[7]        mem_60__q_mem[7]
+imem            net     mem[60].q_mem[6]        mem_60__q_mem[6]
+imem            net     mem[60].q_mem[5]        mem_60__q_mem[5]
+imem            net     mem[60].q_mem[4]        mem_60__q_mem[4]
+imem            net     mem[60].q_mem[3]        mem_60__q_mem[3]
+imem            net     mem[60].q_mem[2]        mem_60__q_mem[2]
+imem            net     mem[60].q_mem[1]        mem_60__q_mem[1]
+imem            net     mem[60].q_mem[0]        mem_60__q_mem[0]
+imem            net     mem[61].q_mem           mem_61__q_mem
+imem            net     mem[61].q_mem[15]       mem_61__q_mem[15]
+imem            net     mem[61].q_mem[14]       mem_61__q_mem[14]
+imem            net     mem[61].q_mem[13]       mem_61__q_mem[13]
+imem            net     mem[61].q_mem[12]       mem_61__q_mem[12]
+imem            net     mem[61].q_mem[11]       mem_61__q_mem[11]
+imem            net     mem[61].q_mem[10]       mem_61__q_mem[10]
+imem            net     mem[61].q_mem[9]        mem_61__q_mem[9]
+imem            net     mem[61].q_mem[8]        mem_61__q_mem[8]
+imem            net     mem[61].q_mem[7]        mem_61__q_mem[7]
+imem            net     mem[61].q_mem[6]        mem_61__q_mem[6]
+imem            net     mem[61].q_mem[5]        mem_61__q_mem[5]
+imem            net     mem[61].q_mem[4]        mem_61__q_mem[4]
+imem            net     mem[61].q_mem[3]        mem_61__q_mem[3]
+imem            net     mem[61].q_mem[2]        mem_61__q_mem[2]
+imem            net     mem[61].q_mem[1]        mem_61__q_mem[1]
+imem            net     mem[61].q_mem[0]        mem_61__q_mem[0]
+imem            net     mem[62].q_mem           mem_62__q_mem
+imem            net     mem[62].q_mem[15]       mem_62__q_mem[15]
+imem            net     mem[62].q_mem[14]       mem_62__q_mem[14]
+imem            net     mem[62].q_mem[13]       mem_62__q_mem[13]
+imem            net     mem[62].q_mem[12]       mem_62__q_mem[12]
+imem            net     mem[62].q_mem[11]       mem_62__q_mem[11]
+imem            net     mem[62].q_mem[10]       mem_62__q_mem[10]
+imem            net     mem[62].q_mem[9]        mem_62__q_mem[9]
+imem            net     mem[62].q_mem[8]        mem_62__q_mem[8]
+imem            net     mem[62].q_mem[7]        mem_62__q_mem[7]
+imem            net     mem[62].q_mem[6]        mem_62__q_mem[6]
+imem            net     mem[62].q_mem[5]        mem_62__q_mem[5]
+imem            net     mem[62].q_mem[4]        mem_62__q_mem[4]
+imem            net     mem[62].q_mem[3]        mem_62__q_mem[3]
+imem            net     mem[62].q_mem[2]        mem_62__q_mem[2]
+imem            net     mem[62].q_mem[1]        mem_62__q_mem[1]
+imem            net     mem[62].q_mem[0]        mem_62__q_mem[0]
+imem            net     mem[63].q_mem           mem_63__q_mem
+imem            net     mem[63].q_mem[15]       mem_63__q_mem[15]
+imem            net     mem[63].q_mem[14]       mem_63__q_mem[14]
+imem            net     mem[63].q_mem[13]       mem_63__q_mem[13]
+imem            net     mem[63].q_mem[12]       mem_63__q_mem[12]
+imem            net     mem[63].q_mem[11]       mem_63__q_mem[11]
+imem            net     mem[63].q_mem[10]       mem_63__q_mem[10]
+imem            net     mem[63].q_mem[9]        mem_63__q_mem[9]
+imem            net     mem[63].q_mem[8]        mem_63__q_mem[8]
+imem            net     mem[63].q_mem[7]        mem_63__q_mem[7]
+imem            net     mem[63].q_mem[6]        mem_63__q_mem[6]
+imem            net     mem[63].q_mem[5]        mem_63__q_mem[5]
+imem            net     mem[63].q_mem[4]        mem_63__q_mem[4]
+imem            net     mem[63].q_mem[3]        mem_63__q_mem[3]
+imem            net     mem[63].q_mem[2]        mem_63__q_mem[2]
+imem            net     mem[63].q_mem[1]        mem_63__q_mem[1]
+imem            net     mem[63].q_mem[0]        mem_63__q_mem[0]
+1
+1
+set verilogout_no_tri TRUE
+TRUE
+write -hierarchy -format verilog -output "${top_level}.nl.v"
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing verilog file '/homes/user/stud/fall20/jd3693/Desktop/Project/dc/fir/fir.nl.v'.
+1
+#write_sdf -context verilog "${top_level}.temp.sdf"
+write_sdc "${top_level}.syn.sdc" -version 1.7
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+write_sdf "${top_level}.syn.sdf"
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/homes/user/stud/fall20/jd3693/Desktop/Project/dc/fir/fir.syn.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+Warning: Design contains black-box components.  These cells will have no timing information. (WT-7)
+1
+# Generate report file
+set maxpaths 20
+20
+set rpt_file "${top_level}.dc.rpt"
+fir.dc.rpt
+check_design > $rpt_file
+report_area  >> ${rpt_file}
+report_power -hier -analysis_effort medium >> ${rpt_file}
+report_design >> ${rpt_file}
+report_cell >> ${rpt_file}
+report_port -verbose >> ${rpt_file}
+report_compile_options >> ${rpt_file}
+report_constraint -all_violators -verbose >> ${rpt_file}
+report_timing -path full -delay max -max_paths $maxpaths -nworst 100 >> ${rpt_file}
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs
+report_timing -delay max -nworst 1 -max_paths 10000 -path full -nosplit -unique -sort_by slack > ${top_level}.syn.critical_regs.full
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack -to [all_outputs] > ${top_level}.syn.critical_regs.output
+report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -sort_by slack -to [all_registers -data_pins] > ${top_level}.syn.critical_regs.regs
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+report_timing -delay min -nworst 1 -max_paths 10000 -path short -nosplit -unique -sort_by slack > ${top_level}.syn.fast_path
+quit
+
+Thank you...

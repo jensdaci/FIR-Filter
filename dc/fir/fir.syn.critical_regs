@@ -1,0 +1,127 @@
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : fir
+Version: O-2018.06-SP5-1
+Date   : Mon Dec 14 23:18:20 2020
+****************************************
+
+Operating Conditions: tt_1p2v_25c   Library: scx3_cmos8rf_lpvt_tt_1p2v_25c
+Wire Load Model Mode: top
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+alu_0_ANS_reg_16_/D (DFFQX1TS)      9.44 f            9.67         0.23
+alu_0_ANS_reg_17_/D (DFFQX1TS)      9.15 f            9.67         0.52
+alu_0_ANS_reg_15_/D (DFFQX1TS)      9.08 f            9.67         0.59
+alu_0_ANS_reg_14_/D (DFFQX1TS)      8.70 f            9.67         0.97
+alu_0_ANS_reg_12_/D (DFFQX1TS)      8.69 f            9.67         0.98
+alu_0_ANS_reg_13_/D (DFFQX1TS)      8.55 f            9.67         1.12
+alu_0_ANS_reg_11_/D (DFFQX1TS)      8.33 f            9.67         1.33
+alu_0_ANS_reg_10_/D (DFFQX1TS)      7.86 f            9.67         1.81
+alu_0_ANS_reg_9_/D (DFFQX1TS)       7.59 f            9.67         2.08
+alu_0_ANS_reg_8_/D (DFFQX1TS)       7.31 f            9.67         2.36
+alu_0_ANS_reg_7_/D (DFFQX1TS)       7.25 f            9.67         2.42
+alu_0_ANS_reg_6_/D (DFFQX1TS)       6.92 f            9.67         2.74
+alu_0_ANS_reg_5_/D (DFFQX1TS)       6.49 f            9.67         3.18
+alu_0_ANS_reg_4_/D (DFFQX1TS)       6.29 f            9.67         3.38
+alu_0_ANS_reg_3_/D (DFFQX1TS)       6.01 f            9.67         3.66
+alu_0_ANS_reg_2_/D (DFFQX1TS)       5.71 f            9.67         3.95
+alu_0_ANS_reg_1_/D (DFFQX1TS)       5.08 f            9.67         4.58
+alu_0_ANS_reg_0_/D (DFFQX1TS)       3.38 f            9.67         6.29
+reg_16_X_DATA_OUT_reg_11_/D (DFFQX1TS)     3.12 f     9.67         6.55
+reg_16_X_DATA_OUT_reg_12_/D (DFFQX1TS)     3.12 f     9.67         6.55
+reg_16_X_DATA_OUT_reg_14_/D (DFFQX1TS)     3.12 f     9.67         6.55
+reg_16_X_DATA_OUT_reg_0_/D (DFFQX1TS)     3.12 f      9.67         6.55
+reg_16_X_DATA_OUT_reg_1_/D (DFFQX1TS)     3.12 f      9.67         6.55
+reg_16_X_DATA_OUT_reg_2_/D (DFFQX1TS)     3.12 f      9.67         6.55
+reg_16_X_DATA_OUT_reg_3_/D (DFFQX1TS)     3.12 f      9.67         6.55
+reg_16_X_DATA_OUT_reg_4_/D (DFFQX1TS)     3.12 f      9.67         6.55
+reg_16_X_DATA_OUT_reg_5_/D (DFFQX1TS)     3.12 f      9.67         6.55
+reg_16_X_DATA_OUT_reg_6_/D (DFFQX1TS)     3.12 f      9.67         6.55
+reg_16_X_DATA_OUT_reg_7_/D (DFFQX1TS)     3.12 f      9.67         6.55
+reg_16_X_DATA_OUT_reg_8_/D (DFFQX1TS)     3.12 f      9.67         6.55
+reg_16_X_DATA_OUT_reg_9_/D (DFFQX1TS)     3.12 f      9.67         6.55
+reg_16_X_DATA_OUT_reg_10_/D (DFFQX1TS)     3.12 f     9.67         6.55
+reg_16_X_DATA_OUT_reg_13_/D (DFFQX1TS)     3.12 f     9.67         6.55
+reg_16_X_DATA_OUT_reg_15_/D (DFFQX1TS)     3.12 f     9.67         6.55
+reg_38_Y_DATA_OUT_reg_15_/D (DFFQX1TS)     2.98 r     9.74         6.76
+reg_38_Y_DATA_OUT_reg_13_/D (DFFQX1TS)     2.98 r     9.74         6.76
+reg_38_Y_DATA_OUT_reg_2_/D (DFFQX1TS)     2.98 r      9.74         6.76
+reg_38_Y_DATA_OUT_reg_12_/D (DFFQX1TS)     2.81 r     9.74         6.92
+reg_38_Y_DATA_OUT_reg_10_/D (DFFQX1TS)     2.81 r     9.74         6.92
+reg_38_Y_DATA_OUT_reg_14_/D (DFFQX1TS)     2.81 r     9.74         6.92
+reg_38_Y_DATA_OUT_reg_5_/D (DFFQX1TS)     2.81 r      9.74         6.93
+reg_38_Y_DATA_OUT_reg_7_/D (DFFQX1TS)     2.81 r      9.74         6.93
+reg_38_Y_DATA_OUT_reg_6_/D (DFFQX1TS)     2.81 r      9.74         6.93
+reg_38_Y_DATA_OUT_reg_3_/D (DFFQX1TS)     2.81 r      9.74         6.93
+reg_38_Y_DATA_OUT_reg_11_/D (DFFQX1TS)     2.81 r     9.74         6.93
+reg_38_Y_DATA_OUT_reg_1_/D (DFFQX1TS)     2.81 r      9.74         6.93
+reg_38_Y_DATA_OUT_reg_0_/D (DFFQX1TS)     2.81 r      9.74         6.93
+reg_38_Y_DATA_OUT_reg_9_/D (DFFQX1TS)     2.81 r      9.74         6.93
+reg_38_M_DATA_OUT_reg_17_/D (DFFQX1TS)     2.66 f     9.67         7.01
+reg_38_M_DATA_OUT_reg_0_/D (DFFQX1TS)     2.66 f      9.67         7.01
+reg_38_M_DATA_OUT_reg_1_/D (DFFQX1TS)     2.66 f      9.67         7.01
+reg_38_M_DATA_OUT_reg_2_/D (DFFQX1TS)     2.66 f      9.67         7.01
+reg_38_M_DATA_OUT_reg_3_/D (DFFQX1TS)     2.66 f      9.67         7.01
+reg_38_M_DATA_OUT_reg_4_/D (DFFQX1TS)     2.66 f      9.67         7.01
+reg_38_M_DATA_OUT_reg_5_/D (DFFQX1TS)     2.66 f      9.67         7.01
+reg_38_M_DATA_OUT_reg_8_/D (DFFQX1TS)     2.66 f      9.67         7.01
+reg_38_M_DATA_OUT_reg_9_/D (DFFQX1TS)     2.66 f      9.67         7.01
+reg_38_M_DATA_OUT_reg_10_/D (DFFQX1TS)     2.66 f     9.67         7.01
+reg_38_M_DATA_OUT_reg_11_/D (DFFQX1TS)     2.66 f     9.67         7.01
+reg_38_M_DATA_OUT_reg_12_/D (DFFQX1TS)     2.66 f     9.67         7.01
+reg_38_Y_DATA_OUT_reg_16_/D (DFFQX1TS)     2.63 r     9.74         7.10
+reg_38_Y_DATA_OUT_reg_17_/D (DFFQX1TS)     2.63 r     9.74         7.11
+reg_38_Y_DATA_OUT_reg_8_/D (DFFQX1TS)     2.63 r      9.74         7.11
+reg_38_Y_DATA_OUT_reg_4_/D (DFFQX1TS)     2.63 r      9.74         7.11
+reg_38_M_DATA_OUT_reg_7_/D (DFFQX1TS)     2.43 f      9.67         7.23
+reg_38_M_DATA_OUT_reg_16_/D (DFFQX1TS)     2.43 f     9.67         7.24
+reg_38_M_DATA_OUT_reg_13_/D (DFFQX1TS)     2.43 f     9.67         7.24
+reg_38_M_DATA_OUT_reg_14_/D (DFFQX1TS)     2.43 f     9.67         7.24
+reg_38_M_DATA_OUT_reg_15_/D (DFFQX1TS)     2.43 f     9.67         7.24
+reg_38_M_DATA_OUT_reg_6_/D (DFFQX1TS)     2.27 f      9.67         7.40
+reg_16_B_DATA_OUT_reg_2_/D (DFFQX1TS)     2.04 f      9.67         7.63
+reg_16_B_DATA_OUT_reg_7_/D (DFFQX1TS)     2.04 f      9.67         7.63
+reg_16_B_DATA_OUT_reg_12_/D (DFFQX1TS)     2.04 f     9.67         7.63
+reg_16_B_DATA_OUT_reg_15_/D (DFFQX1TS)     2.04 f     9.67         7.63
+presentState_reg_2_/D (DFFTRX1TS)     1.94 f          9.60         7.66
+presentState_reg_1_/D (DFFQX1TS)     1.87 r           9.66         7.80
+reg_16_B_DATA_OUT_reg_0_/D (DFFQX1TS)     1.85 f      9.67         7.82
+reg_16_B_DATA_OUT_reg_1_/D (DFFQX1TS)     1.85 f      9.67         7.82
+reg_16_B_DATA_OUT_reg_3_/D (DFFQX1TS)     1.85 f      9.67         7.82
+reg_16_B_DATA_OUT_reg_4_/D (DFFQX1TS)     1.85 f      9.67         7.82
+reg_16_B_DATA_OUT_reg_5_/D (DFFQX1TS)     1.85 f      9.67         7.82
+reg_16_B_DATA_OUT_reg_6_/D (DFFQX1TS)     1.85 f      9.67         7.82
+reg_16_B_DATA_OUT_reg_8_/D (DFFQX1TS)     1.85 f      9.67         7.82
+reg_16_B_DATA_OUT_reg_9_/D (DFFQX1TS)     1.85 f      9.67         7.82
+reg_16_B_DATA_OUT_reg_10_/D (DFFQX1TS)     1.85 f     9.67         7.82
+reg_16_B_DATA_OUT_reg_11_/D (DFFQX1TS)     1.85 f     9.67         7.82
+reg_16_B_DATA_OUT_reg_13_/D (DFFQX1TS)     1.85 f     9.67         7.82
+reg_16_B_DATA_OUT_reg_14_/D (DFFQX1TS)     1.85 f     9.67         7.82
+presentState_reg_0_/D (DFFTRX1TS)     1.53 r          9.52         7.99
+presentState_reg_0_/RN (DFFTRX1TS)     1.38 f         9.58         8.21
+presentState_reg_2_/RN (DFFTRX1TS)     1.38 f         9.58         8.21
+dout[14] (out)                      1.46 r            9.95         8.49
+dout[13] (out)                      1.46 r            9.95         8.49
+dout[12] (out)                      1.46 r            9.95         8.49
+dout[11] (out)                      1.46 r            9.95         8.49
+dout[10] (out)                      1.46 r            9.95         8.49
+dout[9] (out)                       1.46 r            9.95         8.49
+dout[8] (out)                       1.46 r            9.95         8.49
+dout[7] (out)                       1.46 r            9.95         8.49
+dout[6] (out)                       1.46 r            9.95         8.49
+dout[5] (out)                       1.46 r            9.95         8.49
+dout[4] (out)                       1.46 r            9.95         8.49
+dout[3] (out)                       1.46 r            9.95         8.49
+dout[2] (out)                       1.46 r            9.95         8.49
+dout[1] (out)                       1.46 r            9.95         8.49
+dout[0] (out)                       1.46 r            9.95         8.49
+dout[15] (out)                      1.41 r            9.95         8.54
+
+1

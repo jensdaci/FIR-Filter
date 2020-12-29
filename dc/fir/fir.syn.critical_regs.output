@@ -1,0 +1,36 @@
+Warning: Design 'fir' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -max_paths 10000
+        -sort_by slack
+Design : fir
+Version: O-2018.06-SP5-1
+Date   : Mon Dec 14 23:18:20 2020
+****************************************
+
+Operating Conditions: tt_1p2v_25c   Library: scx3_cmos8rf_lpvt_tt_1p2v_25c
+Wire Load Model Mode: top
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+dout[14] (out)                      1.46 r            9.95         8.49
+dout[13] (out)                      1.46 r            9.95         8.49
+dout[12] (out)                      1.46 r            9.95         8.49
+dout[11] (out)                      1.46 r            9.95         8.49
+dout[10] (out)                      1.46 r            9.95         8.49
+dout[9] (out)                       1.46 r            9.95         8.49
+dout[8] (out)                       1.46 r            9.95         8.49
+dout[7] (out)                       1.46 r            9.95         8.49
+dout[6] (out)                       1.46 r            9.95         8.49
+dout[5] (out)                       1.46 r            9.95         8.49
+dout[4] (out)                       1.46 r            9.95         8.49
+dout[3] (out)                       1.46 r            9.95         8.49
+dout[2] (out)                       1.46 r            9.95         8.49
+dout[1] (out)                       1.46 r            9.95         8.49
+dout[0] (out)                       1.46 r            9.95         8.49
+dout[15] (out)                      1.41 r            9.95         8.54
+
+1
