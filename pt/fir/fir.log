@@ -1,0 +1,279 @@
+
+                                 PrimeTime (R)
+
+               Version P-2019.03-SP2 for linux64 - May 30, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+#################################################
+# Primetime 
+# Script for static timing analysis
+# MS 7/2015
+#################################################
+#################################################
+# Units are defined in the .lib file
+# time: ns
+#################################################
+## Global
+set sh_enable_page_mode true
+false
+set power_enable_analysis true
+Information: Checked out license 'PrimePower' (PT-019)
+true
+## Setting files/paths
+set verilog_files {../../dc/fir/fir.nl.v}
+../../dc/fir/fir.nl.v
+set my_toplevel fir
+fir
+set search_path ". /courses/ee6321/share/ibm13rflpvt/synopsys/"
+. /courses/ee6321/share/ibm13rflpvt/synopsys/
+set link_path "* scx3_cmos8rf_lpvt_tt_1p2v_25c.db" 
+* scx3_cmos8rf_lpvt_tt_1p2v_25c.db
+## Read design
+read_db "scx3_cmos8rf_lpvt_tt_1p2v_25c.db"
+Loading db file '/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db'
+1
+read_db "../../mem_comp/imem_mc/imem_mc_tt_1p2v_25c_syn.db"
+Loading db file '/homes/user/stud/fall20/jd3693/Desktop/Project/mem_comp/imem_mc/imem_mc_tt_1p2v_25c_syn.db'
+1
+read_db "../../mem_comp/cmem_mc/cmem_mc_tt_1p2v_25c_syn.db"
+Loading db file '/homes/user/stud/fall20/jd3693/Desktop/Project/mem_comp/cmem_mc/cmem_mc_tt_1p2v_25c_syn.db'
+1
+read_verilog $verilog_files
+1
+link_design -keep_sub_designs $my_toplevel
+Loading verilog file '/homes/user/stud/fall20/jd3693/Desktop/Project/dc/fir/fir.nl.v'
+Warning: -keep_sub_design option of link_design will be made obsolete and removed from future releases of PrimeTime starting with the 2017.12 release. (PT-007)
+Linking design fir...
+Warning: Unable to resolve reference to 'imem_mc' in 'fir'. (LNK-005)
+Warning: Unable to resolve reference to 'cmem_mc' in 'fir'. (LNK-005)
+Information: Creating black box for imem_0/mem_51__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_15__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_10__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_55__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_19__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_63__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_14__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_27__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_5__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_22__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_0__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_35__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_30__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_18__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_13__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_9__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_26__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_4__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_21__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_39__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_34__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_47__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_42__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_8__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_50__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_38__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_33__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_46__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_41__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_59__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_54__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_62__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_58__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_53__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_17__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_61__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_12__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_25__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_3__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_20__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_16__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_11__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_29__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_7__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_24__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_2__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_37__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_32__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_45__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_40__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_28__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_6__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_23__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_1__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_36__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_31__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_49__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_44__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_57__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_52__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_60__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_48__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_43__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for imem_0/mem_56__imem_0/imem_mc... (LNK-043)
+Information: Creating black box for cmem_0/cmem_mc_0/cmem_mc... (LNK-043)
+Information: 490 (92.98%) library cells are unused in library scx3_cmos8rf_lpvt_tt_1p2v_25c..... (LNK-045)
+Information: 1 (100.00%) library cells are unused in library USERLIB..... (LNK-045)
+Information: 1 (100.00%) library cells are unused in library USERLIB..... (LNK-045)
+Information: total 492 library cells are unused (LNK-046)
+Design 'fir' was successfully linked.
+Information: There are 2540 leaf cells, ports, hiers and 4733 nets in the design (LNK-047)
+1
+## Timing Constraints
+source ./timing.tcl
+Warning: Collection '_sel3 ([get_clocks  { {clk} }])' has inappropriate type (clock). (SEL-002)
+Error: Nothing matched for port_list (SEL-005)
+Information: Loading library 'scx3_cmos8rf_lpvt_tt_1p2v_25c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Warning: Setting input delay on clock port (clk) relative to a clock (clk) defined at the same port. Command is ignored. (UITE-489)
+1
+1
+###################################################
+## Run STA 
+###################################################
+set rpt_file "./fir_pt.rpt"
+./fir_pt.rpt
+check_timing
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Information: Checking 'unconstrained_endpoints'.
+Information: Checking 'unexpandable_clocks'.
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+check_timing succeeded.
+1
+report_design >> ${rpt_file}
+report_reference >> ${rpt_file}
+report_constraint >> ${rpt_file}
+report_constraint -all_violators -significant_digits 4 >> ${rpt_file}
+report_timing -significant_digits 4 -delay_type min_max >> ${rpt_file}
+## Power analysis
+set power_analysis_mode "time_based"
+time_based
+read_vcd "../../qsim_dc/fir/fir.vcd" -strip_path "testbench/fir_0"
+
+======================================================================
+Summary:
+Total number of nets = 3541
+Number of annotated nets = 3541 (100.00%)
+Total number of leaf cells = 2415
+Number of fully annotated leaf cells = 2415 (100.00%)
+======================================================================
+
+1
+report_switching_activity >> ${rpt_file}
+report_switching_activity -list_not_annotated >> ${rpt_file}
+update_power
+Warning: The hierarchical cell 'imem_0/mem_15__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_10__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_55__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_19__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_63__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_14__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_27__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_5__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_22__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_0__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_35__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_30__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_18__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_13__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_9__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_26__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_4__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_21__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_39__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_34__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_47__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_42__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_8__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_50__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_38__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_33__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_46__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_41__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_59__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_54__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_62__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_58__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_53__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_17__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_61__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_12__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_25__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_3__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_20__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_16__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_11__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_29__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_7__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_24__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_2__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_37__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_32__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_45__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_40__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_28__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_6__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_23__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_1__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_36__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_31__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_49__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_44__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_57__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_52__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_60__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_48__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_43__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_56__imem_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'cmem_0/cmem_mc_0' is an empty cell (PWR-278)
+Warning: The hierarchical cell 'imem_0/mem_51__imem_0' is an empty cell (PWR-278)
+Information: Running time_based power analysis... (PWR-601)
+Information: The waveform options are:
+		File name:	primetime_px.fsdb
+		File format:	fsdb
+		Time interval:	0.001ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+ Last event time =     3080 ns  Last event time =  5606.14 ns  Last event time =     8140 ns  Last event time =    10640 ns  Last event time =  13046.2 ns  Last event time =  15517.1 ns  Last event time =  17926.6 ns  Last event time =    20400 ns  Last event time =    22867 ns  Last event time =    25356 ns  Last event time =  27946.4 ns  Last event time =  30396.9 ns  Last event time =    32907 ns  Last event time =    35380 ns  Last event time =  37856.1 ns  Last event time =    40426 ns  Last event time =  42896.4 ns  Last event time =    45376 ns  Last event time =    47830 ns  Last event time =    50290 ns  Last event time =  52716.7 ns  Last event time =    55190 ns  Last event time =  57656.5 ns  Last event time =    60096 ns  Last event time =  62536.3 ns  Last event time =    64900 ns  Last event time =  67336.3 ns  Last event time =    69866 ns  Last event time =    72347 ns  Last event time =  74901.5 ns  Last event time =  77366.3 ns  Last event time =  79856.4 ns  Last event time =  82416.6 ns  Last event time =    84900 ns  Last event time =    87270 ns  Last event time =    89750 ns  Last event time =    92270 ns  Last event time =  94716.6 ns  Last event time =    97146 ns  Last event time =    99577 ns  Last event time =   102057 ns  Last event time =   104587 ns  Last event time =   107097 ns  Last event time =   109577 ns  Last event time =   112130 ns  Last event time =   114616 ns  Last event time =   117127 ns  Last event time =   119557 ns  Last event time =   121990 ns  Last event time =   124516 ns  Last event time =   126966 ns  Last event time =   129376 ns  Last event time =   131880 ns  Last event time =   134310 ns  Last event time =   136800 ns  Last event time =   139270 ns  Last event time =   141767 ns  Last event time =   144177 ns  Last event time =   146647 ns  Last event time =   149146 ns  Last event time =   151701 ns  Last event time =   154100 ns  Last event time =   156557 ns  Last event time =   159056 ns  Last event time =   161526 ns  Last event time =   164006 ns  Last event time =   164778 ns  Last event time =   165166 ns  Last event time =   165537 ns  Last event time =   165918 ns  Last event time =   166289 ns  Last event time =   166677 ns  Last event time =   167057 ns  Last event time =   167428 ns  Last event time =   167808 ns  Last event time =   168197 ns  Last event time =   168567 ns  Last event time =   168948 ns  Last event time =   169319 ns  Last event time =   169707 ns  Last event time =   170087 ns  Last event time =   170458 ns  Last event time =   170838 ns  Last event time =   171227 ns  Last event time =   171597 ns  Last event time =   171978 ns  Last event time =   172349 ns  Last event time =   172737 ns  Last event time =   173118 ns  Last event time =   173488 ns  Last event time =   173869 ns  Last event time =   174257 ns  Last event time =   174627 ns  Last event time =   175008 ns  Last event time =   175379 ns  Last event time =   175767 ns  Last event time =   176148 ns  Last event time =   176518 ns  Last event time =   176899 ns  Last event time =   177287 ns  Last event time =   177657 ns  Last event time =   178038 ns  Last event time =   178415 ns  Last event time =   178797 ns  Last event time =   179178 ns  Last event time =   179548 ns  Last event time =   179929 ns  Last event time =   180317 ns  Last event time =   180688 ns  Last event time =   181068 ns  Last event time =   181446 ns  Last event time =   181827 ns  Last event time =   182208 ns  Last event time =   182578 ns  Last event time =   182965 ns  Last event time =   183347 ns  Last event time =   183718 ns  Last event time =   184098 ns  Last event time =   184477 ns  Last event time =   184857 ns  Last event time =   185238 ns  Last event time =   185608 ns  Last event time =   185996 ns  Last event time =   186377 ns  Last event time =   186748 ns  Last event time =   187128 ns  Last event time =   187507 ns  Last event time =   187887 ns  Last event time =   188268 ns  Last event time =   188638 ns  Last event time =   189026 ns  Last event time =   189407 ns  Last event time =   189778 ns  Last event time =   190158 ns  Last event time =   190537 ns  Last event time =   190917 ns  Last event time =   191298 ns  Last event time =   191668 ns  Last event time =   192056 ns  Last event time =   192437 ns  Last event time =   192808 ns  Last event time =   193188 ns  Last event time =   193576 ns  Last event time =   193947 ns  Last event time =   194328 ns  Last event time =   194698 ns  Last event time =   195086 ns  Last event time =   195467 ns  Last event time =   195838 ns  Last event time =   196218 ns  Last event time =   196606 ns  Last event time =   196977 ns  Last event time =   197358 ns  Last event time =   197728 ns  Last event time =   198117 ns  Last event time =   198497 ns  Last event time =   198868 ns  Last event time =   199248 ns  Last event time =   199636 ns  Last event time =   200007 ns  Last event time =   200388 ns  Last event time =   200759 ns  Last event time =   201147 ns  Last event time =   201527 ns  Last event time =   201898 ns  Last event time =   202278 ns  Last event time =   202666 ns  Last event time =   203037 ns  Last event time =   203418 ns  Last event time =   203789 ns  Last event time =   204177 ns  Last event time =   204557 ns  Last event time =   204928 ns  Last event time =   205308 ns  Last event time =   205697 ns  Last event time =   206067 ns  Last event time =   206448 ns  Last event time =   206819 ns  Last event time =   207207 ns  Last event time =   207587 ns  Last event time =   207958 ns  Last event time =   208338 ns  Last event time =   208727 ns  Last event time =   209097 ns  Last event time =   209478 ns  Last event time =   209849 ns  Last event time =   210237 ns  Last event time =   210618 ns  Last event time =   210988 ns  Last event time =   211369 ns  Last event time =   211757 ns  Last event time =   212127 ns  Last event time =   212508 ns  Last event time =   212879 ns  Last event time =   213267 ns  Last event time =   213648 ns  Last event time =   214018 ns  Last event time =   214399 ns  Last event time =   214787 ns  Last event time =   215157 ns  Last event time =   215538 ns  Last event time =   215915 ns  Last event time =   216297 ns  Last event time =   216678 ns  Last event time =   217048 ns  Last event time =   217429 ns  Last event time =   217817 ns  Last event time =   218188 ns  Last event time =   218568 ns  Last event time =   218946 ns  Last event time =   219327 ns  Last event time =   219708 ns  Last event time =   220078 ns  Last event time =   220465 ns  Last event time =   220847 ns  Last event time =   221218 ns  Last event time =   221598 ns  Last event time =   221977 ns  Last event time =   222357 ns  Last event time =   222738 ns  Last event time =   223108 ns  Last event time =   223496 ns  Last event time =   223877 ns  Last event time =   224248 ns  Last event time =   224628 ns  Last event time =   225007 ns  Last event time =   225387 ns  Last event time =   225768 ns  Last event time =   226138 ns  Last event time =   226526 ns  Last event time =   226907 ns  Last event time =   227278 ns  Last event time =   227658 ns  Last event time =   228037 ns  Last event time =   228417 ns  Last event time =   228798 ns  Last event time =   229168 ns  Last event time =   229556 ns  Last event time =   229937 ns  Last event time =   230308 ns  Last event time =   230688 ns  Last event time =   231076 ns  Last event time =   231447 ns  Last event time =   231828 ns  Last event time =   232198 ns  Last event time =   232586 ns  Last event time =   232967 ns  Last event time =   233338 ns  Last event time =   233718 ns  Last event time =   234106 ns  Last event time =   234477 ns  Last event time =   234858 ns  Last event time =   235228 ns  Last event time =   235617 ns  Last event time =   235997 ns  Last event time =   236368 ns  Last event time =   236748 ns  Last event time =   237136 ns  Last event time =   237507 ns  Last event time =   237888 ns  Last event time =   238259 ns  Last event time =   238647 ns  Last event time =   239027 ns  Last event time =   239398 ns  Last event time =   239778 ns  Last event time =   240166 ns  Last event time =   240537 ns  Last event time =   240918 ns  Last event time =   241289 ns  Last event time =   241677 ns  Last event time =   242057 ns  Last event time =   242428 ns  Last event time =   242808 ns  Last event time =   243197 ns  Last event time =   243567 ns  Last event time =   243948 ns  Last event time =   244319 ns  Last event time =   244707 ns  Last event time =   245087 ns  Last event time =   245458 ns  Last event time =   245838 ns  Last event time =   246227 ns  Last event time =   246597 ns  Last event time =   246978 ns  Last event time =   247349 ns  Last event time =   247737 ns  Last event time =   248118 ns  Last event time =   248488 ns  Last event time =   248869 ns  Last event time =   249257 ns  Last event time =   249627 ns  Last event time =   250008 ns  Last event time =   250379 ns  Last event time =   250767 ns  Last event time =   251148 ns  Last event time =   251518 ns  Last event time =   251899 ns  Last event time =   252287 ns  Last event time =   252657 ns  Last event time =   253038 ns  Last event time =   253415 ns  Last event time =   253797 ns  Last event time =   254178 ns  Last event time =   254548 ns  Last event time =   254929 ns  Last event time =   255317 ns  Last event time =   255688 ns  Last event time =   256068 ns  Last event time =   256446 ns  Last event time =   256827 ns  Last event time =   257208 ns  Last event time =   257578 ns  Last event time =   257965 ns  Last event time =   258347 ns  Last event time =   258718 ns  Last event time =   259098 ns  Last event time =   259477 ns  Last event time =   259857 ns  Last event time =   260238 ns  Last event time =   260608 ns  Last event time =   260996 ns  Last event time =   261377 ns  Last event time =   261748 ns  Last event time =   262128 ns  Last event time =   262507 ns  Last event time =   262887 ns  Last event time =   263268 ns  Last event time =   263638 ns  Last event time =   264026 ns  Last event time =   264407 ns  Last event time =   264778 ns  Last event time =   265158 ns  Last event time =   265537 ns  Last event time =   265917 ns  Last event time =   266298 ns  Last event time =   266668 ns  Last event time =   267056 ns  Last event time =   267437 ns  Last event time =   267808 ns  Last event time =   268188 ns  Last event time =   268576 ns  Last event time =   268947 ns  Last event time =   269328 ns  Last event time =   269698 ns  Last event time =   270086 ns  Last event time =   270467 ns  Last event time =   270838 ns  Last event time =   271218 ns  Last event time =   271606 ns  Last event time =   271977 ns  Last event time =   272358 ns  Last event time =   272728 ns  Last event time =   273117 ns  Last event time =   273497 ns  Last event time =   273868 ns  Last event time =   274248 ns  Last event time =   274636 ns  Last event time =   275007 ns  Last event time =   275388 ns  Last event time =   275759 ns  Last event time =   276147 ns  Last event time =   276527 ns  Last event time =   276898 ns  Last event time =   277278 ns  Last event time =   277666 ns  Last event time =   278037 ns  Last event time =   278418 ns  Last event time =   278789 ns  Last event time =   279177 ns  Last event time =   279557 ns  Last event time =   279928 ns  Last event time =   280308 ns  Last event time =   280697 ns  Last event time =   281067 ns  Last event time =   281448 ns  Last event time =   281819 ns  Last event time =   282207 ns  Last event time =   282587 ns  Last event time =   282958 ns  Last event time =   283338 ns  Last event time =   283727 ns  Last event time =   284097 ns  Last event time =   284478 ns  Last event time =   284849 ns  Last event time =   285237 ns  Last event time =   285618 ns  Last event time =   285988 ns  Last event time =   286369 ns  Last event time =   286757 ns  Last event time =   287127 ns  Last event time =   287508 ns  Last event time =   287879 ns  Last event time =   288267 ns  Last event time =   288648 ns  Last event time =   289018 ns  Last event time =   289399 ns  Last event time =   289787 ns  Last event time =   290157 ns  Last event time =   290538 ns  Last event time =   290915 ns  Last event time =   291297 ns  Last event time =   291678 ns  Last event time =   292048 ns  Last event time =   292429 ns  Last event time =   292817 ns  Last event time =   293188 ns  Last event time =   293568 ns  Last event time =   293946 ns  Last event time =   294327 ns  Last event time =   294708 ns  Last event time =   295078 ns  Last event time =   295465 ns  Last event time =   295847 ns  Last event time =   296218 ns  Last event time =   296598 ns  Last event time =   296977 ns  Last event time =   297357 ns  Last event time =   297738 ns  Last event time =   298108 ns  Last event time =   298496 ns  Last event time =   298877 ns  Last event time =   299248 ns  Last event time =   299628 ns  Last event time =   300007 ns  Last event time =   300387 ns  Last event time =   300768 ns  Last event time =   301138 ns  Last event time =   301526 ns  Last event time =   301907 ns  Last event time =   302278 ns  Last event time =   302658 ns  Last event time =   303037 ns  Last event time =   303417 ns  Last event time =   303798 ns  Last event time =   304168 ns  Last event time =   304556 ns  Last event time =   304937 ns  Last event time =   305308 ns  Last event time =   305688 ns  Last event time =   306076 ns  Last event time =   306447 ns  Last event time =   306828 ns  Last event time =   307198 ns  Last event time =   307586 ns  Last event time =   307967 ns  Last event time =   308338 ns  Last event time =   308718 ns  Last event time =   309106 ns  Last event time =   309477 ns  Last event time =   309858 ns  Last event time =   310228 ns  Last event time =   310617 ns  Last event time =   310997 ns  Last event time =   311368 ns  Last event time =   311748 ns  Last event time =   312136 ns  Last event time =   312507 ns  Last event time =   312888 ns  Last event time =   313259 ns  Last event time =   313647 ns  Last event time =   314027 ns  Last event time =   314398 ns  Last event time =   314778 ns  Last event time =   315166 ns  Last event time =   315537 ns  Last event time =   315918 ns  Last event time =   316289 ns  Last event time =   316677 ns  Last event time =   317057 ns  Last event time =   317428 ns  Last event time =   317808 ns  Last event time =   318197 ns  Last event time =   318567 ns  Last event time =   318948 ns  Last event time =   319319 ns  Last event time =   319707 ns  Last event time =   320087 ns  Last event time =   320458 ns  Last event time =   320838 ns  Last event time =   321227 ns  Last event time =   321597 ns  Last event time =   321978 ns  Last event time =   322349 ns  Last event time =   322737 ns  Last event time =   323118 ns  Last event time =   323488 ns  Last event time =   323869 ns  Last event time =   324257 ns  Last event time =   324627 ns  Last event time =   325008 ns  Last event time =   325379 ns  Last event time =   325767 ns  Last event time =   326148 ns  Last event time =   326518 ns  Last event time =   326899 ns  Last event time =   327287 ns  Last event time =   327657 ns  Last event time =   328038 ns  Last event time =   328415 ns  Last event time =   328797 ns  Last event time =   329178 ns  Last event time =   329548 ns  Last event time =   329929 ns  Last event time =   330317 ns  Last event time =   330688 ns  Last event time =   331068 ns  Last event time =   331446 ns  Last event time =   331827 ns  Last event time =   332208 ns  Last event time =   332578 ns  Last event time =   332965 ns  Last event time =   333347 ns  Last event time =   333718 ns  Last event time =   334098 ns  Last event time =   334477 ns  Last event time =   334857 ns  Last event time =   335238 ns  Last event time =   335608 ns  Last event time =   335996 ns  Last event time =   336377 ns  Last event time =   336748 ns  Last event time =   337128 ns  Last event time =   337507 ns  Last event time =   337887 ns  Last event time =   338268 ns  Last event time =   338638 ns  Last event time =   339026 ns  Last event time =   339407 ns  Last event time =   339778 ns  Last event time =   340158 ns  Last event time =   340537 ns  Last event time =   340917 ns  Last event time =   341298 ns  Last event time =   341668 ns  Last event time =   342056 ns  Last event time =   342437 ns  Last event time =   342808 ns  Last event time =   343188 ns  Last event time =   343576 ns  Last event time =   343947 ns  Last event time =   344328 ns  Last event time =   344698 ns  Last event time =   345086 ns  Last event time =   345467 ns  Last event time =   345838 ns  Last event time =   346218 ns  Last event time =   346606 ns  Last event time =   346977 ns  Last event time =   347358 ns  Last event time =   347728 ns  Last event time =   348117 ns  Last event time =   348497 ns  Last event time =   348868 ns  Last event time =   349248 ns  Last event time =   349636 ns  Last event time =   350007 ns  Last event time =   350388 ns  Last event time =   350759 ns  Last event time =   351147 ns  Last event time =   351527 ns  Last event time =   351898 ns  Last event time =   352278 ns  Last event time =   352666 ns  Last event time =   353037 ns  Last event time =   353418 ns  Last event time =   353789 ns  Last event time =   354177 ns  Last event time =   354557 ns  Last event time =   354928 ns  Last event time =   355308 ns  Last event time =   355697 ns  Last event time =   356067 ns  Last event time =   356448 ns  Last event time =   356819 ns  Last event time =   357207 ns  Last event time =   357587 ns  Last event time =   357958 ns  Last event time =   358338 ns  Last event time =   358727 ns  Last event time =   359097 ns  Last event time =   359478 ns  Last event time =   359849 ns  Last event time =   360237 ns  Last event time =   360618 ns  Last event time =   360988 ns  Last event time =   361369 ns  Last event time =   361757 ns  Last event time =   362127 ns  Last event time =   362508 ns  Last event time =   362879 ns  Last event time =   363267 ns  Last event time =   363648 ns  Last event time =   364018 ns  Last event time =   364399 ns  Last event time =   364787 ns  Last event time =   365157 ns  Last event time =   365538 ns  Last event time =   365915 ns  Last event time =   366297 ns  Last event time =   366678 ns  Last event time =   367048 ns  Last event time =   367429 ns  Last event time =   367817 ns  Last event time =   368188 ns  Last event time =   368568 ns  Last event time =   368946 ns  Last event time =   369327 ns  Last event time =   369708 ns  Last event time =   370078 ns  Last event time =   370465 ns  Last event time =   370847 ns  Last event time =   371218 ns  Last event time =   371598 ns  Last event time =   371977 ns  Last event time =   372357 ns  Last event time =   372738 ns  Last event time =   373108 ns  Last event time =   373496 ns  Last event time =   373877 ns  Last event time =   374248 ns  Last event time =   374628 ns  Last event time =   375007 ns  Last event time =   375387 ns  Last event time =   375768 ns  Last event time =   376138 ns  Last event time =   376526 ns  Last event time =   376907 ns  Last event time =   377278 ns  Last event time =   377658 ns  Last event time =   378037 ns  Last event time =   378417 ns  Last event time =   378798 ns  Last event time =   379168 ns  Last event time =   379556 ns  Last event time =   379937 ns  Last event time =   380308 ns  Last event time =   380688 ns  Last event time =   381076 ns  Last event time =   381447 ns  Last event time =   381828 ns  Last event time =   382198 ns  Last event time =   382586 ns  Last event time =   382967 ns  Last event time =   383338 ns  Last event time =   383718 ns  Last event time =   384106 ns  Last event time =   384477 ns  Last event time =   384858 ns  Last event time =   385228 ns  Last event time =   385617 ns  Last event time =   385997 ns  Last event time =   386368 ns  Last event time =   386748 ns  Last event time =   387136 ns  Last event time =   387507 ns  Last event time =   387888 ns  Last event time =   388259 ns  Last event time =   388647 ns  Last event time =   389027 ns  Last event time =   389398 ns  Last event time =   389778 ns  Last event time =   390166 ns  Last event time =   390537 ns  Last event time =   390918 ns  Last event time =   391289 ns  Last event time =   391677 ns  Last event time =   392057 ns  Last event time =   392428 ns  Last event time =   392808 ns  Last event time =   393197 ns  Last event time =   393567 ns  Last event time =   393948 ns  Last event time =   394319 ns  Last event time =   394707 ns  Last event time =   395087 ns  Last event time =   395458 ns  Last event time =   395838 ns  Last event time =   396227 ns  Last event time =   396597 ns  Last event time =   396978 ns  Last event time =   397349 ns  Last event time =   397737 ns  Last event time =   398118 ns  Last event time =   398488 ns  Last event time =   398869 ns  Last event time =   399257 ns  Last event time =   399627 ns  Last event time =   400008 ns  Last event time =   400379 ns  Last event time =   400767 ns  Last event time =   401148 ns  Last event time =   401518 ns  Last event time =   401899 ns  Last event time =   402287 ns  Last event time =   402657 ns  Last event time =   403038 ns  Last event time =   403415 ns  Last event time =   403797 ns  Last event time =   404178 ns  Last event time =   404548 ns  Last event time =   404929 ns  Last event time =   405317 ns  Last event time =   405688 ns  Last event time =   406068 ns  Last event time =   406446 ns  Last event time =   406827 ns  Last event time =   407208 ns  Last event time =   407578 ns  Last event time =   407965 ns  Last event time =   408347 ns  Last event time =   408718 ns  Last event time =   409098 ns  Last event time =   409477 ns  Last event time =   409857 ns  Last event time =   410238 ns  Last event time =   410608 ns  Last event time =   410996 ns  Last event time =   411377 ns  Last event time =   411748 ns  Last event time =   412128 ns  Last event time =   412507 ns  Last event time =   412887 ns  Last event time =   413268 ns  Last event time =   413638 ns  Last event time =   414026 ns  Last event time =   414407 ns  Last event time =   414778 ns  Last event time =   415158 ns  Last event time =   415537 ns  Last event time =   415917 ns  Last event time =   416298 ns  Last event time =   416668 ns  Last event time =   417056 ns  Last event time =   417437 ns  Last event time =   417808 ns  Last event time =   418188 ns  Last event time =   418576 ns  Last event time =   418947 ns  Last event time =   419328 ns  Last event time =   419698 ns  Last event time =   420086 ns  Last event time =   420467 ns  Last event time =   420838 ns  Last event time =   421218 ns  Last event time =   421606 ns  Last event time =   421977 ns  Last event time =   422358 ns  Last event time =   422728 ns  Last event time =   423117 ns  Last event time =   423497 ns  Last event time =   423868 ns  Last event time =   424248 ns  Last event time =   424636 ns  Last event time =   425007 ns  Last event time =   425388 ns  Last event time =   425759 ns  Last event time =   426147 ns  Last event time =   426527 ns  Last event time =   426898 ns  Last event time =   427278 ns  Last event time =   427666 ns  Last event time =   428037 ns  Last event time =   428418 ns  Last event time =   428789 ns  Last event time =   429177 ns  Last event time =   429557 ns  Last event time =   429928 ns  Last event time =   430308 ns  Last event time =   430697 ns  Last event time =   431067 ns  Last event time =   431448 ns  Last event time =   431819 ns  Last event time =   432207 ns  Last event time =   432587 ns  Last event time =   432958 ns  Last event time =   433338 ns  Last event time =   433727 ns  Last event time =   434097 ns  Last event time =   434478 ns  Last event time =   434849 ns  Last event time =   435237 ns  Last event time =   435618 ns  Last event time =   435988 ns  Last event time =   436369 ns  Last event time =   436757 ns  Last event time =   437127 ns  Last event time =   437508 ns  Last event time =   437879 ns  Last event time =   438267 ns  Last event time =   438648 ns  Last event time =   439018 ns  Last event time =   439399 ns  Last event time =   439787 ns  Last event time =   440157 ns  Last event time =   440538 ns  Last event time =   440915 ns  Last event time =   441297 ns  Last event time =   441678 ns  Last event time =   442048 ns  Last event time =   442429 ns  Last event time =   442817 ns  Last event time =   443188 ns  Last event time =   443568 ns  Last event time =   443946 ns  Last event time =   444327 ns  Last event time =   444708 ns  Last event time =   445078 ns  Last event time =   445465 ns  Last event time =   445847 ns  Last event time =   446218 ns  Last event time =   446598 ns  Last event time =   446977 ns  Last event time =   447357 ns  Last event time =   447738 ns  Last event time =   448108 ns  Last event time =   448496 ns  Last event time =   448877 ns  Last event time =   449248 ns  Last event time =   449628 ns  Last event time =   450007 ns  Last event time =   450387 ns  Last event time =   450768 ns  Last event time =   451138 ns  Last event time =   451526 ns  Last event time =   451907 ns  Last event time =   452278 ns  Last event time =   452658 ns  Last event time =   453037 ns  Last event time =   453417 ns  Last event time =   453798 ns  Last event time =   454168 ns  Last event time =   454556 ns  Last event time =   454937 ns  Last event time =   455308 ns  Last event time =   455688 ns  Last event time =   456076 ns  Last event time =   456447 ns  Last event time =   456828 ns  Last event time =   457198 ns  Last event time =   457586 ns  Last event time =   457967 ns  Last event time =   458338 ns  Last event time =   458718 ns  Last event time =   459106 ns  Last event time =   459477 ns  Last event time =   459858 ns  Last event time =   460228 ns  Last event time =   460617 ns  Last event time =   460997 ns  Last event time =   461368 ns  Last event time =   461748 ns  Last event time =   462136 ns  Last event time =   462507 ns  Last event time =   462888 ns  Last event time =   463259 ns  Last event time =   463647 ns  Last event time =   464027 ns  Last event time =   464398 ns  Last event time =   464778 ns  Last event time =   465166 ns  Last event time =   465537 ns  Last event time =   465918 ns  Last event time =   466289 ns  Last event time =   466677 ns  Last event time =   467057 ns  Last event time =   467428 ns  Last event time =   467808 ns  Last event time =   468197 ns  Last event time =   468567 ns  Last event time =   468948 ns  Last event time =   469319 ns  Last event time =   469707 ns  Last event time =   470087 ns  Last event time =   470458 ns  Last event time =   470838 ns  Last event time =   471227 ns  Last event time =   471597 ns  Last event time =   471978 ns  Last event time =   472349 ns  Last event time =   472737 ns  Last event time =   473118 ns  Last event time =   473488 ns  Last event time =   473869 ns  Last event time =   474257 ns  Last event time =   474627 ns  Last event time =   475008 ns  Last event time =   475379 ns  Last event time =   475767 ns  Last event time =   476148 ns  Last event time =   476518 ns  Last event time =   476899 ns  Last event time =   477287 ns  Last event time =   477657 ns  Last event time =   478038 ns  Last event time =   478415 ns  Last event time =   478797 ns  Last event time =   479178 ns  Last event time =   479548 ns  Last event time =   479929 ns  Last event time =   480317 ns  Last event time =   480688 ns  Last event time =   481068 ns  Last event time =   481446 ns  Last event time =   481827 ns  Last event time =   482208 ns  Last event time =   482578 ns  Last event time =   482965 ns  Last event time =   483347 ns  Last event time =   483718 ns  Last event time =   484098 ns  Last event time =   484477 ns  Last event time =   484857 ns  Last event time =   485238 ns  Last event time =   485608 ns  Last event time =   485996 ns  Last event time =   486377 ns  Last event time =   486748 ns  Last event time =   487128 ns  Last event time =   487507 ns  Last event time =   487887 ns  Last event time =   488268 ns  Last event time =   488638 ns  Last event time =   489026 ns  Last event time =   489407 ns  Last event time =   489778 ns  Last event time =   490158 ns  Last event time =   490537 ns  Last event time =   490917 ns  Last event time =   491298 ns  Last event time =   491668 ns  Last event time =   492056 ns  Last event time =   492437 ns  Last event time =   492808 ns  Last event time =   493188 ns  Last event time =   493576 ns  Last event time =   493947 ns  Last event time =   494328 ns Information: analysis is done for time window (0ns - 494490ns)
+
+Information: Total simulation time = 494490.000000 ns
+1
+report_power >> ${rpt_file}
+report_power -hierarchy  >> ${rpt_file}
+write_sdf -context verilog "./fir.sdf"
+1
+# Exiting primetime
+quit
+Information: Defining new variable 'clk_name'. (CMD-041)
+Information: Defining new variable 'rpt_file'. (CMD-041)
+Information: Defining new variable 'clk_uncertainty'. (CMD-041)
+Information: Defining new variable 'clk_period'. (CMD-041)
+Information: Defining new variable 'clk_port'. (CMD-041)
+Information: Defining new variable 'my_toplevel'. (CMD-041)
+Information: Defining new variable 'typical_wire_load'. (CMD-041)
+Information: Defining new variable 'typical_output_delay'. (CMD-041)
+Information: Defining new variable 'verilog_files'. (CMD-041)
+Information: Defining new variable 'typical_input_delay'. (CMD-041)
+Information: Defining new variable 'clk_transition'. (CMD-041)
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 1310.64 MB
+CPU usage for this session: 60 seconds 
+Elapsed time for this session: 70 seconds
+Diagnostics summary: 1 error, 71 warnings, 84 informationals
+
+Thank you for using pt_shell!
