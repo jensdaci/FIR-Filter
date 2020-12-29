@@ -1,0 +1,271 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/user/stud/fall20/jd3693/Desktop/Project/qsim_rtl/fir
+T_opt
+!s110 1608010823
+V3z2SdDmG;L:c_UXz?[LM?0
+04 9 4 work testbench fast 0
+=1-989096bfa3d5-5fd84c46-b21ea-2f92
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OE;O;10.7b_1;67
+valu
+Z2 !s110 1608010821
+!i10b 1
+!s100 Bk_m[;lOXgA=41Tm<0F<V2
+IeBc=C2@BbjFjIoB3j6cA83
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1605754952
+8/user/stud/fall20/jd3693/Desktop/Project/rtl/alu/alu.v
+F/user/stud/fall20/jd3693/Desktop/Project/rtl/alu/alu.v
+L0 1
+Z4 OE;L;10.7b_1;67
+r1
+!s85 0
+31
+Z5 !s108 1608010820.000000
+!s107 /user/stud/fall20/jd3693/Desktop/Project/rtl/alu/alu.v|
+!s90 -reportprogress|300|+acc|-incr|/user/stud/fall20/jd3693/Desktop/Project/rtl/alu/alu.v|
+!i113 0
+Z6 o+acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vcmem
+R2
+!i10b 1
+!s100 JzJRT0iSKaDWDKMPFQ`TV1
+I8zz`djWA]NQ[XcXgP=83m3
+R3
+R0
+w1606506347
+8/user/stud/fall20/jd3693/Desktop/Project/rtl/cmem/cmem.v
+F/user/stud/fall20/jd3693/Desktop/Project/rtl/cmem/cmem.v
+L0 3
+R4
+r1
+!s85 0
+31
+Z7 !s108 1608010821.000000
+!s107 /user/stud/fall20/jd3693/Desktop/Project/rtl/cmem/cmem.v|
+!s90 -reportprogress|300|+acc|-incr|/user/stud/fall20/jd3693/Desktop/Project/rtl/cmem/cmem.v|
+!i113 0
+R6
+R1
+vcmem_mc
+R2
+!i10b 1
+!s100 jag0K;4n<jgeS]D`hWn5o3
+IRL0T;k;kCOiLaVE_NR76Z3
+R3
+R0
+w1605907286
+8/user/stud/fall20/jd3693/Desktop/Project/mem_comp/cmem_mc/cmem_mc.v
+F/user/stud/fall20/jd3693/Desktop/Project/mem_comp/cmem_mc/cmem_mc.v
+Z8 L0 53
+R4
+r1
+!s85 0
+31
+R7
+!s107 /user/stud/fall20/jd3693/Desktop/Project/mem_comp/cmem_mc/cmem_mc.v|
+!s90 -reportprogress|300|+acc|-incr|/user/stud/fall20/jd3693/Desktop/Project/mem_comp/cmem_mc/cmem_mc.v|
+!i113 0
+R6
+R1
+vfir
+!s110 1608010819
+!i10b 1
+!s100 hKn[SSjnfYTea?XiGoSk<1
+I7FJgWFI9DEmU?k^KGf>jh3
+R3
+R0
+w1608004851
+8/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v
+F/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v
+L0 3
+R4
+r1
+!s85 0
+31
+Z9 !s108 1608010819.000000
+!s107 /user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v|
+!s90 -reportprogress|300|+acc|-incr|/user/stud/fall20/jd3693/Desktop/Project/rtl/fir/fir.v|
+!i113 0
+R6
+R1
+vimem
+R2
+!i10b 1
+!s100 Zf^FN;BmV9fV_8d2F]<R`3
+ISoD>I?]Tl0;HB1GO48eOJ2
+R3
+R0
+w1606524616
+8/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/imem.v
+F/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/imem.v
+L0 3
+R4
+r1
+!s85 0
+31
+R7
+!s107 /user/stud/fall20/jd3693/Desktop/Project/rtl/imem/imem.v|
+!s90 -reportprogress|300|+acc|-incr|/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/imem.v|
+!i113 0
+R6
+R1
+vimem_mc
+Z10 !s110 1608010822
+!i10b 1
+!s100 NA>LJckn;9leK6XcdeP;@0
+IR721d8hC;@]ODZk>QWF^N3
+R3
+R0
+w1605907129
+8/user/stud/fall20/jd3693/Desktop/Project/mem_comp/imem_mc/imem_mc.v
+F/user/stud/fall20/jd3693/Desktop/Project/mem_comp/imem_mc/imem_mc.v
+R8
+R4
+r1
+!s85 0
+31
+R7
+!s107 /user/stud/fall20/jd3693/Desktop/Project/mem_comp/imem_mc/imem_mc.v|
+!s90 -reportprogress|300|+acc|-incr|/user/stud/fall20/jd3693/Desktop/Project/mem_comp/imem_mc/imem_mc.v|
+!i113 0
+R6
+R1
+vmux_16_1
+R2
+!i10b 1
+!s100 =_;?CJY;2OB[@7de9J@Cf1
+IUQ:Ucm>WCW?cE29k_<zVB2
+R3
+R0
+w1605943166
+8/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/mux_16_1.v
+F/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/mux_16_1.v
+L0 3
+R4
+r1
+!s85 0
+31
+R7
+!s107 /user/stud/fall20/jd3693/Desktop/Project/rtl/imem/mux_16_1.v|
+!s90 -reportprogress|300|+acc|-incr|/user/stud/fall20/jd3693/Desktop/Project/rtl/imem/mux_16_1.v|
+!i113 0
+R6
+R1
+vreg_16
+Z11 !s110 1608010820
+!i10b 1
+!s100 0k7=^>g3T>[lYI<0jBgG;1
+IzG7^KR:aJ;?d7P]O3_6F:1
+R3
+R0
+w1605910783
+8/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_16/reg_16.v
+F/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_16/reg_16.v
+L0 3
+R4
+r1
+!s85 0
+31
+R9
+!s107 /user/stud/fall20/jd3693/Desktop/Project/rtl/reg_16/reg_16.v|
+!s90 -reportprogress|300|+acc|-incr|/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_16/reg_16.v|
+!i113 0
+R6
+R1
+vreg_38
+R11
+!i10b 1
+!s100 NP`LGA;5N?XGBQ_<B]2b?3
+I2JgQ>e[EHo69^RYLMTFmg0
+R3
+R0
+w1607837226
+8/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_38/reg_38.v
+F/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_38/reg_38.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /user/stud/fall20/jd3693/Desktop/Project/rtl/reg_38/reg_38.v|
+!s90 -reportprogress|300|+acc|-incr|/user/stud/fall20/jd3693/Desktop/Project/rtl/reg_38/reg_38.v|
+!i113 0
+R6
+R1
+vtestbench
+R10
+!i10b 1
+!s100 [=<=fA_6NQ1z6oe@jNJ^62
+Ifoj0mUMgOY`4bTbV1TjS23
+R3
+R0
+w1608004723
+8test_fir.v
+Ftest_fir.v
+L0 9
+R4
+r1
+!s85 0
+31
+!s108 1608010822.000000
+!s107 test_fir.v|
+!s90 -reportprogress|300|+acc|-incr|test_fir.v|
+!i113 0
+R6
+R1
+vupcounter_14
+R11
+!i10b 1
+!s100 0S;1^2`^^DFz^56EimXIL0
+Ihag=cL[Sc2=T2^HJRfE3X1
+R3
+R0
+w1607750731
+8/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_14/upcounter_14.v
+F/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_14/upcounter_14.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_14/upcounter_14.v|
+!s90 -reportprogress|300|+acc|-incr|/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_14/upcounter_14.v|
+!i113 0
+R6
+R1
+vupcounter_6
+R11
+!i10b 1
+!s100 MoKG?bIlJe?mGEnS7?Sf71
+IE[l]OzO3iOG^CE^:HQ8?e0
+R3
+R0
+w1607934412
+8/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_6/upcounter_6.v
+F/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_6/upcounter_6.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_6/upcounter_6.v|
+!s90 -reportprogress|300|+acc|-incr|/user/stud/fall20/jd3693/Desktop/Project/rtl/upcounter_6/upcounter_6.v|
+!i113 0
+R6
+R1

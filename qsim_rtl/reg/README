@@ -1,0 +1,5 @@
+Set VoptFLow=0 in modelsim.ini for the tool to work
+In runsim.do use:
+1) vlog -suppress 12110 
+2) vsim -suppress 12110 
+
