@@ -1,0 +1,629 @@
+/*
+ *      CONFIDENTIAL  AND  PROPRIETARY SOFTWARE OF ARM Physical IP, INC.
+ *      
+ *      Copyright (c) 1993-2020  ARM Physical IP, Inc.  All  Rights Reserved.
+ *      
+ *      Use of this Software is subject to the terms and conditions  of the
+ *      applicable license agreement with ARM Physical IP, Inc.  In addition,
+ *      this Software is protected by patents, copyright law and international
+ *      treaties.
+ *      
+ *      The copyright notice(s) in this Software does not indicate actual or
+ *      intended publication of this Software.
+ *      
+ *      name:			High Speed/Density Single Port Register File Generator
+ *           			IBM CMRF8SF-LPVT Process
+ *      version:		2008Q3V1
+ *      comment:		
+ *      configuration:	 -instname "cmem_mc" -words 64 -bits 16 -frequency 1 -ring_width 2.0 -mux 2 -write_mask off -wp_size 8 -top_layer "m6-m8_m4" -power_type rings -horiz met3 -vert met2 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 4 -asvm on -libname USERLIB -corners ff_1p32v_m55c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_m55c
+ *
+ *      Synopsys model for Synchronous Single-Port Register File
+ *
+ *      Library Name:   USERLIB
+ *      Instance Name:  cmem_mc
+ *      Words:          64
+ *      Word Width:     16
+ *      Mux:            2
+ *      Corner:        ff_1p65v_125c
+ *
+ *      Creation Date:  2020-11-20 21:21:27Z
+ *      Version:        2008Q3V1
+ *
+ *      Verified With: Synopsys Design Compiler
+ *
+ *      Modeling Assumptions: This library contains a black box description
+ *          for a memory element.  At the library level, a
+ *          default_max_transition constraint is set to the maximum
+ *          characterized input slew.  Each output has a max_capacitance
+ *          constraint set to the highest characterized output load.  These two
+ *          constraints force Design Compiler to synthesize circuits that
+ *          operate within the characterization space.  The user can tighten
+ *          these constraints, if desired.  When writing SDF from Design
+ *          Compiler, use the version 2.1 option.  This ensures the SDF will
+ *          annotate to simulation models provided with this generator.
+ *
+ *      Modeling Limitations: 
+ *          Due to limitations of the .lib format, some data reduction was
+ *          necessary.  When reducing data, minimum values were chosen for the
+ *          fast case corner and maximum values were used for the typical and
+ *          best case corners.  It is recommended that critical timing and
+ *          setup and hold times be checked at all corners.
+ *
+ *      Known Bugs: None.
+ *
+ *      Known Work Arounds: N/A
+ *
+ */
+
+library(USERLIB) {
+	delay_model		: table_lookup;
+	revision		: 1.1;	
+	date			: "2020-11-20 21:21:27Z";
+	comment			: "Confidential Information of ARM Physical IP, Inc.  Use subject to ARM Physical IP, Inc. license.  Copyright (c) 1993-2020 ARM Physical IP, Inc.";
+	time_unit		: "1ns";
+	voltage_unit		: "1V";
+	current_unit		: "1mA";
+	leakage_power_unit	: "1mW";
+	nom_process		: 1;
+	nom_temperature		: 125.000;
+	nom_voltage		: 1.650;
+	capacitive_load_unit	 (1,pf);
+
+	pulling_resistance_unit	        : "1kohm";
+
+	/* additional header data */
+	default_cell_leakage_power      : 0;
+	default_fanout_load		: 1;
+	default_inout_pin_cap		: 0.005;
+	default_input_pin_cap		: 0.005;
+	default_output_pin_cap		: 0.0;
+	default_max_transition		: 1.500;
+
+        /* default attributes */
+        default_leakage_power_density : 0.0;
+        slew_derate_from_library      : 1.000;
+        slew_lower_threshold_pct_fall : 10.000;
+        slew_upper_threshold_pct_fall : 90.000;
+        slew_lower_threshold_pct_rise : 10.000;
+        slew_upper_threshold_pct_rise : 90.000;
+        input_threshold_pct_fall      : 50.000;
+        input_threshold_pct_rise      : 50.000;
+        output_threshold_pct_fall     : 50.000;
+        output_threshold_pct_rise     : 50.000;
+
+ 	/* k-factors */
+ 	k_process_cell_fall             : 1;
+ 	k_process_cell_leakage_power    : 0;
+ 	k_process_cell_rise             : 1;
+ 	k_process_fall_transition       : 1;
+ 	k_process_hold_fall             : 1;
+ 	k_process_hold_rise             : 1;
+ 	k_process_internal_power        : 0;
+ 	k_process_min_pulse_width_high  : 1;
+ 	k_process_min_pulse_width_low   : 1;
+ 	k_process_pin_cap               : 0;
+ 	k_process_recovery_fall         : 1;
+ 	k_process_recovery_rise         : 1;
+ 	k_process_rise_transition       : 1;
+ 	k_process_setup_fall            : 1;
+ 	k_process_setup_rise            : 1;
+ 	k_process_wire_cap              : 0;
+ 	k_process_wire_res              : 0;
+	k_temp_cell_fall		: 0.000;
+	k_temp_cell_rise		: 0.000;
+	k_temp_hold_fall                : 0.000;
+	k_temp_hold_rise                : 0.000;
+	k_temp_min_pulse_width_high     : 0.000;
+	k_temp_min_pulse_width_low      : 0.000;
+	k_temp_min_period               : 0.000;
+	k_temp_rise_propagation         : 0.000;
+	k_temp_fall_propagation         : 0.000;
+	k_temp_rise_transition          : 0.0;
+	k_temp_fall_transition          : 0.0;
+	k_temp_recovery_fall            : 0.000;
+	k_temp_recovery_rise            : 0.000;
+	k_temp_setup_fall               : 0.000;
+	k_temp_setup_rise               : 0.000;
+	k_volt_cell_fall                : 0.000;
+	k_volt_cell_rise                : 0.000;
+	k_volt_hold_fall                : 0.000;
+	k_volt_hold_rise                : 0.000;
+	k_volt_min_pulse_width_high     : 0.000;
+	k_volt_min_pulse_width_low      : 0.000;
+	k_volt_min_period               : 0.000;
+	k_volt_rise_propagation         : 0.000;
+	k_volt_fall_propagation         : 0.000;
+	k_volt_rise_transition	        : 0.0;
+	k_volt_fall_transition	        : 0.0;
+	k_volt_recovery_fall            : 0.000;
+	k_volt_recovery_rise            : 0.000;
+	k_volt_setup_fall               : 0.000;
+	k_volt_setup_rise               : 0.000;
+
+
+        operating_conditions(ff_1p65v_125c) {
+		process	 : 1;
+		temperature	 : 125.000;
+		voltage	 : 1.650;
+		tree_type	 : balanced_tree;
+	}
+        default_operating_conditions : ff_1p65v_125c;
+	wire_load("sample") {
+		resistance	 : 1.6e-05;
+		capacitance	 : 0.0002;
+		area	 : 1.7;
+  		slope	 : 500;
+		fanout_length	 (1,500);
+	}
+        lu_table_template(cmem_mc_bist_mux_delay_template) {
+           variable_1 : input_net_transition;
+           variable_2 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        lu_table_template(cmem_mc_mux_mem_out_delay_template) {
+           variable_1 : input_net_transition;
+           variable_2 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        lu_table_template(cmem_mc_mem_out_delay_template) {
+           variable_1 : input_net_transition;
+           variable_2 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+	lu_table_template(cmem_mc_bist_mux_slew_template) {
+           variable_1 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+	lu_table_template(cmem_mc_mem_out_slew_template) {
+           variable_1 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+	lu_table_template(cmem_mc_clk_setup_constraint_template) {
+           variable_1 : related_pin_transition;
+           variable_2 : constrained_pin_transition;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+	lu_table_template(cmem_mc_constraint_template) {
+           variable_1 : related_pin_transition;
+           variable_2 : constrained_pin_transition;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        power_lut_template(cmem_mc_energy_template_clkslew_load) {
+           variable_1 : input_transition_time;
+           variable_2 : total_output_net_capacitance;
+               index_1 ("1000, 1001");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        power_lut_template(cmem_mc_energy_template_sigslew_load) {
+           variable_1 : input_transition_time;
+           variable_2 : total_output_net_capacitance;
+               index_1 ("1000, 1001");
+               index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        power_lut_template(cmem_mc_energy_template_load) {
+           variable_1 : total_output_net_capacitance;
+               index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+        }
+        power_lut_template(cmem_mc_energy_template_clkslew) {
+           variable_1 : input_transition_time;
+               index_1 ("1000, 1001");
+        }
+        power_lut_template(cmem_mc_energy_template_sigslew) {
+           variable_1 : input_transition_time;
+               index_1 ("1000, 1001");
+        }
+	library_features(report_delay_calculation);
+	type (cmem_mc_DATA) {
+		base_type : array ;
+		data_type : bit ;
+		bit_width : 16;
+		bit_from : 15;
+		bit_to : 0 ;
+		downto : true ;
+	}
+	type (cmem_mc_UPM) {
+		base_type : array ;
+		data_type : bit ;
+		bit_width : 3;
+		bit_from : 2;
+		bit_to : 0 ;
+		downto : true ;
+	}
+	type (cmem_mc_ADDRESS) {
+		base_type : array ;
+		data_type : bit ;
+		bit_width : 6;
+		bit_from : 5;
+		bit_to : 0 ;
+		downto : true ;
+	}
+cell(cmem_mc) {
+	area		 : 12671.386;
+	dont_use	 : TRUE;
+	dont_touch	 : TRUE;
+        interface_timing : TRUE;
+	memory() {
+		type : ram;
+		address_width : 6;
+		word_width : 16;
+	}
+        bus(Q)   {
+                bus_type : cmem_mc_DATA;
+		direction : output;
+		max_capacitance : 0.650;
+                memory_read() {
+			address : A;
+		}
+                timing() {
+                        related_pin :   "CLK" ;
+                        timing_type : rising_edge ;
+                        timing_sense : non_unate;
+                        cell_rise(cmem_mc_mem_out_delay_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.000, 0.020, 0.040, 0.090, 0.220, 0.430, 0.650");
+                        values ( \
+                          "0.503, 0.512, 0.521, 0.544, 0.604, 0.700, 0.801", \
+                          "0.526, 0.535, 0.545, 0.567, 0.627, 0.723, 0.824", \
+                          "0.556, 0.565, 0.574, 0.597, 0.656, 0.753, 0.854", \
+                          "0.614, 0.624, 0.633, 0.656, 0.715, 0.812, 0.913", \
+                          "0.791, 0.800, 0.809, 0.832, 0.892, 0.988, 1.089", \
+                          "1.085, 1.094, 1.103, 1.126, 1.186, 1.282, 1.383", \
+                          "1.379, 1.388, 1.398, 1.421, 1.480, 1.576, 1.677" \
+                        )
+                        }
+                        rise_transition(cmem_mc_mem_out_slew_template) {
+                        index_1 ("0.000, 0.020, 0.040, 0.090, 0.220, 0.430, 0.650");
+                        values ("0.024, 0.048, 0.073, 0.133, 0.291, 0.545, 0.811")
+                        }
+                        cell_fall(cmem_mc_mem_out_delay_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.000, 0.020, 0.040, 0.090, 0.220, 0.430, 0.650");
+                        values ( \
+                          "0.503, 0.512, 0.521, 0.544, 0.604, 0.700, 0.801", \
+                          "0.526, 0.535, 0.545, 0.567, 0.627, 0.723, 0.824", \
+                          "0.556, 0.565, 0.574, 0.597, 0.656, 0.753, 0.854", \
+                          "0.614, 0.624, 0.633, 0.656, 0.715, 0.812, 0.913", \
+                          "0.791, 0.800, 0.809, 0.832, 0.892, 0.988, 1.089", \
+                          "1.085, 1.094, 1.103, 1.126, 1.186, 1.282, 1.383", \
+                          "1.379, 1.388, 1.398, 1.421, 1.480, 1.576, 1.677" \
+                        )
+                        }
+                        fall_transition(cmem_mc_mem_out_slew_template) {
+                        index_1 ("0.000, 0.020, 0.040, 0.090, 0.220, 0.430, 0.650");
+                        values ("0.024, 0.052, 0.079, 0.148, 0.326, 0.614, 0.915")
+                        }
+                }
+        }
+        pin(CLK)   {
+		direction : input;
+		capacitance : 0.055;
+                clock : true;
+                max_transition : 1.500;
+                min_pulse_width_high : 0.165 ;
+                min_pulse_width_low  : 0.175 ;
+                min_period           : 1.171 ;
+
+
+                internal_power(){
+                        when : "(!CEN & ! \
+                                 (WEN) \
+                                ) \
+                                 ";
+                        rise_power(cmem_mc_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("20.107, 20.107")
+                        }
+                        fall_power(cmem_mc_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.000, 0.000")
+                        }
+                }
+                internal_power(){
+                        when : "(!CEN & \
+                                 (WEN) \
+                                ) \
+                                 ";
+                        rise_power(cmem_mc_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("18.799, 18.799")
+                        }
+                        fall_power(cmem_mc_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.000, 0.000")
+                        }
+                }
+         internal_power(){
+                 when : "(CEN)";
+                        rise_power(cmem_mc_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.114, 0.114")
+                        }
+                        fall_power(cmem_mc_energy_template_clkslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.000, 0.000")
+                        }
+                }
+        }
+
+        pin(CEN)   {
+                direction : input;
+                capacitance : 0.006;
+                timing() {
+                        related_pin     : CLK;
+                        timing_type     : setup_rising ;
+                        rise_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.200, 0.221, 0.248, 0.302, 0.464, 0.734, 1.004", \
+                          "0.176, 0.198, 0.225, 0.279, 0.441, 0.711, 0.980", \
+                          "0.147, 0.168, 0.195, 0.249, 0.411, 0.681, 0.951", \
+                          "0.088, 0.109, 0.136, 0.190, 0.352, 0.622, 0.892", \
+                          "-0.089, -0.067, -0.040, 0.014, 0.176, 0.446, 0.716", \
+                          "-0.383, -0.361, -0.334, -0.280, -0.118, 0.152, 0.422", \
+                          "-0.677, -0.655, -0.628, -0.574, -0.412, -0.143, 0.127" \
+                        )
+                        }
+                        fall_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.184, 0.208, 0.238, 0.299, 0.482, 0.786, 1.090", \
+                          "0.160, 0.185, 0.215, 0.276, 0.458, 0.763, 1.067", \
+                          "0.131, 0.155, 0.186, 0.246, 0.429, 0.733, 1.037", \
+                          "0.072, 0.096, 0.127, 0.188, 0.370, 0.674, 0.978", \
+                          "-0.105, -0.080, -0.050, 0.011, 0.194, 0.498, 0.802", \
+                          "-0.399, -0.374, -0.344, -0.283, -0.101, 0.204, 0.508", \
+                          "-0.693, -0.669, -0.638, -0.577, -0.395, -0.091, 0.214" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLK;
+                        timing_type     : hold_rising ;
+                        rise_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.176, 0.155, 0.128, 0.074, 0.000, 0.000, 0.000", \
+                          "0.471, 0.449, 0.422, 0.368, 0.206, 0.000, 0.000", \
+                          "0.765, 0.743, 0.716, 0.662, 0.500, 0.230, 0.000" \
+                        )
+                        }
+                        fall_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.166, 0.141, 0.111, 0.050, 0.000, 0.000, 0.000", \
+                          "0.460, 0.435, 0.405, 0.344, 0.162, 0.000, 0.000", \
+                          "0.754, 0.730, 0.699, 0.638, 0.456, 0.152, 0.000" \
+                        )
+                        }
+               }
+        }
+        pin(WEN){
+                direction : input;
+                capacitance : 0.018;
+                timing() {
+                        related_pin     : CLK;
+                        timing_type     : setup_rising ;
+                        rise_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.195, 0.220, 0.251, 0.314, 0.501, 0.813, 1.126", \
+                          "0.171, 0.196, 0.228, 0.290, 0.477, 0.790, 1.102", \
+                          "0.142, 0.167, 0.198, 0.261, 0.448, 0.760, 1.073", \
+                          "0.083, 0.108, 0.139, 0.202, 0.389, 0.702, 1.014", \
+                          "-0.093, -0.068, -0.037, 0.025, 0.213, 0.525, 0.837", \
+                          "-0.388, -0.363, -0.331, -0.269, -0.081, 0.231, 0.543", \
+                          "-0.682, -0.657, -0.626, -0.563, -0.376, -0.063, 0.249" \
+                        )
+                        }
+                        fall_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.216, 0.236, 0.261, 0.311, 0.460, 0.709, 0.958", \
+                          "0.192, 0.212, 0.237, 0.287, 0.436, 0.685, 0.935", \
+                          "0.163, 0.183, 0.208, 0.258, 0.407, 0.656, 0.905", \
+                          "0.104, 0.124, 0.149, 0.199, 0.348, 0.597, 0.846", \
+                          "-0.072, -0.052, -0.028, 0.022, 0.172, 0.421, 0.670", \
+                          "-0.367, -0.347, -0.322, -0.272, -0.122, 0.127, 0.376", \
+                          "-0.661, -0.641, -0.616, -0.566, -0.417, -0.168, 0.081" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLK;
+                        timing_type     : hold_rising ;
+                        rise_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.026, 0.001, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.085, 0.060, 0.029, 0.000, 0.000, 0.000, 0.000", \
+                          "0.261, 0.236, 0.205, 0.143, 0.000, 0.000, 0.000", \
+                          "0.555, 0.530, 0.499, 0.437, 0.249, 0.000, 0.000", \
+                          "0.850, 0.825, 0.793, 0.731, 0.544, 0.231, 0.000" \
+                        )
+                        }
+                        fall_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.011, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.070, 0.050, 0.025, 0.000, 0.000, 0.000, 0.000", \
+                          "0.246, 0.226, 0.201, 0.152, 0.002, 0.000, 0.000", \
+                          "0.540, 0.521, 0.496, 0.446, 0.296, 0.047, 0.000", \
+                          "0.835, 0.815, 0.790, 0.740, 0.591, 0.342, 0.093" \
+                        )
+                        }
+               }
+        }
+        bus(A)   {
+                bus_type : cmem_mc_ADDRESS;
+                direction : input;
+                capacitance : 0.012;
+                timing() {
+                        related_pin     : CLK;
+                        timing_type     : setup_rising ;
+                        rise_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.215, 0.241, 0.275, 0.341, 0.541, 0.874, 1.207", \
+                          "0.191, 0.218, 0.251, 0.318, 0.517, 0.850, 1.183", \
+                          "0.162, 0.188, 0.222, 0.288, 0.488, 0.821, 1.154", \
+                          "0.103, 0.130, 0.163, 0.229, 0.429, 0.762, 1.095", \
+                          "-0.074, -0.047, -0.014, 0.053, 0.253, 0.586, 0.919", \
+                          "-0.368, -0.341, -0.308, -0.241, -0.041, 0.292, 0.624", \
+                          "-0.662, -0.635, -0.602, -0.535, -0.336, -0.003, 0.330" \
+                        )
+                        }
+                        fall_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.111, 0.135, 0.165, 0.226, 0.408, 0.711, 1.014", \
+                          "0.087, 0.111, 0.142, 0.202, 0.384, 0.687, 0.990", \
+                          "0.058, 0.082, 0.112, 0.173, 0.355, 0.658, 0.961", \
+                          "-0.001, 0.023, 0.053, 0.114, 0.296, 0.599, 0.902", \
+                          "-0.178, -0.154, -0.123, -0.063, 0.119, 0.422, 0.726", \
+                          "-0.472, -0.448, -0.417, -0.357, -0.175, 0.128, 0.431", \
+                          "-0.766, -0.742, -0.712, -0.651, -0.469, -0.166, 0.137" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLK;
+                        timing_type     : hold_rising ;
+                        rise_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.011, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.041, 0.014, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.100, 0.073, 0.040, 0.000, 0.000, 0.000, 0.000", \
+                          "0.276, 0.250, 0.216, 0.150, 0.000, 0.000, 0.000", \
+                          "0.570, 0.544, 0.510, 0.444, 0.244, 0.000, 0.000", \
+                          "0.865, 0.838, 0.805, 0.738, 0.538, 0.205, 0.000" \
+                        )
+                        }
+                        fall_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.002, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.026, 0.001, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.055, 0.031, 0.001, 0.000, 0.000, 0.000, 0.000", \
+                          "0.114, 0.090, 0.059, 0.000, 0.000, 0.000, 0.000", \
+                          "0.290, 0.266, 0.236, 0.175, 0.000, 0.000, 0.000", \
+                          "0.585, 0.560, 0.530, 0.469, 0.288, 0.000, 0.000", \
+                          "0.879, 0.854, 0.824, 0.764, 0.582, 0.279, 0.000" \
+                        )
+                        }
+               }
+                internal_power(){
+                        when : "CEN";
+                        rise_power(cmem_mc_energy_template_sigslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.194, 0.194")
+                        }
+                        fall_power(cmem_mc_energy_template_sigslew) {
+                        index_1 ("0.000, 1.000");
+                        values ("0.194, 0.194")
+                        }
+                }
+        }
+        bus(D)   {
+                bus_type : cmem_mc_DATA;
+                memory_write() {
+                        address : A;
+                        clocked_on : "CLK";
+                }
+                direction : input;
+                capacitance : 0.003;
+                timing() {
+                        related_pin     : CLK;
+                        timing_type     : setup_rising ;
+                        rise_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.096, 0.119, 0.148, 0.206, 0.381, 0.671, 0.962", \
+                          "0.072, 0.096, 0.125, 0.183, 0.357, 0.648, 0.938", \
+                          "0.043, 0.066, 0.095, 0.153, 0.328, 0.618, 0.909", \
+                          "-0.016, 0.007, 0.036, 0.095, 0.269, 0.559, 0.850", \
+                          "-0.192, -0.169, -0.140, -0.082, 0.092, 0.383, 0.673", \
+                          "-0.487, -0.463, -0.434, -0.376, -0.202, 0.089, 0.379", \
+                          "-0.781, -0.757, -0.728, -0.670, -0.496, -0.205, 0.085" \
+                        )
+                        }
+                        fall_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.115, 0.138, 0.167, 0.226, 0.402, 0.694, 0.987", \
+                          "0.091, 0.115, 0.144, 0.202, 0.378, 0.671, 0.963", \
+                          "0.062, 0.085, 0.115, 0.173, 0.349, 0.641, 0.934", \
+                          "0.003, 0.026, 0.056, 0.114, 0.290, 0.582, 0.875", \
+                          "-0.173, -0.150, -0.121, -0.062, 0.113, 0.406, 0.699", \
+                          "-0.468, -0.444, -0.415, -0.356, -0.181, 0.112, 0.404", \
+                          "-0.762, -0.738, -0.709, -0.651, -0.475, -0.182, 0.110" \
+                        )
+                        }
+                } 
+                timing() {
+                        related_pin     : CLK;
+                        timing_type     : hold_rising ;
+                        rise_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.081, 0.058, 0.029, 0.000, 0.000, 0.000, 0.000", \
+                          "0.104, 0.081, 0.052, 0.000, 0.000, 0.000, 0.000", \
+                          "0.134, 0.111, 0.081, 0.023, 0.000, 0.000, 0.000", \
+                          "0.193, 0.169, 0.140, 0.082, 0.000, 0.000, 0.000", \
+                          "0.369, 0.346, 0.317, 0.259, 0.084, 0.000, 0.000", \
+                          "0.663, 0.640, 0.611, 0.553, 0.379, 0.088, 0.000", \
+                          "0.957, 0.934, 0.905, 0.847, 0.673, 0.382, 0.092" \
+                        )
+                        }
+                        fall_constraint(cmem_mc_constraint_template) {
+                        index_1 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        index_2 ("0.010, 0.050, 0.100, 0.200, 0.500, 1.000, 1.500");
+                        values ( \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.005, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000", \
+                          "0.064, 0.040, 0.011, 0.000, 0.000, 0.000, 0.000", \
+                          "0.240, 0.217, 0.187, 0.129, 0.000, 0.000, 0.000", \
+                          "0.534, 0.511, 0.482, 0.423, 0.248, 0.000, 0.000", \
+                          "0.828, 0.805, 0.776, 0.717, 0.542, 0.249, 0.000" \
+                        )
+                        }
+               }
+        }
+
+        cell_leakage_power : 7.64E-3;
+}
+}
